@@ -184,6 +184,10 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11493712, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: moveSpeed
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
   m_IsPrefabParent: 0
