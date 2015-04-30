@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMobility : MonoBehaviour {
 
-	public float speed;
+	public float moveSpeed;
 
 	void Start () {
 		
@@ -11,19 +11,31 @@ public class PlayerMobility : MonoBehaviour {
 
 	void FixedUpdate () {
 
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed);
+		if (Input.GetKey(KeyCode.DownArrow)) {
+			
+			//Move down. If the ship is at the edge of the map it stops.
+
+			transform.Translate(new Vector3(0, moveSpeed, 0));
+			
+			
+		}
+		if (Input.GetKey(KeyCode.UpArrow)) {
+			
+			//Move up. If the ship is at the edge of the map it stops.
+
+			transform.Translate(new Vector3(0, -moveSpeed, 0));
+			
 		}
 
-		if (Input.GetKey (KeyCode.DownArrow)) {
-			GetComponent<Rigidbody2D>().AddForce(-Vector2.up * speed);
+		//Rotate the ship to the left
+		if (Input.GetKey(KeyCode.LeftArrow)) {
+			transform.Rotate(new Vector3(0, 0, moveSpeed * 20));
+			
 		}
-		if (Input.GetKey (KeyCode.RightArrow)) {
-			GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed);
-		}
-
-		if (Input.GetKey (KeyCode.LeftArrow)) {
-			GetComponent<Rigidbody2D>().AddForce(-Vector2.right * speed);
+		
+		//Rotate the ship to the right
+		if (Input.GetKey(KeyCode.RightArrow)) {
+			transform.Rotate(0, 0, -moveSpeed * 20);
 		}
 	}
 }
