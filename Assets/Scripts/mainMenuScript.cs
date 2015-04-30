@@ -7,6 +7,7 @@ public class mainMenuScript : MonoBehaviour {
 	//Variables needed for the main menu
 
 	public Canvas InfoMenu;
+	public Canvas QuitMenu;
 	public Button PlayButton;
 	public Button ExitButton;
 	public Button InfoButton;
@@ -17,11 +18,14 @@ public class mainMenuScript : MonoBehaviour {
 
 		//Initialize the buttons and canvas
 		InfoMenu = InfoMenu.GetComponent<Canvas> ();
+		QuitMenu = QuitMenu.GetComponent<Canvas> ();
 		InfoButton = InfoButton.GetComponent<Button> ();
 		PlayButton = PlayButton.GetComponent<Button> ();
 		ExitButton = ExitButton.GetComponent<Button> ();
 
-		InfoButton.enabled = false;
+		//Hide the QuitMenu and InfoMenu and enable the main menu buttons
+		InfoMenu.enabled = false;
+		QuitMenu.enabled = false;
 		PlayButton.enabled = true;
 		ExitButton.enabled = true;
 		InfoButton.enabled = true;
@@ -29,11 +33,11 @@ public class mainMenuScript : MonoBehaviour {
 
 
 	public void PressPlay () {
-		//dostuff
+		Application.LoadLevel (1);
 	}
 
 
-	//Pop up the Info Menu when you press How To
+	//Pop up the Info Menu when you press How To and disable the main menu buttons
 	public void PressHowTo () {
 
 		InfoMenu.enabled = true;
@@ -51,6 +55,31 @@ public class mainMenuScript : MonoBehaviour {
 		PlayButton.enabled = true;
 		ExitButton.enabled = true;
 		InfoButton.enabled = true;
+	}
+
+	// Bring up the Quit Menu when the player presses quit to confirm 
+	// that he wants to quit. Also disable the main menu buttons.
+
+	public void PressQuit () {
+		QuitMenu.enabled = true;
+		PlayButton.enabled = false;
+		ExitButton.enabled = false;
+		InfoButton.enabled = false;
+	}
+
+	// Hide the quit menu if the player presses NO in the Quit Menu.
+	// Alse enable the Main Menu buttons again.
+	public void ExitQuitMenu () {
+		QuitMenu.enabled = false;
+		PlayButton.enabled = true;
+		ExitButton.enabled = true;
+		InfoButton.enabled = true;
+		
+	}
+
+	//If the player presses yes in the Quit Menu the game is exited
+	public void QuitGame () {
+		Application.Quit ();
 	}
 
 	
