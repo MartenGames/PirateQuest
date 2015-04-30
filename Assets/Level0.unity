@@ -370,7 +370,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1793124805}
   - 212: {fileID: 1793124804}
-  - 114: {fileID: 1793124806}
   m_Layer: 0
   m_Name: cannon2
   m_TagString: Untagged
@@ -418,18 +417,6 @@ Transform:
   - {fileID: 1970251849}
   m_Father: {fileID: 1987818204}
   m_RootOrder: 0
---- !u!114 &1793124806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11487620, guid: 18688edaf4adc4f7d8c971e4518746c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1793124803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65fbcd3621a5d4ab795a7b3dc63e8aed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1970251848
 GameObject:
   m_ObjectHideFlags: 0
