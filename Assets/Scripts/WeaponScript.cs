@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CannonScript : MonoBehaviour {
+public class WeaponScript : MonoBehaviour {
 	
 	public float fireRate = 0;
 	public float damage = 10;
-	public LayerMask notToHit;
+	public LayerMask whatToHit;
 	
 	float timeToFire = 0;
 	Transform  firePoint;
@@ -20,6 +20,7 @@ public class CannonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Shoot ();
 		// Single fire weapon
 		if (fireRate == 0) {
 			// Just a reminder for Daniel
@@ -42,6 +43,15 @@ public class CannonScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
-		Debug.Log ("Test");
+		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+		Vector2 firePointPos = new Vector2 (firePoint.position.x, firePoint.position.y);
+		Vector2 endPointPos = new Vector2 (firePointPos.x + 100, firePointPos.y + 100);
+		//RaycastHit2D hit = Physics2D.Raycast (firePointPos, moustPos - firePointPos, 100, notToHit);
+		RaycastHit2D hit = Physics2D.Raycast (firePointPos, endPointPos - firePointPos, 100, whatToHit);
+		Debug.DrawLine (firePointPos, ((endPointPos - firePointPos) * 100), Color.cyan);
+		if (hit.collider != null) {
+			Debug.DrawLine (firePointPos, hit.point, Color.red);
+			Debug.Log ("We hit " + hit.collider.name + " and did " + damage + " damage");
+		}
 	}
 }
