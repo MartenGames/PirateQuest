@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMobility : MonoBehaviour {
+public class PlayerMobilityScript : MonoBehaviour {
 
 	public float moveSpeed;
 
