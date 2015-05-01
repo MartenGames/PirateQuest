@@ -19,12 +19,15 @@ public class DamageHandlerScript : MonoBehaviour {
 		layer = gameObject.layer;
 	}
 
-	void OnTriggerEnter2D() {
+	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log ("Trigger!");
+		Debug.Log (other.gameObject.name);
 
-		health--;
-		invulnerabilityTimer = 2f;
-		gameObject.layer = 11;
+		if(other.gameObject.name == "Bullet(Clone)") {
+			health--;
+			invulnerabilityTimer = 2f;
+			gameObject.layer = 11;
+		}
 	}
 
 	void Update() {
