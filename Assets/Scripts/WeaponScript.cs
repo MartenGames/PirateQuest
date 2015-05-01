@@ -20,7 +20,7 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Shoot ();
+		// Debug : Shoot ();
 		// Single fire weapon
 		if (fireRate == 0) {
 			// Just a reminder for Daniel
@@ -45,7 +45,11 @@ public class WeaponScript : MonoBehaviour {
 	void Shoot() {
 		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
 		Vector2 firePointPos = new Vector2 (firePoint.position.x, firePoint.position.y);
-		Vector2 endPointPos = new Vector2 (firePointPos.x + 100, firePointPos.y + 100);
+		Vector2 endPointPos = new Vector2 (transform.parent.rotation.x, transform.parent.rotation.y);
+		Debug.Log ("Right " + transform.parent.transform.right);
+		Debug.Log ("Forward " + transform.parent.transform.forward);
+		Debug.Log ("Up " + transform.parent.transform.up);
+		Debug.Log ("Rotation " + transform.parent.rotation);
 		//RaycastHit2D hit = Physics2D.Raycast (firePointPos, moustPos - firePointPos, 100, notToHit);
 		RaycastHit2D hit = Physics2D.Raycast (firePointPos, endPointPos - firePointPos, 100, whatToHit);
 		Debug.DrawLine (firePointPos, ((endPointPos - firePointPos) * 100), Color.cyan);
