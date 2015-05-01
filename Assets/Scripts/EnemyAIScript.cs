@@ -6,12 +6,7 @@ public class EnemyAIScript : MonoBehaviour {
 	public float MoveSpeed;
 	public float Distance;
 
-	private Vector3 Player;
-
-	private Vector2 PlayerDirection;
-
-	private float XDif;
-	private float YDif;
+	Transform Player;
 	
 	void Start () {
 
@@ -20,31 +15,23 @@ public class EnemyAIScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//Assign the Player Vector to the position of the player
-		Player = GameObject.Find("Player").transform.position;
+		GameObject go = GameObject.Find ("Player");
 
-		//A formula to rotate the enemy ships towards the player
-		Vector3 dir = Player - transform.position;
-		float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
+		Player = go.transform;
 
-		//Find the difference in coordinates between the enemy and the player
-		XDif = Player.x - transform.position.x;
-		YDif = Player.y - transform.position.y;
+		Vector3 pos = transform.position;
 
-		//Create new vectors with the recently calculated coordinates
-		PlayerDirection = new Vector2 (XDif, YDif);
+		Vector3 velocity = new Vector3 (0, MoveSpeed * Time.deltaTime, 0);
 
-		//Only move the enemy if he is at a certain distance from the player
-			transform.position += (Vector3)PlayerDirection.normalized * MoveSpeed * Time.deltaTime;
+		float distance = Vector3.Distance (Player.position, transform.position);
+
+
+		//The enemy ship stops if it gets within a certain distance from the player.
+		if (distance > 4) {
+			pos += transform.rotation * velocity;
+			transform.position = pos;
+		}
 
 	}
-
-	//Boolean that says if the enemy shop can move
-	bool CanMove () {
-		return (Vector2.Distance (Player, transform.position) > Distance); 
-	}
-	
-
 
 }
