@@ -17,7 +17,7 @@ public class PlayerCollectScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other){
 
-		if(other.gameObject.name == "Gold" ||other.gameObject.name == "Gold(Clone)") {
+		if(other.gameObject.name == "Gold" || other.gameObject.name == "Gold(Clone)") {
 			GoldAmountManagerScript.goldAmount += goldValue;
 			Destroy(other.gameObject);
 		}
