@@ -416,6 +416,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2030261697}
   - 212: {fileID: 2030261696}
+  - 68: {fileID: 2030261698}
   m_Layer: 0
   m_Name: BackgroundOcean
   m_TagString: Untagged
@@ -461,3 +462,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!68 &2030261698
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030261695}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -1.20060682, y: -1.29189527}
+  - {x: -1.19186556, y: 1.03344977}
+  - {x: 1.23671508, y: 1.01984859}
+  - {x: 1.24080372, y: -1.27933955}
+  - {x: -1.19518566, y: -1.27543807}
