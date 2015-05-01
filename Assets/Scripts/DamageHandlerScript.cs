@@ -22,11 +22,9 @@ public class DamageHandlerScript : MonoBehaviour {
 	void OnTriggerEnter2D() {
 		Debug.Log ("Trigger!");
 
-
 		health--;
 		invulnerabilityTimer = 2f;
 		gameObject.layer = 11;
-
 	}
 
 	void Update() {
