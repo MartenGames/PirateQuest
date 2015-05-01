@@ -45,12 +45,16 @@ public class WeaponScript : MonoBehaviour {
 	void Shoot() {
 		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
 		Vector2 firePointPos = new Vector2 (firePoint.position.x, firePoint.position.y);
-		Vector2 endPointPos = new Vector2 (transform.parent.position.x + transform.parent.rotation.x, transform.parent.position.x + transform.parent.rotation.x);
+		Vector2 endPointPos = new Vector2 (transform.rotation.z, transform.rotation.w);
+
 		Debug.Log ("Right " + transform.parent.transform.right);
 		Debug.Log ("Forward " + transform.parent.transform.forward);
 		Debug.Log ("Up " + transform.parent.transform.up);
 		Debug.Log ("Rotation " + transform.parent.rotation);
-		//RaycastHit2D hit = Physics2D.Raycast (firePointPos, moustPos - firePointPos, 100, notToHit);
+		Debug.Log ("RotationA " + transform.parent.rotation.w);
+		Debug.Log ("RotationB " + transform.parent.rotation.z);
+
+		//RaycastHit2D hit = Physics2D.Raycast (firePointPos, mousePos - firePointPos, 100, whatToHit);
 		RaycastHit2D hit = Physics2D.Raycast (firePointPos, endPointPos - firePointPos, 100, whatToHit);
 		Debug.DrawLine (firePointPos, ((endPointPos - firePointPos) * 100), Color.cyan);
 		if (hit.collider != null) {
