@@ -43,6 +43,11 @@ public class DamageHandlerScript : MonoBehaviour {
 	}
 
 	void Die() {
+
+		if (gameObject.name == "Enemy") {
+
+			Destroy (gameObject);
+		}
 		Destroy (gameObject);
 	}
 }
