@@ -308,7 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f462c09da6b417c8ad8233d1e3e5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 171418, guid: 4e9f47f430fb64c04bcecbee2c61a0e6, type: 2}
+  enemy: {fileID: 190942, guid: 2d48108fdebc54792a4ffae54b53e9f4, type: 2}
+  SpawnPoint1: {fileID: 1142463879}
+  SpawnPoint2: {fileID: 940900724}
 --- !u!1 &1142463879
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAI : MonoBehaviour {
+public class EnemyAIScript : MonoBehaviour {
 
 	public float MoveSpeed;
 	public float Distance;
@@ -31,14 +31,14 @@ public class EnemyAI : MonoBehaviour {
 
 		//Assign the Player Vector to the position of the player
 		Player = GameObject.Find("Player").transform.position;
-		Enemy = GameObject.Find("TestEnemy").transform.position;
 
 
-		/*Quaternion rotation = Quaternion.LookRotation
-		(Player - transform.position, transform.TransformDirection(Vector3.up));
-		transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
-		*/
+		if ((Enemy = GameObject.Find ("Enemy").transform.position) == null) {
+			continue;
+		}
 
+
+		//A formula to rotate the enemy ships towards the player
 		Vector3 dir = Player - transform.position;
 		float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
@@ -47,21 +47,21 @@ public class EnemyAI : MonoBehaviour {
 		XDif = Player.x - transform.position.x;
 		YDif = Player.y - transform.position.y;
 
+		//Find the distance between current enemy and another enemy
 		EnemyXDif = Enemy.x - transform.position.x;
 		EnemyYDif = Enemy.y - transform.position.y;
 
-		//Create a new vector with the coordinates
+		//Create new vectors with the recently calculated coordinates
 		PlayerDirection = new Vector2 (XDif, YDif);
 		EnemyDirection = new Vector2 (EnemyXDif, EnemyYDif);
 
 
+		//If a enemy is nearby then move from him
 		if (Vector2.Distance (Enemy, transform.position) < Distance) {
 			transform.position = (transform.position - Enemy).normalized * MoveSpeed + Enemy;
 
 		}
 
-
-		
 		//Only move the enemy if he is at a certain distance from the player
 		if(CanMove()) {
 			transform.position += (Vector3)PlayerDirection.normalized * MoveSpeed * Time.deltaTime;

@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21276834}
   - 50: {fileID: 5086118}
   - 61: {fileID: 6158740}
-  - 114: {fileID: 11423840}
   - 114: {fileID: 11407820}
+  - 114: {fileID: 11451782}
   m_Layer: 9
   m_Name: TestEnemy
   m_TagString: Untagged
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulnerabilityTimer: 0
---- !u!114 &11423840
+--- !u!114 &11451782
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,8 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b987941088b464596b1b29f25d4eddd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1
-  Distance: 3
+  MoveSpeed: 0
+  Distance: 0
 --- !u!212 &21276834
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerCollectScript : MonoBehaviour {
 
+	public int goldValue = 10;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,6 +18,7 @@ public class PlayerCollectScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 
 		if(other.gameObject.name == "Gold" ||other.gameObject.name == "Gold(Clone)") {
+			GoldAmountManagerScript.goldAmount += goldValue;
 			Destroy(other.gameObject);
 		}
 	}
