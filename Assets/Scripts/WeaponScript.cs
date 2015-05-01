@@ -45,7 +45,7 @@ public class WeaponScript : MonoBehaviour {
 	void Shoot() {
 		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
 		Vector2 firePointPos = new Vector2 (firePoint.position.x, firePoint.position.y);
-		Vector2 endPointPos = new Vector2 (transform.parent.rotation.x, transform.parent.rotation.y);
+		Vector2 endPointPos = new Vector2 (transform.parent.position.x + transform.parent.rotation.x, transform.parent.position.x + transform.parent.rotation.x);
 		Debug.Log ("Right " + transform.parent.transform.right);
 		Debug.Log ("Forward " + transform.parent.transform.forward);
 		Debug.Log ("Up " + transform.parent.transform.up);
