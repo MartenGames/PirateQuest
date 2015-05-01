@@ -34,6 +34,7 @@ public class WeaponScript : MonoBehaviour {
 			}
 		}
 		// Not single fire weapon
+		// Will maybe implement later but erase this if we do not use
 		else {
 			// Check if we are holding down the space button
 			if(Input.GetKey(KeyCode.Space) && Time.time > timeToFire) {
