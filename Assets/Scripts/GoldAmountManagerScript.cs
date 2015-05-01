@@ -14,7 +14,7 @@ public class GoldAmountManagerScript : MonoBehaviour
 		text = GetComponent <Text> ();
 		
 		// Reset the score.
-		score = 0;
+		goldAmount = 0;
 	}
 	
 	// Update is called once per frame
