@@ -10,6 +10,10 @@ public class BulletScript : MonoBehaviour {
 	void Start () {
 	
 	}
+
+	void OnTriggerEnter2D() {
+		Destroy (gameObject);
+	}
 	
 	// Update is called once per frame
 	void Update () {
