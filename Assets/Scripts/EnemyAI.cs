@@ -28,4 +28,11 @@ public class EnemyAI : MonoBehaviour {
 			transform.position += (Vector3)PlayerDirection.normalized * MoveSpeed * Time.deltaTime;
 		}
 	}
+
+
+	void Spawn() {
+
+
+
+	}
 }
