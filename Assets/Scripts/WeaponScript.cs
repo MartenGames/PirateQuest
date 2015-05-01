@@ -34,6 +34,7 @@ public class WeaponScript : MonoBehaviour {
 			}
 		}
 		// Not single fire weapon
+		// Will maybe implement later but erase this if we do not use
 		else {
 			// Check if we are holding down the space button
 			if(Input.GetKey(KeyCode.Space) && Time.time > timeToFire) {
@@ -45,8 +46,8 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
-		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, firePoint.position.z);
-		Instantiate (bulletPrefab, firePointPos, transform.parent.rotation);
+		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
+		Instantiate (bulletPrefab, firePointPos, transform.rotation);
 
 
 		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
