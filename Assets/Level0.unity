@@ -98,6 +98,7 @@ GameObject:
   - 222: {fileID: 403907904}
   - 114: {fileID: 403907903}
   - 114: {fileID: 403907906}
+  - 114: {fileID: 403907907}
   m_Layer: 5
   m_Name: GoldAmountText
   m_TagString: Untagged
@@ -168,6 +169,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &403907907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 403907902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30808287e2ddf421ebaf7e9109c7f38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &522296112
 Prefab:
   m_ObjectHideFlags: 0
