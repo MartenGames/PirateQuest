@@ -9,6 +9,10 @@ public class DamageHandlerScript : MonoBehaviour {
 
 	int layer;
 
+	public GameObject Gold;
+	public float xCoordinate;
+	public float yCoordinate;
+
 	/*
 	void OnCollisionEnter2D() {
 		Debug.Log ("Collision!");
@@ -44,10 +48,17 @@ public class DamageHandlerScript : MonoBehaviour {
 
 	void Die() {
 
+		//Spawn gold when enemy ship is destroyed.
 		if (gameObject.name == "Enemy") {
 
+			//Get the position of the sinking ship.
+			xCoordinate = gameObject.transform.position.x;
+			yCoordinate = gameObject.transform.position.y;
+
+			Destroy (gameObject);
+			Instantiate (Gold, new Vector3 (xCoordinate, yCoordinate, 0), transform.rotation);
+		} else {
 			Destroy (gameObject);
 		}
-		Destroy (gameObject);
 	}
 }
