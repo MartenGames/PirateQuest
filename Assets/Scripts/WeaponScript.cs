@@ -45,8 +45,8 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
-		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, firePoint.position.z);
-		Instantiate (bulletPrefab, firePointPos, transform.parent.rotation);
+		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
+		Instantiate (bulletPrefab, firePointPos, transform.rotation);
 
 
 		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
