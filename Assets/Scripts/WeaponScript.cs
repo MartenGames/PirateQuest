@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class WeaponScript : MonoBehaviour {
-	
+
+
 	public float fireRate = 0;
 	public float damage = 10;
 	public LayerMask whatToHit;
+	public GameObject bulletPrefab;
 	
 	float timeToFire = 0;
 	Transform  firePoint;
@@ -43,7 +45,12 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
+		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, firePoint.position.z);
+		Instantiate (bulletPrefab, firePointPos, transform.parent.rotation);
+
+
 		//Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+		/*
 		Vector2 firePointPos = new Vector2 (firePoint.position.x, firePoint.position.y);
 		Vector2 endPointPos = new Vector2 (transform.rotation.z, transform.rotation.w);
 
@@ -61,5 +68,6 @@ public class WeaponScript : MonoBehaviour {
 			Debug.DrawLine (firePointPos, hit.point, Color.red);
 			Debug.Log ("We hit " + hit.collider.name + " and did " + damage + " damage");
 		}
+		*/
 	}
 }

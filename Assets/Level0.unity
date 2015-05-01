@@ -126,6 +126,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 187620, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 193988, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437152, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 182776, guid: b76a19cc9973947e28fa570dcc508d96, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
   m_IsPrefabParent: 0
