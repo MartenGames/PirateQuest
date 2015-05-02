@@ -8,6 +8,8 @@ public class DamageHandlerScript : MonoBehaviour {
 
 	public float invulnerabilityTimer = 0;
 
+	public AudioClip sinkShip;
+
 	int layer;
 
 	public GameObject Gold;
@@ -65,6 +67,7 @@ public class DamageHandlerScript : MonoBehaviour {
 			yCoordinate = gameObject.transform.position.y;
 
 			Destroy (gameObject);
+			AudioSource.PlayClipAtPoint(sinkShip, transform.position);
 			Instantiate (Gold, new Vector3 (xCoordinate, yCoordinate, 0), transform.rotation);
 		} else {
 			Destroy (gameObject);
