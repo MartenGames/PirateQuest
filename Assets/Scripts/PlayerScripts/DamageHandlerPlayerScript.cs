@@ -7,6 +7,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public float invulnerabilityTimer = 0;
 	public AudioClip sinkShip;
 	public Canvas defeatCanvas;
+	public Canvas winningCanvas;
 	public float xCoordinate;
 	public float yCoordinate;
 	public bool secondCannon = false;
@@ -29,6 +30,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 
 		defeatCanvas.enabled = false;
+		winningCanvas.enabled = false;
 		GameObject cannon = GameObject.Find ("Cannon2");
 		cannon.SetActive (secondCannon);
 		layer = gameObject.layer;
@@ -52,6 +54,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		
 		if (health <= 0) {
 			Die ();
+		}
+
+		if (GameObject.Find ("Enemy(Clone)") == null) {
+			Destroy (gameObject);
+			winningCanvas.enabled = true;
 		}
 	}
 	
