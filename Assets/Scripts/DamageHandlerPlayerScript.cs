@@ -1,0 +1,45 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class DamageHandlerPlayerScript : MonoBehaviour {
+	
+	public int health = 2;
+	public float invulnerabilityTimer = 0;
+	public AudioClip sinkShip;
+	public Canvas defeatCanvas;
+	public float xCoordinate;
+	public float yCoordinate;
+
+	int layer;
+	
+	void Start() {
+		defeatCanvas.enabled = false;
+		layer = gameObject.layer;
+	}
+	
+	void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log (other.gameObject.name);
+		if (other.gameObject.name == "EnemyBullet(Clone)") {
+			health--;
+			invulnerabilityTimer = 2f;
+			gameObject.layer = 11;
+		}
+	}
+	
+	void Update() {
+		invulnerabilityTimer -= Time.deltaTime;
+		
+		if (invulnerabilityTimer <= 0) {
+			gameObject.layer = layer;
+		}
+		
+		if (health <= 0) {
+			Die ();
+		}
+	}
+	
+	void Die() {
+		Destroy (gameObject);
+		defeatCanvas.enabled = true;
+	}
+}
