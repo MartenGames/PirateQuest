@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerCollectScript : MonoBehaviour {
 
+	public AudioClip coinCollect;
+
 	public int goldValue = 100;
 
 	// Use this for initialization
@@ -19,6 +21,7 @@ public class PlayerCollectScript : MonoBehaviour {
 
 		if(other.gameObject.name == "Gold" || other.gameObject.name == "Gold(Clone)") {
 			GoldAmountManagerScript.goldAmount += goldValue;
+			AudioSource.PlayClipAtPoint(coinCollect, transform.position);
 			Destroy(other.gameObject);
 		}
 	}

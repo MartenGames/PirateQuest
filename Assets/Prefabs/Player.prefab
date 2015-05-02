@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa54da241f0e44039ea6a6b30ecb08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinCollect: {fileID: 8300000, guid: d57d89f1f3c6446d5b6176e1a4866962, type: 3}
   goldValue: 10
 --- !u!114 &11458758
 MonoBehaviour:
