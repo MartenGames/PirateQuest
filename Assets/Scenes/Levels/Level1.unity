@@ -520,39 +520,39 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalPosition.x
       value: .00999999046
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalPosition.y
       value: .900000036
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 448648, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 416054, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 11491118, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+    - target: {fileID: 11411160, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
       propertyPath: defeatCanvas
       value: 
       objectReference: {fileID: 1211417152}
