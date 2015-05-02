@@ -15,9 +15,18 @@ public class EnemyAIScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		GameObject go = GameObject.Find ("Player");
 
-		Player = go.transform;
+		if (Player == null) {
+			GameObject go = GameObject.Find ("Player");
+
+			if(go != null) {
+				Player = go.transform;
+			}
+		}	
+
+		if (Player == null) {
+			return;
+		}
 
 		Vector3 pos = transform.position;
 
