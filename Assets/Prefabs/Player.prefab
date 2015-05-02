@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   invulnerabilityTimer: 0
+  sinkShip: {fileID: 0}
   Gold: {fileID: 194100, guid: a67e203374fad4f95a0c716080f21954, type: 2}
   xCoordinate: 0
   yCoordinate: 0
@@ -166,6 +167,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967035
   bulletPrefab: {fileID: 182776, guid: b76a19cc9973947e28fa570dcc508d96, type: 2}
+  cannonSound: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
 --- !u!114 &11485004
 MonoBehaviour:
   m_ObjectHideFlags: 1

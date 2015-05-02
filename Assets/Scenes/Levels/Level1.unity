@@ -414,6 +414,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11471884, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: cannonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
   m_IsPrefabParent: 0
@@ -623,9 +627,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
-  SpawnPoint1: {fileID: 576190697}
-  SpawnPoint2: {fileID: 1598463360}
-  numberOfEnemies: 0
+  numberOfEnemies: 2
+  spawnPoints:
+  - {fileID: 576190697}
+  - {fileID: 1598463360}
 --- !u!1001 &1415581582
 Prefab:
   m_ObjectHideFlags: 0
