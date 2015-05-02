@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Globalization;
 
 public class DamageHandlerScript : MonoBehaviour {
 
@@ -14,6 +15,9 @@ public class DamageHandlerScript : MonoBehaviour {
 	public GameObject Gold;
 	public float xCoordinate;
 	public float yCoordinate;
+
+	//Use this to compare strings
+	private CompareInfo myComp = CultureInfo.InvariantCulture.CompareInfo; 
 
 	/*
 	void OnCollisionEnter2D() {
@@ -54,9 +58,9 @@ public class DamageHandlerScript : MonoBehaviour {
 	}
 
 	void Die() {
-
 		//Spawn gold when enemy ship is destroyed.
-		if (gameObject.name == "Enemy") {
+
+		if (myComp.IsPrefix(gameObject.name, "Enemy" )) {
 
 			//Get the position of the sinking ship.
 			xCoordinate = gameObject.transform.position.x;
