@@ -224,6 +224,7 @@ MonoBehaviour:
   invulnerabilityTimer: 0
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   defeatCanvas: {fileID: 22300446, guid: 88765f63a0f744a2a8ba5bfe8c88d8cd, type: 2}
+  winningCanvas: {fileID: 22338378, guid: 078d007c602f244fbbb775306424ed3f, type: 2}
   xCoordinate: 0
   yCoordinate: 0
   secondCannon: 0
