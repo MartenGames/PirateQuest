@@ -29,6 +29,11 @@ public class DamageHandlerScript : MonoBehaviour {
 
 		if(other.gameObject.name == "Bullet(Clone)") {
 			health--;
+			//invulnerabilityTimer = 2f;
+			//gameObject.layer = 11;
+		}
+		if (other.gameObject.name == "EnemyBullet(Clone)") {
+			health--;
 			invulnerabilityTimer = 2f;
 			gameObject.layer = 11;
 		}
