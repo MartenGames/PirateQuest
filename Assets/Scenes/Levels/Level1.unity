@@ -414,6 +414,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11471884, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: cannonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
   m_IsPrefabParent: 0
