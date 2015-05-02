@@ -6,6 +6,7 @@ public class SpawnScript : MonoBehaviour {
 	public GameObject enemy;
 	public GameObject SpawnPoint1;
 	public GameObject SpawnPoint2;
+	public int numberOfEnemies;
 	private float X1, X2, Y1, Y2;
 
 	// Use this for initialization
