@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿	using UnityEngine;
 using System.Collections;
 
 public class WeaponScript : MonoBehaviour {
@@ -10,6 +10,8 @@ public class WeaponScript : MonoBehaviour {
 	public float fireDelay = 1f;
 	public LayerMask whatToHit;
 	public GameObject bulletPrefab;
+
+	public AudioClip cannonSound;
 	
 	float timeToFire = 0;
 	Transform  firePoint;
@@ -52,5 +54,6 @@ public class WeaponScript : MonoBehaviour {
 	void Shoot() {
 		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
 		Instantiate (bulletPrefab, firePointPos, transform.rotation);
+		AudioSource.PlayClipAtPoint (cannonSound, transform.position);
 	}
 }

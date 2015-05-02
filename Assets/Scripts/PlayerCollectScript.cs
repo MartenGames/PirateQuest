@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerCollectScript : MonoBehaviour {
 
-	public int goldValue = 10;
+	public int goldValue = 100;
 
 	// Use this for initialization
 	void Start () {
