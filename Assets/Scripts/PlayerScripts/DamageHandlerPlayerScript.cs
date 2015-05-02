@@ -11,9 +11,23 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public float yCoordinate;
 	public bool secondCannon = false;
 
+	GameObject player;                          // Reference to the player GameObject.
+	PlayerHealthScript playerHealth;
+
 	int layer;
 	
 	void Start() {
+		if (player == null) {
+			GameObject go = GameObject.Find ("Player");
+			
+			if(go != null) {
+				player = go;
+				playerHealth = player.GetComponent <PlayerHealthScript> ();
+			}
+		}
+
+
+
 		defeatCanvas.enabled = false;
 		GameObject cannon = GameObject.Find ("Cannon2");
 		cannon.SetActive (secondCannon);
