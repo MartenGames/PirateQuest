@@ -222,6 +222,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5357ecac0ea456095b449bccb37939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageButton: {fileID: 1219486247}
+  firerateButton: {fileID: 1650344567}
+  multiCannonsButton: {fileID: 1501464621}
+  armourButton: {fileID: 681577558}
+  continueButton: {fileID: 303813267}
 --- !u!1 &303813264
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +315,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 303813268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 194791465}
+        m_MethodName: PressContinueButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &303813268
@@ -799,7 +816,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1501464622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 194791465}
+        m_MethodName: PressMultiCannonsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1501464622
