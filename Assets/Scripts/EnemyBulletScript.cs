@@ -17,7 +17,10 @@ public class EnemyBulletScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		Vector3 pos = transform.position;
+
+		//Different from the player bullet. This bullet goes along the Y-axis.
 		Vector3 velocity = new Vector3 (0, speed * Time.deltaTime, 0);
 		pos += transform.rotation * velocity;
 		transform.position = pos;

@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &145096
+--- !u!1 &160886
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 421374}
-  - 212: {fileID: 21222640}
-  - 61: {fileID: 6104358}
+  - 4: {fileID: 406756}
+  - 212: {fileID: 21212202}
+  - 68: {fileID: 6887480}
   m_Layer: 10
   m_Name: IslandOne
   m_TagString: Untagged
@@ -17,37 +17,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &421374
+--- !u!4 &406756
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145096}
+  m_GameObject: {fileID: 160886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96000004, y: 1.51999998, z: 0}
+  m_LocalPosition: {x: 6.62438774, y: -11.1483765, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6104358
-BoxCollider2D:
+--- !u!68 &6887480
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145096}
+  m_GameObject: {fileID: 160886}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.0299999993, y: .589999974}
-  serializedVersion: 2
-  m_Size: {x: 1.62, y: 1.29999995}
---- !u!212 &21222640
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: .721283376, y: 1.16501892}
+  - {x: -.331323624, y: 1.3532232}
+  - {x: -.986653507, y: .488267511}
+  - {x: -.529277444, y: .214106753}
+  - {x: -.487037659, y: .0015300751}
+  - {x: .123281099, y: -.120583348}
+  - {x: .222163394, y: .156699374}
+  - {x: .795755804, y: .214453131}
+  - {x: .713680267, y: 1.17922676}
+--- !u!212 &21212202
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145096}
+  m_GameObject: {fileID: 160886}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,5 +85,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 145096}
+  m_RootGameObject: {fileID: 160886}
   m_IsPrefabParent: 1
