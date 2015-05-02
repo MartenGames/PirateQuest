@@ -29,8 +29,6 @@ public class SpawnScript : MonoBehaviour {
 
 		SpawnEnemy ();
 	}
-	
-	// Update is called once per frame
 
 	void SpawnEnemy () {
 		for(int i = 0; i < numberOfEnemies; i++) {
