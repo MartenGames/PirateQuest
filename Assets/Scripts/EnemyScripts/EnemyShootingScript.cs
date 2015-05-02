@@ -19,11 +19,8 @@ public class EnemyShootingScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
-
 		if (Player == null) {
-			GameObject go = GameObject.Find ("Player");
+			GameObject go = GameObject.Find ("Player(Clone)");
 			
 			if(go != null) {
 				Player = go.transform;

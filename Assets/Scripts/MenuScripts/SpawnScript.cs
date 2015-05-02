@@ -37,7 +37,6 @@ public class SpawnScript : MonoBehaviour {
 	}
 
 	void SpawnEnemy () {
-		Debug.Log ("hothot");
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Instantiate (enemy, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
 		}
