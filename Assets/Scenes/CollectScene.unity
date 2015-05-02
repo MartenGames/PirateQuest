@@ -168,6 +168,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11411160, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      propertyPath: defeatCanvas
+      value: 
+      objectReference: {fileID: 22300446, guid: 88765f63a0f744a2a8ba5bfe8c88d8cd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
   m_IsPrefabParent: 0
