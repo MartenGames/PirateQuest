@@ -100,8 +100,9 @@ GameObject:
   - 114: {fileID: 194791462}
   - 222: {fileID: 194791461}
   - 114: {fileID: 194791460}
+  - 114: {fileID: 194791465}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UpgradeSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,6 +211,17 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &194791465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194791458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5357ecac0ea456095b449bccb37939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &303813264
 GameObject:
   m_ObjectHideFlags: 0
