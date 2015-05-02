@@ -9,11 +9,14 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public Canvas defeatCanvas;
 	public float xCoordinate;
 	public float yCoordinate;
+	public bool secondCannon = false;
 
 	int layer;
 	
 	void Start() {
 		defeatCanvas.enabled = false;
+		GameObject cannon = GameObject.Find ("Cannon2");
+		cannon.SetActive (secondCannon);
 		layer = gameObject.layer;
 	}
 	
