@@ -13,6 +13,7 @@ public class Coordinate {
 }
 
 public class SpawnScript : MonoBehaviour {
+	public GameObject player;
 	public GameObject enemy;
 	public int numberOfEnemies = 2;
 	public GameObject[] spawnPoints;
@@ -27,10 +28,16 @@ public class SpawnScript : MonoBehaviour {
 			coords.Add(co);
 		}
 
+		SpawnPlayer ();
 		SpawnEnemy ();
 	}
 
+	void SpawnPlayer() {
+		Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
+	}
+
 	void SpawnEnemy () {
+		Debug.Log ("hothot");
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Instantiate (enemy, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
 		}
