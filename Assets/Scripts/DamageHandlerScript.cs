@@ -61,9 +61,8 @@ public class DamageHandlerScript : MonoBehaviour {
 			//Get the position of the sinking ship.
 			xCoordinate = gameObject.transform.position.x;
 			yCoordinate = gameObject.transform.position.y;
-
-			Destroy (gameObject);
 			AudioSource.PlayClipAtPoint(sinkShip, transform.position);
+			Destroy (gameObject);
 			Instantiate (Gold, new Vector3 (xCoordinate, yCoordinate, 0), transform.rotation);
 		} else {
 			Destroy (gameObject);
