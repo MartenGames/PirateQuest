@@ -241,11 +241,11 @@ MonoBehaviour:
   health: 2
   invulnerabilityTimer: 0
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
-  defeatCanvas: {fileID: 22361434, guid: 3edd965ed9e964523be277313038f102, type: 2}
-  winningCanvas: {fileID: 22328130, guid: d3acada25df974ed280519b2a123c189, type: 2}
-  restartLevel: {fileID: 11452054, guid: 3edd965ed9e964523be277313038f102, type: 2}
-  goToUpgradeStore: {fileID: 11441298, guid: d3acada25df974ed280519b2a123c189, type: 2}
-  goToMap: {fileID: 11437278, guid: d3acada25df974ed280519b2a123c189, type: 2}
+  defeatCanvas: {fileID: 22332440, guid: 3edd965ed9e964523be277313038f102, type: 2}
+  winningCanvas: {fileID: 22310128, guid: d3acada25df974ed280519b2a123c189, type: 2}
+  restartLevel: {fileID: 11454596, guid: 3edd965ed9e964523be277313038f102, type: 2}
+  goToUpgradeStore: {fileID: 11441684, guid: d3acada25df974ed280519b2a123c189, type: 2}
+  goToMap: {fileID: 11424276, guid: d3acada25df974ed280519b2a123c189, type: 2}
   xCoordinate: 0
   yCoordinate: 0
   secondCannon: 0

@@ -84,7 +84,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	public void GoToUpgradeStore() {
-		Debug.Log ("Next Level!");
+		Debug.Log ("Go To Upgrade Store!");
 		// Remember to add a final level where you will win the game!
 		// Application.LoadLevel (Application.loadedLevel + 1);
 	}
