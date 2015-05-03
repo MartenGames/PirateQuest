@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f2ba7605a504cd1b958ede71ebbcd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  attackDamage: 25
   invulnerabilityTimer: 0
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   defeatCanvas: {fileID: 22332440, guid: 3edd965ed9e964523be277313038f102, type: 2}

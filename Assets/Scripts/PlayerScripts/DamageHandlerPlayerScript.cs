@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class DamageHandlerPlayerScript : MonoBehaviour {
-	
-	public int health = 2;
+
+	public int attackDamage = 25;
 	public float invulnerabilityTimer = 0;
 	public AudioClip sinkShip;
 	public Canvas defeatCanvas;
@@ -16,20 +16,20 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public float yCoordinate;
 	public bool secondCannon = false;
 
-	// Reference to the player GameObject.
-	GameObject player;
+	private Slider mapSlider;
+	
+	GameObject player;                          // Reference to the player GameObject.
 	PlayerHealthScript playerHealth;
 	int layer;
 	
 	void Start() {
-		if (player == null) {
-			GameObject go = GameObject.Find ("Player");
-			
-			if(go != null) {
-				player = go;
-				playerHealth = player.GetComponent <PlayerHealthScript> ();
-			}
-		}
+
+		GameObject go = GameObject.Find ("HealthSlider");
+
+		mapSlider = go.GetComponent<Slider> ();
+
+		player = GameObject.Find("Player(Clone)");
+		playerHealth = player.GetComponent <PlayerHealthScript> ();
 
 		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
 		winningCanvas = winningCanvas.GetComponent<Canvas> ();
@@ -44,9 +44,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log (other.gameObject.name);
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
-			health--;
+			playerHealth.TakeDamage(attackDamage);
 			invulnerabilityTimer = 2f;
 			gameObject.layer = 11;
 		}
@@ -58,8 +57,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		if (invulnerabilityTimer <= 0) {
 			gameObject.layer = layer;
 		}
-		
-		if (health <= 0) {
+
+		playerHealth.healthSlider.value = playerHealth.currentHealth;
+
+		mapSlider.value = playerHealth.currentHealth;
+
+		if (playerHealth.currentHealth <= 0) {
 			Die ();
 		}
 
@@ -80,11 +83,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public void GoToMap() {
 		Debug.Log ("Got To Map!");
-		Application.LoadLevel (1);
+		Application.LoadLevel ("LevelSelection");
 	}
 
 	public void GoToUpgradeStore() {
 		Debug.Log ("Go To Upgrade Store!");
-		Application.LoadLevel (3);
+		Application.LoadLevel ("UpgradeStore");
+		Application.LoadLevel ("UpgradeStore");
 	}
 }
