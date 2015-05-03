@@ -33,7 +33,7 @@ public class MainMenuScript : MonoBehaviour {
 	
 	
 	public void PressPlay () {
-		Application.LoadLevel (1);
+		Application.LoadLevel ("PirateTalk");
 	}
 	
 	

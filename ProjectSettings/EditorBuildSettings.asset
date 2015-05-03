@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelection.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
+  - enabled: 1
+    path: Assets/Scenes/Dialogue Scenes/OctoTalk.unity
+  - enabled: 1
+    path: Assets/Scenes/Dialogue Scenes/PirateTalk.unity

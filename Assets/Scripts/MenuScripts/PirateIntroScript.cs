@@ -17,11 +17,6 @@ public class PirateIntroScript : MonoBehaviour {
 		StartCoroutine ("wait");
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	IEnumerator wait() {
 		yield return new WaitForSeconds(3f);
@@ -31,6 +26,6 @@ public class PirateIntroScript : MonoBehaviour {
 
 
 	public void pressContinue() {
-		Application.LoadLevel ("OctoSpeech");
+		Application.LoadLevel ("OctoTalk");
 	}
 }
