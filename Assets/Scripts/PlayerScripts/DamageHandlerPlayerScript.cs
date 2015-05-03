@@ -10,6 +10,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public AudioClip sinkShip;
 	public Canvas defeatCanvas;
 	public Canvas winningCanvas;
+	public Button restartLevel;
+	public Button goToUpgradeStore;
+	public Button goToMap;
 	public float xCoordinate;
 	public float yCoordinate;
 	public bool secondCannon = false;
@@ -19,7 +22,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	//Animator anim;                              // Reference to the animator component.
 	GameObject player;                          // Reference to the player GameObject.
 	PlayerHealthScript playerHealth;
-
 	int layer;
 	
 	void Start() {
@@ -42,6 +44,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		playerHealth = player.GetComponent <PlayerHealthScript> ();
 		//anim = GetComponent <Animator> ();
 
+		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
+		winningCanvas = winningCanvas.GetComponent<Canvas> ();
+		restartLevel = restartLevel.GetComponent<Button> ();
+		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
+		goToMap = goToMap.GetComponent<Button> ();
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
 		GameObject cannon = GameObject.Find ("Cannon2");
@@ -77,7 +84,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
-			Destroy (gameObject);
 			winningCanvas.enabled = true;
 		}
 	}
@@ -85,5 +91,20 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	void Die() {
 		Destroy (gameObject);
 		defeatCanvas.enabled = true;
+	}
+
+	public void RestartLevel() {
+		Debug.Log ("Restart Level!");
+		Application.LoadLevel (Application.loadedLevel);
+	}
+
+	public void GoToMap() {
+		Debug.Log ("Got To Map!");
+		Application.LoadLevel (1);
+	}
+
+	public void GoToUpgradeStore() {
+		Debug.Log ("Go To Upgrade Store!");
+		Application.LoadLevel (3);
 	}
 }
