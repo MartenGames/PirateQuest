@@ -19,7 +19,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	// Reference to the player GameObject.
 	GameObject player;
 	PlayerHealthScript playerHealth;
-
 	int layer;
 	
 	void Start() {
@@ -77,10 +76,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public void RestartLevel() {
 		Debug.Log ("Restart Level!");
+		Application.LoadLevel (Application.loadedLevel);
 	}
 
 	public void GoToMap() {
 		Debug.Log ("Got To Map!");
+		Application.LoadLevel (1);
 	}
 
 	public void NextLevel() {
