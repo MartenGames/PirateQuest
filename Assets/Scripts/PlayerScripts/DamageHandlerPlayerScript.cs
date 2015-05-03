@@ -80,11 +80,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public void GoToMap() {
 		Debug.Log ("Got To Map!");
-		Application.LoadLevel (1);
+		Application.LoadLevel ("LevelSelection");
 	}
 
 	public void GoToUpgradeStore() {
 		Debug.Log ("Go To Upgrade Store!");
-		Application.LoadLevel (3);
+		Application.LoadLevel ("UpgradeStore");
+		Application.LoadLevel ("UpgradeStore");
 	}
 }
