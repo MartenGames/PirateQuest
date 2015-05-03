@@ -11,13 +11,11 @@ public class PlayerHealthScript : MonoBehaviour
 	public float flashSpeed = 5f;							// The speed the damageImage will fade at.
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);	// The colour the damageImage is set to, to flash.
 
-	//Animator anim;
 	PlayerMobilityScript playerMovement;
 	bool isDead;
 	bool damaged;
 
 	void Awake () {
-		//anim = GetComponent <Animator> ();
 		playerMovement = GetComponent <PlayerMobilityScript> ();
 		currentHealth = startingHealth;
 		healthSlider.value = currentHealth;
@@ -63,15 +61,7 @@ public class PlayerHealthScript : MonoBehaviour
 	{
 		// Set the death flag so this function won't be called again.
 		isDead = true;
-		
-		// Turn off any remaining shooting effects.
-		//playerShooting.DisableEffects ();
-		
-		// Tell the animator that the player is dead.
-		//anim.SetTrigger ("Die");
-		
 		// Turn off the movement and shooting scripts.
 		playerMovement.enabled = false;
-		//playerShooting.enabled = false;
 	}  
 }

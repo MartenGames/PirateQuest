@@ -3,8 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class DamageHandlerPlayerScript : MonoBehaviour {
-	
-	//public int health = 2;
+
 	public int attackDamage = 25;
 	public float invulnerabilityTimer = 0;
 	public AudioClip sinkShip;
@@ -18,23 +17,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public bool secondCannon = false;
 
 	private Slider mapSlider;
-
-	//Animator anim;                              // Reference to the animator component.
+	
 	GameObject player;                          // Reference to the player GameObject.
 	PlayerHealthScript playerHealth;
 	int layer;
 	
 	void Start() {
-		/*
-		if (player == null) {
-			GameObject go = GameObject.Find ("Player");
-			
-			if(go != null) {
-				player = go;
-				playerHealth = player.GetComponent <PlayerHealthScript> ();
-			}
-		}
-		*/
 
 		GameObject go = GameObject.Find ("HealthSlider");
 
@@ -42,7 +30,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 		player = GameObject.Find("Player(Clone)");
 		playerHealth = player.GetComponent <PlayerHealthScript> ();
-		//anim = GetComponent <Animator> ();
 
 		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
 		winningCanvas = winningCanvas.GetComponent<Canvas> ();
@@ -57,11 +44,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log (other.gameObject.name);
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
-			//health--;
 			playerHealth.TakeDamage(attackDamage);
-			Debug.Log(playerHealth.healthSlider.value);
 			invulnerabilityTimer = 2f;
 			gameObject.layer = 11;
 		}
@@ -79,7 +63,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		mapSlider.value = playerHealth.currentHealth;
 
 		if (playerHealth.currentHealth <= 0) {
-			//anim.SetTrigger ("PlayerDead");
 			Die ();
 		}
 
