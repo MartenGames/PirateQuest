@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DamageHandlerPlayerScript : MonoBehaviour {
 	
-	public int health = 2;
+	//public int health = 2;
+	public int attackDamage = 25;
 	public float invulnerabilityTimer = 0;
 	public AudioClip sinkShip;
 	public Canvas defeatCanvas;
@@ -12,12 +14,16 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public float yCoordinate;
 	public bool secondCannon = false;
 
+	private Slider mapSlider;
+
+	//Animator anim;                              // Reference to the animator component.
 	GameObject player;                          // Reference to the player GameObject.
 	PlayerHealthScript playerHealth;
 
 	int layer;
 	
 	void Start() {
+		/*
 		if (player == null) {
 			GameObject go = GameObject.Find ("Player");
 			
@@ -26,8 +32,15 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 				playerHealth = player.GetComponent <PlayerHealthScript> ();
 			}
 		}
+		*/
 
+		GameObject go = GameObject.Find ("HealthSlider");
 
+		mapSlider = go.GetComponent<Slider> ();
+
+		player = GameObject.Find("Player(Clone)");
+		playerHealth = player.GetComponent <PlayerHealthScript> ();
+		//anim = GetComponent <Animator> ();
 
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
@@ -39,7 +52,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log (other.gameObject.name);
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
-			health--;
+			//health--;
+			playerHealth.TakeDamage(attackDamage);
+			Debug.Log(playerHealth.healthSlider.value);
 			invulnerabilityTimer = 2f;
 			gameObject.layer = 11;
 		}
@@ -51,8 +66,13 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		if (invulnerabilityTimer <= 0) {
 			gameObject.layer = layer;
 		}
-		
-		if (health <= 0) {
+
+		playerHealth.healthSlider.value = playerHealth.currentHealth;
+
+		mapSlider.value = playerHealth.currentHealth;
+
+		if (playerHealth.currentHealth <= 0) {
+			//anim.SetTrigger ("PlayerDead");
 			Die ();
 		}
 

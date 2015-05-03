@@ -223,8 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
+  healthSlider: {fileID: 11490870, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+  damageImage: {fileID: 11447358, guid: e49d566d37222440aa8d1a67f0511278, type: 2}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!114 &11470386
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f2ba7605a504cd1b958ede71ebbcd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  attackDamage: 25
   invulnerabilityTimer: 0
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   defeatCanvas: {fileID: 22300446, guid: 88765f63a0f744a2a8ba5bfe8c88d8cd, type: 2}
