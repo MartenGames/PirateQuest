@@ -223,8 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
+  healthSlider: {fileID: 11490870, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+  damageImage: {fileID: 11447358, guid: e49d566d37222440aa8d1a67f0511278, type: 2}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!114 &11470386
@@ -241,8 +241,11 @@ MonoBehaviour:
   health: 2
   invulnerabilityTimer: 0
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
-  defeatCanvas: {fileID: 22300446, guid: 88765f63a0f744a2a8ba5bfe8c88d8cd, type: 2}
-  winningCanvas: {fileID: 22338378, guid: 078d007c602f244fbbb775306424ed3f, type: 2}
+  defeatCanvas: {fileID: 22344638, guid: 3edd965ed9e964523be277313038f102, type: 2}
+  winningCanvas: {fileID: 22362688, guid: d3acada25df974ed280519b2a123c189, type: 2}
+  restartLevel: {fileID: 11461160, guid: 3edd965ed9e964523be277313038f102, type: 2}
+  nextLevel: {fileID: 11477814, guid: d3acada25df974ed280519b2a123c189, type: 2}
+  goToMap: {fileID: 11480778, guid: d3acada25df974ed280519b2a123c189, type: 2}
   xCoordinate: 0
   yCoordinate: 0
   secondCannon: 0

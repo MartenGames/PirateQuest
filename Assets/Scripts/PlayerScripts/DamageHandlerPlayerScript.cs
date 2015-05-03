@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DamageHandlerPlayerScript : MonoBehaviour {
@@ -8,11 +9,15 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public AudioClip sinkShip;
 	public Canvas defeatCanvas;
 	public Canvas winningCanvas;
+	public Button restartLevel;
+	public Button nextLevel;
+	public Button goToMap;
 	public float xCoordinate;
 	public float yCoordinate;
 	public bool secondCannon = false;
 
-	GameObject player;                          // Reference to the player GameObject.
+	// Reference to the player GameObject.
+	GameObject player;
 	PlayerHealthScript playerHealth;
 
 	int layer;
@@ -27,8 +32,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			}
 		}
 
-
-
+		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
+		winningCanvas = winningCanvas.GetComponent<Canvas> ();
+		restartLevel = restartLevel.GetComponent<Button> ();
+		nextLevel = nextLevel.GetComponent<Button> ();
+		goToMap = goToMap.GetComponent<Button> ();
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
 		GameObject cannon = GameObject.Find ("Cannon2");
@@ -65,5 +73,17 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	void Die() {
 		Destroy (gameObject);
 		defeatCanvas.enabled = true;
+	}
+
+	public void RestartLevel() {
+		Debug.Log ("Restart Level!");
+	}
+
+	public void GoToMap() {
+		Debug.Log ("Got To Map!");
+	}
+
+	public void NextLevel() {
+		Debug.Log ("Next Level!");
 	}
 }
