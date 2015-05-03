@@ -223,8 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
+  healthSlider: {fileID: 11490870, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+  damageImage: {fileID: 11447358, guid: e49d566d37222440aa8d1a67f0511278, type: 2}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!114 &11470386
