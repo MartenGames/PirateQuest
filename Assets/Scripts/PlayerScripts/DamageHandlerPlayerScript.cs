@@ -28,7 +28,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 
-
+		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
+		winningCanvas = winningCanvas.GetComponent<Canvas> ();
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
 		GameObject cannon = GameObject.Find ("Cannon2");
