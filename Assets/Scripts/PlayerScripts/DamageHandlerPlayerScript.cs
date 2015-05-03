@@ -12,7 +12,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public float yCoordinate;
 	public bool secondCannon = false;
 
-	GameObject player;                          // Reference to the player GameObject.
+	// Reference to the player GameObject.
+	GameObject player;
 	PlayerHealthScript playerHealth;
 
 	int layer;
@@ -26,7 +27,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 				playerHealth = player.GetComponent <PlayerHealthScript> ();
 			}
 		}
-
 
 		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
 		winningCanvas = winningCanvas.GetComponent<Canvas> ();
