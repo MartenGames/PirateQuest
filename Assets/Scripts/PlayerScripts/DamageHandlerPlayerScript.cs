@@ -10,7 +10,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public Canvas defeatCanvas;
 	public Canvas winningCanvas;
 	public Button restartLevel;
-	public Button nextLevel;
+	public Button goToUpgradeStore;
 	public Button goToMap;
 	public float xCoordinate;
 	public float yCoordinate;
@@ -34,7 +34,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
 		winningCanvas = winningCanvas.GetComponent<Canvas> ();
 		restartLevel = restartLevel.GetComponent<Button> ();
-		nextLevel = nextLevel.GetComponent<Button> ();
+		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
 		goToMap = goToMap.GetComponent<Button> ();
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
@@ -64,7 +64,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
-			Destroy (gameObject);
 			winningCanvas.enabled = true;
 		}
 	}
@@ -84,9 +83,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		Application.LoadLevel (1);
 	}
 
-	public void NextLevel() {
-		Debug.Log ("Next Level!");
-		// Remember to add a final level where you will win the game!
-		// Application.LoadLevel (Application.loadedLevel + 1);
+	public void GoToUpgradeStore() {
+		Debug.Log ("Go To Upgrade Store!");
+		Application.LoadLevel (3);
 	}
 }
