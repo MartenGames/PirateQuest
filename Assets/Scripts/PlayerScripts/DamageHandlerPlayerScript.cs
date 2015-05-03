@@ -86,5 +86,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public void NextLevel() {
 		Debug.Log ("Next Level!");
+		// Remember to add a final level where you will win the game!
+		// Application.LoadLevel (Application.loadedLevel + 1);
 	}
 }
