@@ -64,7 +64,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
-			Destroy (gameObject);
 			winningCanvas.enabled = true;
 		}
 	}
