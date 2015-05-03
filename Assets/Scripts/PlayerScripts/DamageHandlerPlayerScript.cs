@@ -74,4 +74,16 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		Destroy (gameObject);
 		defeatCanvas.enabled = true;
 	}
+
+	public void RestartLevel() {
+		Debug.Log ("Restart Level!");
+	}
+
+	public void GoToMap() {
+		Debug.Log ("Got To Map!");
+	}
+
+	public void NextLevel() {
+		Debug.Log ("Next Level!");
+	}
 }
