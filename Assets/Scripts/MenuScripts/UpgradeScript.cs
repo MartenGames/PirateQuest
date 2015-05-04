@@ -48,7 +48,7 @@ public class UpgradeScript : MonoBehaviour {
 	}
 
 	public void PressContinueButton(){
-		Application.LoadLevel ("LevelSelection");
+		Application.LoadLevel ("Level1");
 	}
 
 	public void PressMultiCannonsButton(){

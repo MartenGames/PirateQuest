@@ -9,6 +9,7 @@ public class StoringVarScript : MonoBehaviour {
 	}
 
 	public void PressMultiCannons(){
+		Debug.Log ("PressMultiCannons in StoringVarScript");
 		secondCannon = true;
 	}
 	
