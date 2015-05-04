@@ -39,4 +39,12 @@ public class EnemyAIScript : MonoBehaviour {
 			transform.position = pos;
 		}
 	}
+
+	void OnTriggerEnter2D() {
+		Debug.Log ("flottt");
+	}
+
+	void OnCollistionEnter2D() {
+		Debug.Log ("Flott2324");
+	}
 }
