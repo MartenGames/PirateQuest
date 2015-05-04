@@ -44,7 +44,8 @@ public class EnemyAIScript : MonoBehaviour {
 		Debug.Log ("flottt");
 	}
 
-	void OnCollistionEnter2D() {
+	void OnCollisionEnter2D(Collision2D co) {
 		Debug.Log ("Flott2324");
+		Debug.Log (co.gameObject.name);
 	}
 }
