@@ -227,12 +227,6 @@ MonoBehaviour:
   multiCannonsButton: {fileID: 1501464621}
   armourButton: {fileID: 681577558}
   continueButton: {fileID: 303813267}
---- !u!114 &250337290
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11476510, guid: 2a747699c5e744110bcde70628f71b7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1012979286}
-  m_Script: {fileID: 11500000, guid: 58c62f9079b5940a59e8b2837ebef59f, type: 3}
 --- !u!1 &303813264
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +509,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 250337290}
+      - m_Target: {fileID: 11476510, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
         m_MethodName: PressIncreaseHealth
         m_Mode: 1
         m_Arguments:
@@ -561,48 +555,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681577556}
---- !u!1001 &1012979286
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 365.091522
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 187.508942
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1219486245
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +829,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 250337290}
+      - m_Target: {fileID: 11476510, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
         m_MethodName: PressMultiCannons
         m_Mode: 1
         m_Arguments:
@@ -1041,7 +993,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 250337290}
+      - m_Target: {fileID: 0}
         m_MethodName: PressIncreaseFirerate
         m_Mode: 1
         m_Arguments:
