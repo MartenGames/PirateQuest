@@ -31,13 +31,15 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		player = GameObject.Find("Player(Clone)");
 		playerHealth = player.GetComponent <PlayerHealthScript> ();
 
-		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
+		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();
+		defeatCanvas.gameObject.SetActive (false);
+		//winningCanvas.enabled = false;
 		winningCanvas = winningCanvas.GetComponent<Canvas> ();
+
 		restartLevel = restartLevel.GetComponent<Button> ();
 		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
 		goToMap = goToMap.GetComponent<Button> ();
-		defeatCanvas.enabled = false;
-		winningCanvas.enabled = false;
+
 		GameObject cannon = GameObject.Find ("Cannon2");
 		cannon.SetActive (secondCannon);
 		layer = gameObject.layer;
@@ -73,7 +75,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	
 	void Die() {
 		Destroy (gameObject);
-		defeatCanvas.enabled = true;
+		Debug.Log (defeatCanvas.gameObject);
+		defeatCanvas.gameObject.SetActive (true);
 	}
 
 	public void RestartLevel() {
