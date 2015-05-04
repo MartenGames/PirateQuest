@@ -23,7 +23,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	
 	void Start() {
 
-		//DontDestroyOnLoad(transform.gameObject);
+		DontDestroyOnLoad (GameObject.Find("EmptyObject"));
 
 		GameObject go = GameObject.Find ("HealthSlider");
 
@@ -43,7 +43,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		goToMap = goToMap.GetComponent<Button> ();
 
 		GameObject cannon = GameObject.Find ("Cannon2");
-		cannon.SetActive (GameObject.Find("EmptyObject").GetComponent<StoringVarScript>().secondCannon);
+		cannon.SetActive (false);
+		//This comment is for hilmar
+		//GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().secondCannon
 		layer = gameObject.layer;
 	}
 

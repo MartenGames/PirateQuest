@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MainMenuScript : MonoBehaviour {
 	
@@ -10,7 +11,10 @@ public class MainMenuScript : MonoBehaviour {
 	public Button PlayButton;
 	public Button ExitButton;
 	public Button InfoButton;
+	public GameObject EmptyObject;
 
+	GameObject theInstance;
+	static bool firstTime = true;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +32,13 @@ public class MainMenuScript : MonoBehaviour {
 		PlayButton.enabled = true;
 		ExitButton.enabled = true;
 		InfoButton.enabled = true;
+
+		if (!firstTime) {
+			Destroy (theInstance);
+		}
+		theInstance = (GameObject)Instantiate(EmptyObject);
+		firstTime = false;
+	
 	}
 	
 	
