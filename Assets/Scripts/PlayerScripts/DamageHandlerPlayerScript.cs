@@ -12,9 +12,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public Button restartLevel;
 	public Button goToUpgradeStore;
 	public Button goToMap;
-	public float xCoordinate;
-	public float yCoordinate;
-	public bool secondCannon = false;
+	//public bool secondCannon = false;
 
 	private Slider mapSlider;
 	
@@ -23,6 +21,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	int layer;
 	
 	void Start() {
+
+		//DontDestroyOnLoad(transform.gameObject);
 
 		GameObject go = GameObject.Find ("HealthSlider");
 
@@ -38,11 +38,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		goToMap = goToMap.GetComponent<Button> ();
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
+		Debug.Log ("hello, im in multicannons");
 		GameObject cannon = GameObject.Find ("Cannon2");
-		cannon.SetActive (secondCannon);
+		cannon.SetActive (false);
 		layer = gameObject.layer;
 	}
-	
+
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
 			playerHealth.TakeDamage(attackDamage);
