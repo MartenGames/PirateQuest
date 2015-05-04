@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492764}
   - 212: {fileID: 21250722}
-  - 61: {fileID: 6190386}
+  - 68: {fileID: 6836132}
   m_Layer: 10
   m_Name: IslandTwo
   m_TagString: Untagged
@@ -24,13 +24,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.63999987, y: 1.58000004, z: 0}
+  m_LocalPosition: {x: 15.0299997, y: 3.55999994, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6190386
-BoxCollider2D:
+--- !u!68 &6836132
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -39,9 +39,22 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.349999994, y: .800000012}
-  serializedVersion: 2
-  m_Size: {x: 1.38, y: 1.22000003}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -.598735809, y: .0842144042}
+  - {x: -1.07576144, y: .500617981}
+  - {x: -1.07699394, y: .775175095}
+  - {x: -1.0916599, y: .984331131}
+  - {x: -.663362145, y: 1.32460904}
+  - {x: -.283526242, y: 1.36925161}
+  - {x: .148270041, y: 1.44021249}
+  - {x: .110771559, y: 1.04946065}
+  - {x: .386991501, y: .638625324}
+  - {x: .294241726, y: .386499792}
+  - {x: .0712722763, y: .241101846}
+  - {x: -.322480768, y: .139881611}
+  - {x: -.606581151, y: .0882930756}
+  - {x: -1.07042396, y: .498692721}
 --- !u!212 &21250722
 SpriteRenderer:
   m_ObjectHideFlags: 1
