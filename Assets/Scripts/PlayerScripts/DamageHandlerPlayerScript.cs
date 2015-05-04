@@ -15,8 +15,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	//public bool secondCannon = false;
 
 	private Slider mapSlider;
-	
-	GameObject player;                          // Reference to the player GameObject.
+
+	// Reference to the player GameObject.
+	GameObject player;
 	PlayerHealthScript playerHealth;
 	int layer;
 	
@@ -31,14 +32,17 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		player = GameObject.Find("Player(Clone)");
 		playerHealth = player.GetComponent <PlayerHealthScript> ();
 
-		defeatCanvas = defeatCanvas.GetComponent<Canvas> ();
-		winningCanvas = winningCanvas.GetComponent<Canvas> ();
+		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();
+		defeatCanvas.gameObject.SetActive (false);
+
+		winningCanvas = GameObject.FindGameObjectWithTag("WinningCanvas").GetComponent<Canvas> ();
+		winningCanvas.gameObject.SetActive (false);
+
 		restartLevel = restartLevel.GetComponent<Button> ();
 		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
 		goToMap = goToMap.GetComponent<Button> ();
 		defeatCanvas.enabled = false;
 		winningCanvas.enabled = false;
-		Debug.Log ("hello, im in multicannons");
 		GameObject cannon = GameObject.Find ("Cannon2");
 		cannon.SetActive (false);
 		layer = gameObject.layer;
@@ -68,13 +72,13 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
-			winningCanvas.enabled = true;
+			winningCanvas.gameObject.SetActive(true);
 		}
 	}
 	
 	void Die() {
 		Destroy (gameObject);
-		defeatCanvas.enabled = true;
+		defeatCanvas.gameObject.SetActive (true);
 	}
 
 	public void RestartLevel() {
