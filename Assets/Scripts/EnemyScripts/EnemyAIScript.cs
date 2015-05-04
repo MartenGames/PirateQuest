@@ -38,7 +38,5 @@ public class EnemyAIScript : MonoBehaviour {
 			pos += transform.rotation * velocity;
 			transform.position = pos;
 		}
-
 	}
-
 }
