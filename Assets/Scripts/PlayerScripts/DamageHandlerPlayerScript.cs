@@ -41,8 +41,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		restartLevel = restartLevel.GetComponent<Button> ();
 		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
 		goToMap = goToMap.GetComponent<Button> ();
-		defeatCanvas.enabled = false;
-		winningCanvas.enabled = false;
+
 		GameObject cannon = GameObject.Find ("Cannon2");
 		cannon.SetActive (false);
 		layer = gameObject.layer;
@@ -82,18 +81,14 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	public void RestartLevel() {
-		Debug.Log ("Restart Level!");
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
 	public void GoToMap() {
-		Debug.Log ("Got To Map!");
 		Application.LoadLevel ("LevelSelection");
 	}
 
 	public void GoToUpgradeStore() {
-		Debug.Log ("Go To Upgrade Store!");
-		Application.LoadLevel ("UpgradeStore");
 		Application.LoadLevel ("UpgradeStore");
 	}
 }
