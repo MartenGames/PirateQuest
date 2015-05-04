@@ -3,9 +3,13 @@ using System.Collections;
 
 public class StoringVarScript : MonoBehaviour {
 
-	// Use this for initialization
+	public bool secondCannon = false;
 	void Start () {
-	
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
+	public void PressMultiCannons(){
+		secondCannon = true;
 	}
 	
 	// Update is called once per frame
