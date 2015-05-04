@@ -5,14 +5,13 @@ using System.Collections;
 public class MainMenuScript : MonoBehaviour {
 	
 	//Variables needed for the main menu
-	
 	public Canvas InfoMenu;
 	public Canvas QuitMenu;
 	public Button PlayButton;
 	public Button ExitButton;
 	public Button InfoButton;
-	
-	
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -33,10 +32,11 @@ public class MainMenuScript : MonoBehaviour {
 	
 	
 	public void PressPlay () {
+
 		Application.LoadLevel ("PirateTalk");
 	}
-	
-	
+
+
 	//Pop up the Info Menu when you press How To and disable the main menu buttons
 	public void PressHowTo () {
 		
