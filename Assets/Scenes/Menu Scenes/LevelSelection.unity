@@ -269,48 +269,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928766588}
---- !u!1001 &1205003424
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 365.091522
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 187.508942
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 483656, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1254385847
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +333,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 292, y: -45}
+  m_AnchoredPosition: {x: 288, y: -44}
   m_SizeDelta: {x: 311.599976, y: 33}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1254385851
@@ -516,7 +474,7 @@ Canvas:
   m_GameObject: {fileID: 1299094151}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
