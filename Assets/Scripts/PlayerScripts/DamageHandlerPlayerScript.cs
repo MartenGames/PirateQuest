@@ -12,17 +12,18 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public Button restartLevel;
 	public Button goToUpgradeStore;
 	public Button goToMap;
-	public float xCoordinate;
-	public float yCoordinate;
-	public bool secondCannon = false;
+	//public bool secondCannon = false;
 
 	private Slider mapSlider;
-	
-	GameObject player;                          // Reference to the player GameObject.
+
+	// Reference to the player GameObject.
+	GameObject player;
 	PlayerHealthScript playerHealth;
 	int layer;
 	
 	void Start() {
+
+		//DontDestroyOnLoad(transform.gameObject);
 
 		GameObject go = GameObject.Find ("HealthSlider");
 
@@ -33,18 +34,19 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();
 		defeatCanvas.gameObject.SetActive (false);
-		//winningCanvas.enabled = false;
-		winningCanvas = winningCanvas.GetComponent<Canvas> ();
+
+		winningCanvas = GameObject.FindGameObjectWithTag("WinningCanvas").GetComponent<Canvas> ();
+		winningCanvas.gameObject.SetActive (false);
 
 		restartLevel = restartLevel.GetComponent<Button> ();
 		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
 		goToMap = goToMap.GetComponent<Button> ();
 
 		GameObject cannon = GameObject.Find ("Cannon2");
-		cannon.SetActive (secondCannon);
+		cannon.SetActive (false);
 		layer = gameObject.layer;
 	}
-	
+
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
 			playerHealth.TakeDamage(attackDamage);
@@ -69,29 +71,24 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
-			winningCanvas.enabled = true;
+			winningCanvas.gameObject.SetActive(true);
 		}
 	}
 	
 	void Die() {
 		Destroy (gameObject);
-		Debug.Log (defeatCanvas.gameObject);
 		defeatCanvas.gameObject.SetActive (true);
 	}
 
 	public void RestartLevel() {
-		Debug.Log ("Restart Level!");
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
 	public void GoToMap() {
-		Debug.Log ("Got To Map!");
 		Application.LoadLevel ("LevelSelection");
 	}
 
 	public void GoToUpgradeStore() {
-		Debug.Log ("Go To Upgrade Store!");
-		Application.LoadLevel ("UpgradeStore");
 		Application.LoadLevel ("UpgradeStore");
 	}
 }
