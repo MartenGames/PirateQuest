@@ -45,7 +45,12 @@ public class EnemyAIScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D co) {
-		Debug.Log ("Flott2324");
-		Debug.Log (co.gameObject.name);
+		//Debug.Log ("Collision!");
+		//Debug.Log (co.gameObject.name);
+		//Debug.Log (co.gameObject.tag);
+
+		if (co.gameObject.tag == "Island") {
+			Debug.Log ("Collide with a island!!");
+		}
 	}
 }
