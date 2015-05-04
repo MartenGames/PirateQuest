@@ -9,8 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 491296}
   - 212: {fileID: 21203176}
+  - 68: {fileID: 6870874}
   m_Layer: 0
-  m_Name: island-three
+  m_Name: IslandThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23,11 +24,48 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.59429455, y: -3.36185741, z: 0}
+  m_LocalPosition: {x: -7.97420025, y: -1.93037677, z: 0}
   m_LocalScale: {x: .150000006, y: .150000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!68 &6870874
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133196}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -13.915, y: 0}
+  - {x: -13.8050079, y: 4.44696999}
+  - {x: -11.5316963, y: 6.68013811}
+  - {x: -10.3622055, y: 7.99090672}
+  - {x: -8.43947697, y: 7.91572094}
+  - {x: -1.11661911, y: 7.84756184}
+  - {x: 3.98396802, y: 12.6972733}
+  - {x: 13.2315569, y: 9.18818283}
+  - {x: 14.2589979, y: 5.61311102}
+  - {x: 13.1126175, y: -.602859616}
+  - {x: 9.85707283, y: -3.19416523}
+  - {x: 9.14203644, y: -8.67295837}
+  - {x: 2.0746994, y: -12.85075}
+  - {x: -6.97132111, y: -5.55562973}
+  - {x: -13.7945175, y: -.13767162}
+  - {x: -13.978303, y: 4.23000193}
+  - {x: -13.7456188, y: 4.65829182}
+  - {x: -11.6129551, y: 6.63294744}
+  - {x: -10.3973513, y: 8.11148643}
+  - {x: -10.6087809, y: 8.1045208}
+  - {x: -.80256778, y: 8.02007675}
+  - {x: 4.21108866, y: 12.9793577}
+  - {x: 6.53785706, y: 11.8052816}
+  - {x: 6.56541824, y: 11.9861746}
+  - {x: 11.8298779, y: 9.64373207}
 --- !u!212 &21203176
 SpriteRenderer:
   m_ObjectHideFlags: 1
