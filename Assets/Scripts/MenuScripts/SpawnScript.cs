@@ -34,6 +34,8 @@ public class SpawnScript : MonoBehaviour {
 
 	void SpawnPlayer() {
 		Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
+		//GameObject spawnPlayer = (GameObject)Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
+		//Debug.Log (spawnPlayer.GetComponent<DamageHandlerPlayerScript>().defeatCanvas);
 	}
 
 	void SpawnEnemy () {
