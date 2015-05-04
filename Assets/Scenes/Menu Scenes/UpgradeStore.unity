@@ -227,6 +227,12 @@ MonoBehaviour:
   multiCannonsButton: {fileID: 1501464621}
   armourButton: {fileID: 681577558}
   continueButton: {fileID: 303813267}
+--- !u!114 &250337290
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11476510, guid: 2a747699c5e744110bcde70628f71b7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1012979286}
+  m_Script: {fileID: 11500000, guid: 58c62f9079b5940a59e8b2837ebef59f, type: 3}
 --- !u!1 &303813264
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +514,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 681577559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250337290}
+        m_MethodName: PressIncreaseHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &681577559
@@ -859,7 +877,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11470386, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      - m_Target: {fileID: 250337290}
         m_MethodName: PressMultiCannons
         m_Mode: 1
         m_Arguments:
@@ -1022,7 +1040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1650344568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250337290}
+        m_MethodName: PressIncreaseFirerate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1650344568

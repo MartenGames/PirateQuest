@@ -4,21 +4,36 @@ using System.Collections;
 
 public class PlayerHealthScript : MonoBehaviour 
 {
-	public int startingHealth = 100;
+	public int startingHealth;
 	public int currentHealth;
 	public Slider healthSlider;
 	public Image damageImage;
 	public float flashSpeed = 5f;							// The speed the damageImage will fade at.
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);	// The colour the damageImage is set to, to flash.
-
+		
 	PlayerMobilityScript playerMovement;
 	bool isDead;
 	bool damaged;
 
-	void Awake () {
-		playerMovement = GetComponent <PlayerMobilityScript> ();
+	void Start () {
+
+		if (GameObject.Find ("EmptyObject").GetComponent<StoringVarScript> ().increaseHealth_1) {
+			Debug.Log("health is 150, UPGRATED!!!");
+			startingHealth = 150;
+		} else {
+			Debug.Log("health is 100, not upgrated!!!");
+			startingHealth = 100;
+		}
+
 		currentHealth = startingHealth;
 		healthSlider.value = currentHealth;
+		Debug.Log (currentHealth);
+	}
+
+	void Awake () {
+
+		playerMovement = GetComponent <PlayerMobilityScript> ();
+
 	}
 	
 	void Update () {

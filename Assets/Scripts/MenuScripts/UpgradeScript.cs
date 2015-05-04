@@ -50,10 +50,6 @@ public class UpgradeScript : MonoBehaviour {
 	public void PressContinueButton(){
 		Application.LoadLevel ("Level1");
 	}
-
-	public void PressMultiCannonsButton(){
-		//player.secondCannon = true;
-	}
 	
 	// Update is called once per frame
 	void Update () {
