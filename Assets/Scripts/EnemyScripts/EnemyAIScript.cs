@@ -49,8 +49,12 @@ public class EnemyAIScript : MonoBehaviour {
 		//Debug.Log (co.gameObject.name);
 		//Debug.Log (co.gameObject.tag);
 
-		if (co.gameObject.tag == "Island") {
+		if (co.gameObject.tag == "Island" && co.rigidbody) {
 			Debug.Log ("Collide with a island!!");
+			//co.rigidbody.AddForce(Vector3.left * 1000);
+			//transform.rotation = Quaternion.LookRotation(Vector3.left);
+			//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0); 
+			//transform.position = new Vector3(transform.position.x, 0, transform.position.z);
 		}
 	}
 }
