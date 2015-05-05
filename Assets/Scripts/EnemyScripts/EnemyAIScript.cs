@@ -46,7 +46,10 @@ public class EnemyAIScript : MonoBehaviour {
 		GameObject[] islands = GameObject.FindGameObjectsWithTag ("Island");
 
 		foreach (GameObject island in islands) {
-			Debug.Log (island.name);
+			Debug.Log ("Island name: "+ island.name);
+			var radius = island.GetComponent<CircleCollider2D>().radius;
+			Debug.Log ("Radius: " + radius);
+
 
 
 			/*
