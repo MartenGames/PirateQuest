@@ -15,7 +15,7 @@ public class Coordinate {
 public class SpawnScript : MonoBehaviour {
 	public GameObject player;
 	public GameObject enemy;
-	public int numberOfEnemies = 2;
+	public int numberOfEnemies;
 	public GameObject[] spawnPoints;
 	List<Coordinate> coords = new List<Coordinate> ();
 

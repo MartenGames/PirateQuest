@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue Scenes/PirateTalk.unity
   - enabled: 1
     path: Assets/Scenes/Dialogue Scenes/OpeningScene.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
