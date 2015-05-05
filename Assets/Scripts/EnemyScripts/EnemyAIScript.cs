@@ -39,6 +39,28 @@ public class EnemyAIScript : MonoBehaviour {
 			transform.position = pos;
 		}
 
+		/*
+		Ray ray;
+		RaycastHit hit;
+		ray.origin = transform.position;
+		ray.direction = Vector3.forward;
+		Debug.DrawRay(ray, Color.red);
+		if(Physics.Raycast(ray, out hit)) {
+			Debug.Log ("Raycast hit!!");
+		}
+		*/
+
+		var direction = new Vector3(0, 45, 0);
+		var length = 10;
+		var diagonal = transform.TransformDirection(direction);
+		diagonal.Normalize();
+		Debug.DrawRay(transform.position, diagonal * length, Color.green);
+
+		if (Physics.Raycast(transform.position, diagonal, length)) {
+			Debug.Log ("There is something in front of the object!");
+		}
+
+		/*
 		//RaycastHit hit;
 		var fwd = transform.TransformDirection (Vector3.forward);
 		fwd.Normalize ();
@@ -46,6 +68,7 @@ public class EnemyAIScript : MonoBehaviour {
 		if (Physics.Raycast (transform.position, fwd, 10)) {
 			Debug.Log ("Raycast!!");
 		}
+		*/
 	}
 
 	void OnTriggerEnter2D() {
