@@ -14,9 +14,9 @@ public class GoldAmountManagerScript : MonoBehaviour
 	{
 		// Set up the reference.
 		text = GetComponent <Text> ();
-	
+
+		// Access the storing variable script to access the players goldAmount
 		emptyObject = GameObject.Find ("EmptyObject(Clone)");
-		// Reset the score.
 	}
 	
 	// Update is called once per frame
