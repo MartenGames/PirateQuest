@@ -7,6 +7,7 @@ public class StoringVarScript : MonoBehaviour {
 	public bool increaseFirerate_1 = false;
 	public int health = 0;
 	public int damage = 1;
+	public int goldAmount = 0;
 
 	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);

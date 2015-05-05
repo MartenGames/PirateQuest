@@ -65,7 +65,13 @@ public class UpgradeScript : MonoBehaviour {
 
 	public void PressIncreaseDAmage(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().damage += 1;
+		if(go.GetComponent<StoringVarScript> ().goldAmount < 50){
+			//do nothing
+		}
+		else {
+			go.GetComponent<StoringVarScript> ().damage += 1;
+			go.GetComponent<StoringVarScript> ().goldAmount -= 50;
+		}
 	}
 	// Update is called once per frame
 	void Update () {
