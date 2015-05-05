@@ -62,6 +62,11 @@ public class UpgradeScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().health += 25;
 	}
+
+	public void PressIncreaseDAmage(){
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().damage += 1;
+	}
 	// Update is called once per frame
 	void Update () {
 	

@@ -44,8 +44,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 		GameObject cannon = GameObject.Find ("Cannon2");
 		cannon.SetActive (GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().secondCannon);
-		//This comment is for hilmar
-		//GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().secondCannon
+
 		layer = gameObject.layer;
 	}
 
