@@ -5,6 +5,7 @@ public class EnemyAIScript : MonoBehaviour {
 
 	public float MoveSpeed;
 	public float Distance;
+	public RaycastHit hit;
 
 	Transform Player;
 	
@@ -32,7 +33,6 @@ public class EnemyAIScript : MonoBehaviour {
 
 		float distance = Vector3.Distance (Player.position, transform.position);
 
-
 		//The enemy ship stops if it gets within a certain distance from the player.
 		if (distance > 4) {
 			pos += transform.rotation * velocity;
@@ -51,7 +51,6 @@ public class EnemyAIScript : MonoBehaviour {
 		}
 		*/
 
-		RaycastHit hit;
 		var length = 10;
 		var direction = new Vector3(0, 45, 0);
 		var diagonal = transform.TransformDirection(direction);
