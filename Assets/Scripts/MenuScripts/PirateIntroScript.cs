@@ -28,4 +28,8 @@ public class PirateIntroScript : MonoBehaviour {
 	public void pressContinue() {
 		Application.LoadLevel ("OctoTalk");
 	}
+
+	public void pressSkip () {
+		Application.LoadLevel ("LevelSelection");
+	}
 }
