@@ -14,6 +14,8 @@ public class UpgradeScript : MonoBehaviour {
 	public Button multiCannonsButton;
 	public Button armourButton;
 	public Button continueButton;
+	public Text MoneySignal;
+
 
 	DamageHandlerPlayerScript player;
 	// Use this for initialization
@@ -31,6 +33,7 @@ public class UpgradeScript : MonoBehaviour {
 		armourButton = armourButton.GetComponent<Button> ();
 		multiCannonsButton = multiCannonsButton.GetComponent<Button> ();
 		continueButton = continueButton.GetComponent<Button> ();
+		MoneySignal = MoneySignal.GetComponent<Text> ();
 
 		//make everything visable
 
@@ -44,6 +47,7 @@ public class UpgradeScript : MonoBehaviour {
 		armourButton.enabled = true;
 		continueButton.enabled = true;
 		multiCannonsButton.enabled = true;
+		MoneySignal.enabled = false;
 	
 	}
 
@@ -65,7 +69,13 @@ public class UpgradeScript : MonoBehaviour {
 
 	public void PressIncreaseDAmage(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().damage += 1;
+		if(go.GetComponent<StoringVarScript> ().goldAmount < 50){
+			//do nothing
+		}
+		else {
+			go.GetComponent<StoringVarScript> ().damage += 1;
+			go.GetComponent<StoringVarScript> ().goldAmount -= 50;
+		}
 	}
 	// Update is called once per frame
 	void Update () {

@@ -7,6 +7,8 @@ public class PlayerCollectScript : MonoBehaviour {
 
 	public int goldValue = 100;
 
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -20,7 +22,9 @@ public class PlayerCollectScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 
 		if(other.gameObject.name == "Gold" || other.gameObject.name == "Gold(Clone)") {
-			GoldAmountManagerScript.goldAmount += goldValue;
+			GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
+			emptyObject.GetComponent<StoringVarScript> ().goldAmount += goldValue;
+			//GoldAmountManagerScript.goldAmount += goldValue;
 			AudioSource.PlayClipAtPoint(coinCollect, transform.position);
 			Destroy(other.gameObject);
 		}
