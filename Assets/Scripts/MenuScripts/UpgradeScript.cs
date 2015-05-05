@@ -58,23 +58,36 @@ public class UpgradeScript : MonoBehaviour {
 	public void PressMultiCannons(){
 
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
-	
+		if (go.GetComponent<StoringVarScript> ().goldAmount < 1500) {
+			MoneySignal.enabled = true;
+		} else {
+			MoneySignal.enabled = false;
+			go.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
+			go.GetComponent<StoringVarScript> ().goldAmount -= 1500;
+		}
 	}
 
 	public void PressIncreaseHealth(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().health += 25;
+		if (go.GetComponent<StoringVarScript> ().goldAmount < 200) {
+			MoneySignal.enabled = true;
+		} else {
+			MoneySignal.enabled = false;
+			go.GetComponent<StoringVarScript> ().health += 25;
+			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
+		}
+
 	}
 
 	public void PressIncreaseDAmage(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		if(go.GetComponent<StoringVarScript> ().goldAmount < 50){
-			//do nothing
+		if(go.GetComponent<StoringVarScript> ().goldAmount < 200){
+			MoneySignal.enabled = true;
 		}
 		else {
+			MoneySignal.enabled = false;
 			go.GetComponent<StoringVarScript> ().damage += 1;
-			go.GetComponent<StoringVarScript> ().goldAmount -= 50;
+			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
 		}
 	}
 	// Update is called once per frame
