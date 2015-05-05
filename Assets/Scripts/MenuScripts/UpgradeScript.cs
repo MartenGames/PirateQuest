@@ -50,7 +50,13 @@ public class UpgradeScript : MonoBehaviour {
 	public void PressContinueButton(){
 		Application.LoadLevel ("Level1");
 	}
-	
+
+	public void PressMultiCannons(){
+
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
+
+	}
 	// Update is called once per frame
 	void Update () {
 	

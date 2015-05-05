@@ -18,7 +18,7 @@ public class PlayerHealthScript : MonoBehaviour
 	void Start () {
 		//This comment is for hilmar !!!
 		//GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().increaseHealth_1
-		if (false) {
+		if (GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().increaseHealth_1) {
 			Debug.Log("health is 150, UPGRATED!!!");
 			startingHealth = 150;
 		} else {

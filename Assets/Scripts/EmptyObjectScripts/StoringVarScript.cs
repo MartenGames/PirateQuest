@@ -7,11 +7,11 @@ public class StoringVarScript : MonoBehaviour {
 	public bool increaseFirerate_1 = false;
 	public bool increaseHealth_1 = false;
 
-	void Start () {
+	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);
 	}
 
-	public void PressMultiCannons(){
+	public void SetMultiCannonsTrue(){
 		Debug.Log ("PressMultiCannons in StoringVarScript");
 		secondCannon = true;
 	}
