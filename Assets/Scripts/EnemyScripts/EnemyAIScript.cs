@@ -5,7 +5,6 @@ public class EnemyAIScript : MonoBehaviour {
 
 	public float MoveSpeed;
 	public float Distance;
-	public RaycastHit hit;
 
 	Transform Player;
 	
@@ -39,6 +38,8 @@ public class EnemyAIScript : MonoBehaviour {
 			transform.position = pos;
 		}
 
+
+
 		/*
 		var direction = new Vector3(0, 45, 0);
 		var length = 10;
@@ -51,6 +52,8 @@ public class EnemyAIScript : MonoBehaviour {
 		}
 		*/
 
+		/*
+		RaycastHit hit;
 		var length = 10;
 		var direction = new Vector3(0, 45, 0);
 		var diagonal = transform.TransformDirection(direction);
@@ -59,6 +62,8 @@ public class EnemyAIScript : MonoBehaviour {
 		if (Physics.Raycast (transform.position, diagonal, out hit, 10)) {
 			Debug.Log ("Raycast!!");
 		}
+		*/
+
 
 		/*
 		Ray ray;
