@@ -39,6 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c62f9079b5940a59e8b2837ebef59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondCannon: 0
+  increaseFirerate_1: 0
+  increaseHealth_1: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

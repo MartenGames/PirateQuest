@@ -3,19 +3,20 @@ using System.Collections;
 
 public class DamageHandlerEnemyScript : MonoBehaviour {
 
-	public int health = 1;
+	public int health;
+	public int damage;
 	public AudioClip sinkShip;
 	public GameObject Gold;
 	public float xCoordinate;
 	public float yCoordinate;
 
 	void Start() {
-
+		damage = GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript> ().damage;
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.name == "Bullet(Clone)") {
-			health--;
+			health -= damage;
 		}
 	}
 

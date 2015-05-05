@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerHealthScript : MonoBehaviour 
 {
-	public int startingHealth;
+	public int startingHealth = 100;
 	public int currentHealth;
 	public Slider healthSlider;
 	public Image damageImage;
@@ -18,13 +18,7 @@ public class PlayerHealthScript : MonoBehaviour
 	void Start () {
 		//This comment is for hilmar !!!
 		//GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().increaseHealth_1
-		if (false) {
-			Debug.Log("health is 150, UPGRATED!!!");
-			startingHealth = 150;
-		} else {
-			Debug.Log("health is 100, not upgrated!!!");
-			startingHealth = 100;
-		}
+		startingHealth += GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health;
 
 		currentHealth = startingHealth;
 		healthSlider.value = currentHealth;
