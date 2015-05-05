@@ -27,43 +27,55 @@ public class EnemyAIScript : MonoBehaviour {
 		}
 
 		// Face the player
-		Vector3 dir = Player.position - transform.position;
-		dir.Normalize ();
-		float zAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		Vector3 playerVector = Player.position - transform.position;
+		playerVector.Normalize ();
+		float zAngle = Mathf.Atan2 (playerVector.y, playerVector.x) * Mathf.Rad2Deg - 90;
 		Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
 		transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
 
 		Vector3 pos = transform.position;
 		Vector3 velocity = new Vector3 (0, MoveSpeed * Time.deltaTime, 0);
 		float distance = Vector3.Distance (Player.position, transform.position);
-
-		// The enemy ship stops if it gets within a certain distance from the player.
-		if (distance > 4) {
-			pos += transform.rotation * velocity;
-			transform.position = pos;
-		}
+		bool tmp = true;
 
 		GameObject[] islands = GameObject.FindGameObjectsWithTag ("Island");
 
 		foreach (GameObject island in islands) {
+			Vector3 islandVector = island.transform.position - transform.position;
+			Vector3 b;
+			Vector3 desiredVector;
+			float radius = island.GetComponent<CircleCollider2D>().radius;
+			float e = 8;
+			// maybe this is not in the center of the island!!
+			float d = Vector3.Distance(island.transform.position, transform.position);
+			float x = 0;
+
 			Debug.Log ("Island name: "+ island.name);
-			var radius = island.GetComponent<CircleCollider2D>().radius;
+			Debug.Log ("Island position: " + island.transform.position.x + " " + island.transform.position.y);
 			Debug.Log ("Radius: " + radius);
+			Debug.Log ("d: " + d);
+			Debug.Log ("e: " + e);
 
+			if(d < e) {
+				x = ((d - radius) / (e - radius));
+				b = new Vector3(-islandVector.y, islandVector.x, islandVector.z);
+				desiredVector = x * playerVector + (1 - x) * b;
+				desiredVector.Normalize();
 
+				tmp = false;
 
-			/*
-			var dist = Vector3.Distance(this.transform.position, island.transform.position);
-			if(dist < 6) {
-				Debug.Log (dist);
-				dist = 6;
-				transform.position = (transform.position - island.transform.position).normalized * dist + island.transform.position;
-				//Vector3 rot = new Vector3(0, 0.5f, 0);
-				//transform.Rotate(Vector3.right * Time.deltaTime * 8);
-				//Vector3 somePos = island.transform.position;
-				//transform.RotateAround (somePos, Vector3.up, 20 * Time.deltaTime);
+				if (distance > 4) {
+					pos += desiredVector * MoveSpeed * Time.deltaTime;
+					transform.position = pos;
+				}
 			}
-			*/
+		}
+
+		if (tmp) {
+			if (distance > 4) {
+				pos += transform.rotation * velocity;
+				transform.position = pos;
+			}
 		}
 	}
 }
