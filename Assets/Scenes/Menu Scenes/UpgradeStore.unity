@@ -829,7 +829,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11476510, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
+      - m_Target: {fileID: 194791465}
         m_MethodName: PressMultiCannons
         m_Mode: 1
         m_Arguments:
