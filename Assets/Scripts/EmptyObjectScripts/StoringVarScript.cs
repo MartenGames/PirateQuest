@@ -5,7 +5,7 @@ public class StoringVarScript : MonoBehaviour {
 
 	public bool secondCannon = false;
 	public bool increaseFirerate_1 = false;
-	public bool increaseHealth_1 = false;
+	public int health = 0;
 
 	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);
@@ -21,10 +21,9 @@ public class StoringVarScript : MonoBehaviour {
 		increaseFirerate_1 = true;
 	}
 
-	public void PressIncreaseHealth(){
-		Debug.Log ("PressIncreaseHealth in StoringVarScript");
-		increaseHealth_1 = true;
-	}
+//	public int SetIncreaseHealth(){
+//		return health;
+//	}
 
 	// Update is called once per frame
 	void Update () {
