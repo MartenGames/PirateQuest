@@ -61,7 +61,37 @@ public class EnemyAIScript : MonoBehaviour {
 					
 					if(d < e) {
 						x = ((d - radius) / (e - radius));
-						b = new Vector3(-islandVector.y, islandVector.x, islandVector.z);
+
+						/*
+						float angle1 = Vector3.Angle (islandVector, playerVector);
+						float angle3 = Mathf.Acos(Vector3.Dot(islandVector.normalized, playerVector.normalized));
+						Debug.Log ("Angle1: " + angle1);
+						Debug.Log ("Angle3: " + angle3);
+						Debug.Log ("Angle4: " + Mathf.Asin(angle1));
+						Debug.Log ("Angle5: " + Mathf.Sin(angle1));
+						float signedAngle = Mathf.Sin (Vector3.Angle (islandVector, playerVector));
+						if(signedAngle < 0.0) {
+							b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
+						}
+						else {
+							b = new Vector3(-islandVector.y, islandVector.x, islandVector.z);
+						}
+						*/
+
+						/*
+						float angle1 = Vector3.Angle (islandVector, playerVector);
+						Debug.Log ("Angle: " + angle1);
+
+						if(0 <= angle1 && angle1 <= 15) {
+							b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
+						}
+						else {
+							b = new Vector3(-islandVector.y, islandVector.x, islandVector.z);
+						}
+						*/
+
+						b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
+
 						desiredVector = x * playerVector + (1 - x) * b;
 						desiredVector.Normalize();
 						
