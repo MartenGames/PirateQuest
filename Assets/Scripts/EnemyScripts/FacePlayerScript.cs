@@ -3,6 +3,7 @@ using System.Collections;
 
 public class FacePlayerScript : MonoBehaviour {
 
+	/*
 	Transform player;
 
 	public float rotateSpeed;
@@ -33,4 +34,5 @@ public class FacePlayerScript : MonoBehaviour {
 		transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
 	
 	}
+	*/
 }

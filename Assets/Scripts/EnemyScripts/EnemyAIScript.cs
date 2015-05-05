@@ -5,7 +5,7 @@ public class EnemyAIScript : MonoBehaviour {
 
 	public float MoveSpeed;
 	public float Distance;
-
+	public float rotateSpeed;
 	Transform Player;
 	
 	void Start () {
@@ -26,72 +26,41 @@ public class EnemyAIScript : MonoBehaviour {
 			return;
 		}
 
+		// Face the player
+		Vector3 dir = Player.position - transform.position;
+		dir.Normalize ();
+		float zAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
+		transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
+
 		Vector3 pos = transform.position;
-
 		Vector3 velocity = new Vector3 (0, MoveSpeed * Time.deltaTime, 0);
-
 		float distance = Vector3.Distance (Player.position, transform.position);
 
-		//The enemy ship stops if it gets within a certain distance from the player.
+		// The enemy ship stops if it gets within a certain distance from the player.
 		if (distance > 4) {
 			pos += transform.rotation * velocity;
 			transform.position = pos;
 		}
 
+		GameObject[] islands = GameObject.FindGameObjectsWithTag ("Island");
+
+		foreach (GameObject island in islands) {
+			Debug.Log (island.name);
 
 
-		/*
-		var direction = new Vector3(0, 45, 0);
-		var length = 10;
-		var diagonal = transform.TransformDirection(direction);
-		diagonal.Normalize();
-		Debug.DrawRay(transform.position, diagonal * length, Color.green);
-		//Debug.Log (Physics.Raycast (transform.position, diagonal, length));
-		if (Physics.Raycast(transform.position, diagonal, length)) {
-			Debug.Log ("There is something in front of the object!");
-		}
-		*/
-
-		/*
-		RaycastHit hit;
-		var length = 10;
-		var direction = new Vector3(0, 45, 0);
-		var diagonal = transform.TransformDirection(direction);
-		diagonal.Normalize();
-		Debug.DrawRay(transform.position, diagonal * length, Color.green);
-		if (Physics.Raycast (transform.position, diagonal, out hit, 10)) {
-			Debug.Log ("Raycast!!");
-		}
-		*/
-
-
-		/*
-		Ray ray;
-		RaycastHit hit;
-		ray.origin = transform.position;
-		ray.direction = Vector3.forward;
-		Debug.DrawRay(ray, Color.red);
-		if(Physics.Raycast(ray, out hit)) {
-			Debug.Log ("Raycast hit!!");
-		}
-		*/
-	}
-
-	void OnTriggerEnter2D() {
-		Debug.Log ("flottt");
-	}
-
-	void OnCollisionEnter2D(Collision2D co) {
-		//Debug.Log ("Collision!");
-		//Debug.Log (co.gameObject.name);
-		//Debug.Log (co.gameObject.tag);
-
-		if (co.gameObject.tag == "Island" && co.rigidbody) {
-			Debug.Log ("Collide with a island!!");
-			//co.rigidbody.AddForce(Vector3.left * 1000);
-			//transform.rotation = Quaternion.LookRotation(Vector3.left);
-			//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0); 
-			//transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+			/*
+			var dist = Vector3.Distance(this.transform.position, island.transform.position);
+			if(dist < 6) {
+				Debug.Log (dist);
+				dist = 6;
+				transform.position = (transform.position - island.transform.position).normalized * dist + island.transform.position;
+				//Vector3 rot = new Vector3(0, 0.5f, 0);
+				//transform.Rotate(Vector3.right * Time.deltaTime * 8);
+				//Vector3 somePos = island.transform.position;
+				//transform.RotateAround (somePos, Vector3.up, 20 * Time.deltaTime);
+			}
+			*/
 		}
 	}
 }
