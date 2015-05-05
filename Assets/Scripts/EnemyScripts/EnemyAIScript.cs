@@ -38,6 +38,14 @@ public class EnemyAIScript : MonoBehaviour {
 			pos += transform.rotation * velocity;
 			transform.position = pos;
 		}
+
+		//RaycastHit hit;
+		var fwd = transform.TransformDirection (Vector3.forward);
+		fwd.Normalize ();
+		//Debug.Log (hit.rigidbody.gameObject.name);
+		if (Physics.Raycast (transform.position, fwd, 10)) {
+			Debug.Log ("Raycast!!");
+		}
 	}
 
 	void OnTriggerEnter2D() {
