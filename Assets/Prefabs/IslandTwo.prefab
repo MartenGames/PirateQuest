@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 492764}
   - 212: {fileID: 21250722}
-  - 68: {fileID: 6836132}
   - 50: {fileID: 5045204}
+  - 58: {fileID: 5818342}
   m_Layer: 10
   m_Name: IslandTwo
   m_TagString: Island
@@ -45,8 +45,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!68 &6836132
-EdgeCollider2D:
+--- !u!58 &5818342
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,22 +55,9 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: -.598735809, y: .0842144042}
-  - {x: -1.07576144, y: .500617981}
-  - {x: -1.07699394, y: .775175095}
-  - {x: -1.0916599, y: .984331131}
-  - {x: -.663362145, y: 1.32460904}
-  - {x: -.283526242, y: 1.36925161}
-  - {x: .148270041, y: 1.44021249}
-  - {x: .110771559, y: 1.04946065}
-  - {x: .386991501, y: .638625324}
-  - {x: .294241726, y: .386499792}
-  - {x: .0712722763, y: .241101846}
-  - {x: -.322480768, y: .139881611}
-  - {x: -.606581151, y: .0882930756}
-  - {x: -1.07042396, y: .498692721}
+  m_Offset: {x: -.349999994, y: .75999999}
+  serializedVersion: 2
+  m_Radius: .75999999
 --- !u!212 &21250722
 SpriteRenderer:
   m_ObjectHideFlags: 1

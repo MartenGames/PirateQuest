@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 406756}
   - 212: {fileID: 21212202}
-  - 68: {fileID: 6887480}
   - 50: {fileID: 5095304}
+  - 58: {fileID: 5876424}
   m_Layer: 10
   m_Name: IslandOne
   m_TagString: Island
@@ -45,8 +45,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!68 &6887480
-EdgeCollider2D:
+--- !u!58 &5876424
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,17 +55,9 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: .721283376, y: 1.16501892}
-  - {x: -.331323624, y: 1.3532232}
-  - {x: -.986653507, y: .488267511}
-  - {x: -.529277444, y: .214106753}
-  - {x: -.487037659, y: .0015300751}
-  - {x: .123281099, y: -.120583348}
-  - {x: .222163394, y: .156699374}
-  - {x: .795755804, y: .214453131}
-  - {x: .713680267, y: 1.17922676}
+  m_Offset: {x: -.0399999991, y: .639999986}
+  serializedVersion: 2
+  m_Radius: .829999983
 --- !u!212 &21212202
 SpriteRenderer:
   m_ObjectHideFlags: 1

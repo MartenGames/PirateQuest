@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11419470}
   - 114: {fileID: 11432238}
   - 114: {fileID: 11424022}
-  - 114: {fileID: 11457878}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -120,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 1
   Distance: 3
+  rotateSpeed: 40
 --- !u!114 &11432238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,18 +136,6 @@ MonoBehaviour:
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: 0
   fireDelay: 1
---- !u!114 &11457878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 065bc40560f294db9882c14c5889447c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 40
 --- !u!212 &21293876
 SpriteRenderer:
   m_ObjectHideFlags: 1
