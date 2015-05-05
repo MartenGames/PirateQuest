@@ -39,14 +39,26 @@ public class EnemyAIScript : MonoBehaviour {
 			transform.position = pos;
 		}
 
+		/*
 		var direction = new Vector3(0, 45, 0);
 		var length = 10;
 		var diagonal = transform.TransformDirection(direction);
 		diagonal.Normalize();
 		Debug.DrawRay(transform.position, diagonal * length, Color.green);
-
+		//Debug.Log (Physics.Raycast (transform.position, diagonal, length));
 		if (Physics.Raycast(transform.position, diagonal, length)) {
 			Debug.Log ("There is something in front of the object!");
+		}
+		*/
+
+		RaycastHit hit;
+		var length = 10;
+		var direction = new Vector3(0, 45, 0);
+		var diagonal = transform.TransformDirection(direction);
+		diagonal.Normalize();
+		Debug.DrawRay(transform.position, diagonal * length, Color.green);
+		if (Physics.Raycast (transform.position, diagonal, out hit, 10)) {
+			Debug.Log ("Raycast!!");
 		}
 
 		/*
@@ -57,16 +69,6 @@ public class EnemyAIScript : MonoBehaviour {
 		Debug.DrawRay(ray, Color.red);
 		if(Physics.Raycast(ray, out hit)) {
 			Debug.Log ("Raycast hit!!");
-		}
-		*/
-
-		/*
-		//RaycastHit hit;
-		var fwd = transform.TransformDirection (Vector3.forward);
-		fwd.Normalize ();
-		//Debug.Log (hit.rigidbody.gameObject.name);
-		if (Physics.Raycast (transform.position, fwd, 10)) {
-			Debug.Log ("Raycast!!");
 		}
 		*/
 	}
