@@ -5,6 +5,7 @@ public class EnemyAIScript : MonoBehaviour {
 
 	public float MoveSpeed;
 	public float Distance;
+	public RaycastHit hit;
 
 	Transform Player;
 	
@@ -32,12 +33,43 @@ public class EnemyAIScript : MonoBehaviour {
 
 		float distance = Vector3.Distance (Player.position, transform.position);
 
-
 		//The enemy ship stops if it gets within a certain distance from the player.
 		if (distance > 4) {
 			pos += transform.rotation * velocity;
 			transform.position = pos;
 		}
+
+		/*
+		var direction = new Vector3(0, 45, 0);
+		var length = 10;
+		var diagonal = transform.TransformDirection(direction);
+		diagonal.Normalize();
+		Debug.DrawRay(transform.position, diagonal * length, Color.green);
+		//Debug.Log (Physics.Raycast (transform.position, diagonal, length));
+		if (Physics.Raycast(transform.position, diagonal, length)) {
+			Debug.Log ("There is something in front of the object!");
+		}
+		*/
+
+		var length = 10;
+		var direction = new Vector3(0, 45, 0);
+		var diagonal = transform.TransformDirection(direction);
+		diagonal.Normalize();
+		Debug.DrawRay(transform.position, diagonal * length, Color.green);
+		if (Physics.Raycast (transform.position, diagonal, out hit, 10)) {
+			Debug.Log ("Raycast!!");
+		}
+
+		/*
+		Ray ray;
+		RaycastHit hit;
+		ray.origin = transform.position;
+		ray.direction = Vector3.forward;
+		Debug.DrawRay(ray, Color.red);
+		if(Physics.Raycast(ray, out hit)) {
+			Debug.Log ("Raycast hit!!");
+		}
+		*/
 	}
 
 	void OnTriggerEnter2D() {
