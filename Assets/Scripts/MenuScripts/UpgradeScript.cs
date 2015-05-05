@@ -55,7 +55,12 @@ public class UpgradeScript : MonoBehaviour {
 
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
+	
+	}
 
+	public void PressIncreaseHealth(){
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().health += 25;
 	}
 	// Update is called once per frame
 	void Update () {
