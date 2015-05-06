@@ -68,6 +68,6 @@ public class SpawnScript : MonoBehaviour {
 	}
 
 	void SpawnEnemyBoss () {
-		Instantiate (EnemyBoss, new Vector3 (coords[1].x, coords[1].y, 0), transform.rotation);
+		Instantiate (EnemyBoss, new Vector3 (coords[1].x, coords[1].y, 0)	, transform.rotation);
 	}
 }
