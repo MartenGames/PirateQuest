@@ -17,6 +17,7 @@ public class SpawnScript : MonoBehaviour {
 	public GameObject enemy;
 	public GameObject enemy2;
 	public GameObject enemy3;
+	public GameObject EnemyBoss;
 	public int numberOfEnemies;
 	public int numberOfEnemies2;
 	public int numberOfEnemies3;
@@ -64,5 +65,9 @@ public class SpawnScript : MonoBehaviour {
 		for(int i = 0; i < numberOfEnemies3; i++) {
 			Instantiate (enemy3, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
 		}
+	}
+
+	void SpawnEnemyBoss () {
+		Instantiate (EnemyBoss, new Vector3 (coords[1].x, coords[1].y, 0), transform.rotation);
 	}
 }
