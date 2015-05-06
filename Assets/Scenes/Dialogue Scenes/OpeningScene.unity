@@ -327,10 +327,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: There is  tail of a legendary fountain that grants eternal life. A secret
-    map that leads to the fountain has been acquired by a old pirate captain. Little
-    does this captain know that an ancient brotherhood, led by a fierceful octopus,
-    has sworn to protect the fountain at any cost...
+  m_Text: There is a tale of a legendary fountain that grants eternal life. A secret
+    map that leads to the fountain has been acquired by an old pirate captain. Little
+    does he know that an ancient brotherhood, led by a fierceful octopus, has sworn
+    to protect the fountain at any cost...
 --- !u!222 &815262530
 CanvasRenderer:
   m_ObjectHideFlags: 0

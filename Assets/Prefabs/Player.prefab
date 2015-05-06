@@ -47,7 +47,7 @@ GameObject:
   - 114: {fileID: 11465228}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,9 +246,6 @@ MonoBehaviour:
   restartLevel: {fileID: 11454596, guid: 3edd965ed9e964523be277313038f102, type: 2}
   goToUpgradeStore: {fileID: 11441684, guid: d3acada25df974ed280519b2a123c189, type: 2}
   goToMap: {fileID: 11424276, guid: d3acada25df974ed280519b2a123c189, type: 2}
-  xCoordinate: 0
-  yCoordinate: 0
-  secondCannon: 0
 --- !u!114 &11471260
 MonoBehaviour:
   m_ObjectHideFlags: 1
