@@ -30,6 +30,22 @@ public class EnemyShootingScript : MonoBehaviour {
 
 		coolDownTimer -= Time.deltaTime;
 
+		/*
+		Vector3 playerVector = Player.position - transform.position;
+		Vector2 playerPos = new Vector2 (Player.transform.position.x, Player.transform.position.y);
+		Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
+		
+		RaycastHit2D[] hit = Physics2D.RaycastAll (myPos, playerPos - myPos, 50);
+		Debug.DrawLine (transform.position, transform.position + playerVector, Color.green);
+
+		foreach (RaycastHit2D obj in hit) {
+			if(obj.collider.tag == "Player") {
+				Debug.Log ("PLAYER!!");
+				Debug.DrawLine (transform.position, transform.position + playerVector, Color.red);
+			}
+		}
+		*/
+
 		//Only shoot within a certain distance
 		if (distance < 10) {
 			if (coolDownTimer <= 0) {
