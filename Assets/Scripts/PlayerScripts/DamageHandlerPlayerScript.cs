@@ -90,11 +90,22 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
-	public void GoToMap() {
+	public void GoToMapDefeat() {
 		Application.LoadLevel ("LevelSelection");
 	}
 
+	public void GoToMapWin() {
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevel += 1;
+		Application.LoadLevel ("LevelSelection");
+	}
+
+
+
 	public void GoToUpgradeStore() {
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevel += 1;
 		Application.LoadLevel ("UpgradeStore");
 	}
+
 }

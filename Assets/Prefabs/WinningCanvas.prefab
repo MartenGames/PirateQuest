@@ -111,7 +111,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11470386, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
-        m_MethodName: GoToMap
+        m_MethodName: GoToMapWin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
