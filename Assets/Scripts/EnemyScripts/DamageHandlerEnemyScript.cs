@@ -15,7 +15,7 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name == "Bullet(Clone)") {
+		if(other.gameObject.name == "Bullet(Clone)" || other.gameObject.name == "SecondBullet(Clone)") {
 			health -= damage;
 		}
 	}
