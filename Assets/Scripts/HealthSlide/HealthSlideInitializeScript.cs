@@ -8,8 +8,6 @@ public class HealthSlideInitializeScript : MonoBehaviour {
 
 
 	void Start () {
-		Debug.Log ("Does this happen\n");
-		Debug.Log (healthSlider.maxValue);
 		healthSlider.maxValue = GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health + 100;
 	}
 	
