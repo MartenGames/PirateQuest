@@ -15,7 +15,11 @@ public class Coordinate {
 public class SpawnScript : MonoBehaviour {
 	public GameObject player;
 	public GameObject enemy;
+	public GameObject enemy2;
+	public GameObject enemy3;
 	public int numberOfEnemies;
+	public int numberOfEnemies2;
+	public int numberOfEnemies3;
 	public GameObject[] spawnPoints;
 	List<Coordinate> coords = new List<Coordinate> ();
 
@@ -30,6 +34,12 @@ public class SpawnScript : MonoBehaviour {
 
 		SpawnPlayer ();
 		SpawnEnemy ();
+		if (numberOfEnemies2 != 0) {
+			SpawnEnemy2 ();
+		}
+		if (numberOfEnemies3 != 0) {
+			SpawnEnemy3 ();
+		}
 	}
 
 	void SpawnPlayer() {
@@ -44,4 +54,15 @@ public class SpawnScript : MonoBehaviour {
 		}
 	}
 
+	void SpawnEnemy2 () {
+		for(int i = 0; i < numberOfEnemies2; i++) {
+			Instantiate (enemy2, new Vector3 (coords[i].x + 1, coords[i].y + 1, 0), transform.rotation);
+		}
+	}
+
+	void SpawnEnemy3 () {
+		for(int i = 0; i < numberOfEnemies3; i++) {
+			Instantiate (enemy3, new Vector3 (coords[i].x - 1, coords[i].y - 1, 0), transform.rotation);
+		}
+	}
 }
