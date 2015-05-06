@@ -8,6 +8,7 @@ public class StoringVarScript : MonoBehaviour {
 	public int health = 0;
 	public int damage = 1;
 	public int goldAmount = 0;
+	public int currentLevelGoldAmount = 0;
 
 	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);

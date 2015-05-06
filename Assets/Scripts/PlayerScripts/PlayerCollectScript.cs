@@ -23,7 +23,7 @@ public class PlayerCollectScript : MonoBehaviour {
 
 		if(other.gameObject.name == "Gold" || other.gameObject.name == "Gold(Clone)") {
 			GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
-			emptyObject.GetComponent<StoringVarScript> ().goldAmount += goldValue;
+			emptyObject.GetComponent<StoringVarScript> ().currentLevelGoldAmount += goldValue;
 			//GoldAmountManagerScript.goldAmount += goldValue;
 			AudioSource.PlayClipAtPoint(coinCollect, transform.position);
 			Destroy(other.gameObject);
