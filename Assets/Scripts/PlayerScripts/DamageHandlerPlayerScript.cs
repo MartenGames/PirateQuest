@@ -26,7 +26,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		DontDestroyOnLoad (GameObject.Find("EmptyObject"));
 
 		GameObject go = GameObject.Find ("HealthSlider");
-
 		mapSlider = go.GetComponent<Slider> ();
 
 		player = GameObject.Find("Player(Clone)");
