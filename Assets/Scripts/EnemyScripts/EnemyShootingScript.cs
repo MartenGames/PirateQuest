@@ -27,9 +27,7 @@ public class EnemyShootingScript : MonoBehaviour {
 		}
 		 
 		float distance = Vector3.Distance (Player.position, transform.position);
-
 		coolDownTimer -= Time.deltaTime;
-
 
 		Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
 		Vector3 forwardVector = transform.TransformVector (new Vector3 (0, 1, 0));
@@ -37,46 +35,22 @@ public class EnemyShootingScript : MonoBehaviour {
 		//Vector3 forwardVector = vec;
 		
 		RaycastHit2D[] hit = Physics2D.RaycastAll (myPos, forwardPos, 100);
-		Debug.DrawLine (transform.position, transform.position + forwardVector * 100, Color.green);
+		//Debug.DrawLine (transform.position, transform.position + forwardVector * 100, Color.green);
 
 		foreach (RaycastHit2D obj in hit) {
 			if(obj.collider.tag == "Player") {
 				Debug.Log ("PLAYER!!");
-				Debug.DrawLine (transform.position, transform.position + forwardVector * 100, Color.red);
+				//Debug.DrawLine (transform.position, transform.position + forwardVector * 100, Color.red);
 
 				if (distance < 10) {
 					if (coolDownTimer <= 0) {
 						coolDownTimer = fireDelay;
 						Vector3 offset = transform.rotation * bulletOffset;
-						
-						GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
+						Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
 						AudioSource.PlayClipAtPoint(gunShot, transform.position);
-						bulletGO.layer = gameObject.layer;
 					}
 				}
 			}
 		}
-
-
-		//Only shoot within a certain distance
-		/*
-		if (distance < 10) {
-			if (coolDownTimer <= 0) {
-				coolDownTimer = fireDelay;
-
-				Vector3 offset = transform.rotation * bulletOffset;
-				Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
-			
-				AudioSource.PlayClipAtPoint(gunShot, transform.position);
-
-				//Took these unnessesary lines from the code, ask hilmar if you want to delete this comment
-
-				//GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
-				//bulletGO.layer = gameObject.layer;
-
-			}
-		}
-		*/
-
 	}
 }

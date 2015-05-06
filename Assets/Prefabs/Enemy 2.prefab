@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 173238}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .400000006, y: .400000006, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 470544}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0a8e361c7434a45b86ce89e0d56f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   damage: 1
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   Gold: {fileID: 194100, guid: a67e203374fad4f95a0c716080f21954, type: 2}
@@ -136,7 +136,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 119446, guid: a62c66e034fe74a4e81de62848eee054, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: 0
-  fireDelay: 1
+  fireDelay: .5
 --- !u!212 &21293876
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ee995c92da274eb1a550acca34b220a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99b886ef3614e410aa0c67119ae7f225, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21297202
 SpriteRenderer:
