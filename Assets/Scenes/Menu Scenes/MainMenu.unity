@@ -915,7 +915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When a enemy is killed a treasure will appear from it's wreck. To collect
+  m_Text: When an enemy is killed a treasure will appear from it's wreck. To collect
     it guide your ship over the treasure. But be careful! The treasure will disappear
     after a certain time limit.
 --- !u!222 &757790859
@@ -1945,7 +1945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To fire at enemies use the space bar to fire bullets from your cannon
+  m_Text: Use the space bar to fire bullets from your cannon and shoot enemies.
 --- !u!222 &1918708136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2011,9 +2011,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To guide the ship, use the arrow keys to guide the ship. The left and right
-    arrow are used for rotation and the up and down arrows are used for forward and
-    backward motion
+  m_Text: To guide the ship, use the arrow keys. The left and right arrow are used
+    for rotation and the up and down arrows are used for forward and backward motion.
 --- !u!222 &1985662831
 CanvasRenderer:
   m_ObjectHideFlags: 0
