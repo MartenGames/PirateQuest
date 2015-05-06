@@ -44,6 +44,8 @@ public class MainMenuScript : MonoBehaviour {
 	
 	public void PressPlay () {
 
+		GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
+		emptyObject.GetComponent<StoringVarScript> ().currentLevel = 1;
 		Application.LoadLevel ("OpeningScene");
 	}
 
