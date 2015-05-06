@@ -738,7 +738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "The brotherhood of the fountain \nwill make sure he never get's to it!"
+  m_Text: "The brotherhood of the fountain \nwill make sure he never gets to it!"
 --- !u!222 &1751473481
 CanvasRenderer:
   m_ObjectHideFlags: 0
