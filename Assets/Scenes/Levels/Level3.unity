@@ -641,7 +641,7 @@ RectTransform:
   - {fileID: 1816521988}
   - {fileID: 1951339625}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -817,7 +817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!1001 &861295816
 Prefab:
   m_ObjectHideFlags: 0
@@ -998,11 +998,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1311098666 stripped
+--- !u!4 &1311098666
 Transform:
   m_PrefabParentObject: {fileID: 494236, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_PrefabInternal: {fileID: 1311098665}
---- !u!1 &1311098667 stripped
+--- !u!1 &1311098667
 GameObject:
   m_PrefabParentObject: {fileID: 165418, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_PrefabInternal: {fileID: 1311098665}
@@ -1019,7 +1019,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169508, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
   enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  EnemyBoss: {fileID: 0}
   numberOfEnemies: 5
+  numberOfEnemies2: 0
+  numberOfEnemies3: 0
   spawnPoints:
   - {fileID: 576190697}
   - {fileID: 1598463360}
@@ -1444,7 +1449,7 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816521987}
---- !u!224 &1951339625 stripped
+--- !u!224 &1951339625
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
