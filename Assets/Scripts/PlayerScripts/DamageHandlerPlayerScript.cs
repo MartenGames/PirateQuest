@@ -26,7 +26,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		DontDestroyOnLoad (GameObject.Find("EmptyObject"));
 
 		GameObject go = GameObject.Find ("HealthSlider");
-
 		mapSlider = go.GetComponent<Slider> ();
 
 		player = GameObject.Find("Player(Clone)");
@@ -72,6 +71,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
+			//make the player invinsible when he has killed every enemy
+			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
 			go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
 			winningCanvas.gameObject.SetActive(true);

@@ -22,11 +22,21 @@ public class PlayerHealthScript : MonoBehaviour
 
 		//This comment is for hilmar !!!
 		//GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().increaseHealth_1
+
+		//Get health from StoringVarScript
 		startingHealth += GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health;
 
 		currentHealth = startingHealth;
+
+		Debug.Log ("healthSlider maxValue FIRST! \n");
+		Debug.Log (healthSlider.maxValue);
+
+		healthSlider.maxValue = currentHealth;
 		healthSlider.value = currentHealth;
-		Debug.Log (currentHealth);
+
+		Debug.Log ("healthSlider maxValue AFTER! \n");
+		Debug.Log (healthSlider.maxValue);
+
 	}
 
 	void Awake () {
