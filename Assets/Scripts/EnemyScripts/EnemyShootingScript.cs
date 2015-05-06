@@ -39,7 +39,7 @@ public class EnemyShootingScript : MonoBehaviour {
 
 		foreach (RaycastHit2D obj in hit) {
 			if(obj.collider.tag == "Player") {
-				Debug.Log ("PLAYER!!");
+				//Debug.Log ("PLAYER!!");
 				//Debug.DrawLine (transform.position, transform.position + forwardVector * 100, Color.red);
 
 				if (distance < 10) {

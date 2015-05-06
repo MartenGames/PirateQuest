@@ -7,15 +7,19 @@ public class PlayerHealthScript : MonoBehaviour
 	public int startingHealth = 100;
 	public int currentHealth;
 	public Slider healthSlider;
-	public Image damageImage;
+	//public Image damageImage;
 	public float flashSpeed = 5f;							// The speed the damageImage will fade at.
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);	// The colour the damageImage is set to, to flash.
 		
 	PlayerMobilityScript playerMovement;
 	bool isDead;
 	bool damaged;
+	Image damageImage;
 
 	void Start () {
+		GameObject go = GameObject.Find ("DamageImage");
+		damageImage = go.GetComponent<Image> ();
+
 		//This comment is for hilmar !!!
 		//GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().increaseHealth_1
 		startingHealth += GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health;
@@ -35,6 +39,7 @@ public class PlayerHealthScript : MonoBehaviour
 		// If the player has just been damaged...
 		if(damaged)
 		{
+			Debug.Log("inside update in PHS, damaged");
 			// ... set the colour of the damageImage to the flash colour.
 			damageImage.color = flashColour;
 		}
@@ -52,7 +57,7 @@ public class PlayerHealthScript : MonoBehaviour
 	{
 		// Set the damaged flag so the screen will flash.
 		damaged = true;
-		
+		Debug.Log ("damaged: " + damaged);
 		// Reduce the current health by the damage amount.
 		currentHealth -= amount;
 		
