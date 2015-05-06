@@ -33,14 +33,14 @@ public class EnemyAIScript : MonoBehaviour {
 		float distance = Vector3.Distance (Player.position, transform.position);
 		bool tmp = true;
 
-		Vector2 playerPos = new Vector2(Player.transform.position.x, Player.transform.position.y);
-
+		Vector2 playerPos = new Vector2 (Player.transform.position.x, Player.transform.position.y);
 		Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
+
 		RaycastHit2D[] hit = Physics2D.RaycastAll (myPos, playerPos - myPos, 5);
 		//Debug.DrawLine(pos, (playerPos - myPos) * 5, Color.green);
 
 		// Debug
-		Debug.DrawLine (transform.position, transform.position + playerVector, Color.red);
+		//Debug.DrawLine (transform.position, transform.position + playerVector, Color.red);
 		// end of debug
 		
 		foreach (RaycastHit2D obj in hit) {
@@ -57,7 +57,7 @@ public class EnemyAIScript : MonoBehaviour {
 					islandVector.Normalize();
 
 					// Debug
-					Debug.DrawLine (transform.position, transform.position + islandVector * 50, Color.blue);
+					//Debug.DrawLine (transform.position, transform.position + islandVector * 50, Color.blue);
 					// end of debug
 
 					Vector3 b;
@@ -72,7 +72,7 @@ public class EnemyAIScript : MonoBehaviour {
 						float z = playerVector.x * islandVector.y - islandVector.x * playerVector.y;
 
 						// TEST
-						Debug.Log ("z: " + z);
+						//Debug.Log ("z: " + z);
 						// END OF TEST
 
 						if(z < 0.1) {
@@ -86,14 +86,14 @@ public class EnemyAIScript : MonoBehaviour {
 						b.Normalize();
 
 						// Debug
-						Debug.DrawLine (transform.position, transform.position + b, Color.cyan);
+						//Debug.DrawLine (transform.position, transform.position + b, Color.cyan);
 						// end of debug
 
 						desiredVector = x * playerVector + (1 - x) * b;
 						desiredVector.Normalize();
 
 						// Debug
-						Debug.DrawLine (transform.position, transform.position + desiredVector, Color.black);
+						//Debug.DrawLine (transform.position, transform.position + desiredVector, Color.black);
 						// end of debug
 
 						tmp = false;
