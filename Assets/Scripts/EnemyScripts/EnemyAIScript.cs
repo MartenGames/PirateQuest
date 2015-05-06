@@ -28,10 +28,6 @@ public class EnemyAIScript : MonoBehaviour {
 
 		Vector3 playerVector = Player.position - transform.position;
 		playerVector.Normalize ();
-		float zAngle = Mathf.Atan2 (playerVector.y, playerVector.x) * Mathf.Rad2Deg - 90;
-		Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
-		transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
-
 		Vector3 pos = transform.position;
 		Vector3 velocity = new Vector3 (0, MoveSpeed * Time.deltaTime, 0);
 		float distance = Vector3.Distance (Player.position, transform.position);
@@ -42,6 +38,7 @@ public class EnemyAIScript : MonoBehaviour {
 		Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
 		RaycastHit2D[] hit = Physics2D.RaycastAll (myPos, playerPos - myPos, 5);
 		//Debug.DrawLine(pos, (playerPos - myPos) * 5, Color.green);
+
 		// Debug
 		Debug.DrawLine (transform.position, transform.position + playerVector, Color.red);
 		// end of debug
@@ -100,7 +97,11 @@ public class EnemyAIScript : MonoBehaviour {
 						// end of debug
 
 						tmp = false;
-						
+
+						float zAngle = Mathf.Atan2 (desiredVector.y, desiredVector.x) * Mathf.Rad2Deg - 90;
+						Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
+						transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
+
 						if (distance > 4) {
 							pos += desiredVector * MoveSpeed * Time.deltaTime;
 							transform.position = pos;
@@ -111,6 +112,11 @@ public class EnemyAIScript : MonoBehaviour {
 		}
 
 		if (tmp) {
+			// Face the player
+			float zAngle = Mathf.Atan2 (playerVector.y, playerVector.x) * Mathf.Rad2Deg - 90;
+			Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
+			transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
+
 			if (distance > 4) {
 				pos += transform.rotation * velocity;
 				transform.position = pos;
