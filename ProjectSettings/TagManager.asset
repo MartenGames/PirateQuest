@@ -7,6 +7,7 @@ TagManager:
   - DefeatCanvas
   - WinningCanvas
   - Island
+  - Player
   layers:
   - Default
   - TransparentFX
