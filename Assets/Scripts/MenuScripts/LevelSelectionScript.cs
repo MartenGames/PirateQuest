@@ -3,20 +3,27 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class LevelSelectionScript : MonoBehaviour {
-	/*
-	public Button level1;
-	public Button level2;
-	public Button level3;
-	public Button level4;
-	public Button level5;
-	public Button level6;
-	public Button level7;
-	public Button level8;
-*/
+
+	public Button[] levels;
+
 	void Start () {
-		/*
+
 		GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
 		int currentLevel = emptyObject.GetComponent<StoringVarScript> ().currentLevel;
+
+		for (int i = 0; i < levels.Length; i++) {
+			if((i + 1) == currentLevel) {
+				levels[i].image.color = Color.red;
+				levels[i].enabled = true;
+			}
+			else {
+				levels[i].image.color = Color.gray;
+				levels[i].enabled = false;
+			}
+		}
+
+		/*
+
 		switch (currentLevel) {
 			case 1:
 				level1.enabled = true;
