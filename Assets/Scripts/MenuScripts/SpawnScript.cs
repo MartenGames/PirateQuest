@@ -56,13 +56,13 @@ public class SpawnScript : MonoBehaviour {
 
 	void SpawnEnemy2 () {
 		for(int i = 0; i < numberOfEnemies2; i++) {
-			Instantiate (enemy2, new Vector3 (coords[i].x + 1, coords[i].y + 1, 0), transform.rotation);
+			Instantiate (enemy2, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
 		}
 	}
 
 	void SpawnEnemy3 () {
 		for(int i = 0; i < numberOfEnemies3; i++) {
-			Instantiate (enemy3, new Vector3 (coords[i].x - 1, coords[i].y - 1, 0), transform.rotation);
+			Instantiate (enemy3, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
 		}
 	}
 }

@@ -52,10 +52,14 @@ public class EnemyShootingScript : MonoBehaviour {
 				coolDownTimer = fireDelay;
 
 				Vector3 offset = transform.rotation * bulletOffset;
-
-				GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
+				Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
+			
 				AudioSource.PlayClipAtPoint(gunShot, transform.position);
-				bulletGO.layer = gameObject.layer;
+
+				//Took these unnessesary lines from the code, ask hilmar if you want to delete this comment
+
+				//GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
+				//bulletGO.layer = gameObject.layer;
 
 			}
 		}
