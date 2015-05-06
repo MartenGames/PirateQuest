@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.0299997, y: 3.55999994, z: 0}
+  m_LocalPosition: {x: 2.57999992, y: -7.67999983, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.349999994, y: .75999999}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .75999999
 --- !u!212 &21250722
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 78e04c11a38f147d19f0f934501a0a2a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .760784388, g: .760784388, b: .760784388, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

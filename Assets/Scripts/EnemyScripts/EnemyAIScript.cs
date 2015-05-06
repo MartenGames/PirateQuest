@@ -39,17 +39,46 @@ public class EnemyAIScript : MonoBehaviour {
 		bool tmp = true;
 
 		Vector2 playerPos = new Vector2(Player.transform.position.x, Player.transform.position.y);
+
 		Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
 		RaycastHit2D[] hit = Physics2D.RaycastAll (myPos, playerPos - myPos, 5);
-		Debug.DrawLine(pos, (playerPos - myPos) * 5, Color.green);
+		//Debug.DrawLine(pos, (playerPos - myPos) * 5, Color.green);
+		// Debug
+		Debug.DrawLine (transform.position, transform.position + playerVector, Color.red);
+		// end of debug
 		
 		foreach (RaycastHit2D obj in hit) {
 			if(obj.collider.tag == "Island") {
-				Debug.DrawLine(pos, (playerPos - myPos) * 5, Color.red);
+				//Debug.DrawLine(pos, (playerPos - myPos) * 5, Color.red);
 				GameObject[] islands = GameObject.FindGameObjectsWithTag ("Island");
+
+				//float sdfas = obj.collider.transform.position.x;
+
 				
 				foreach (GameObject island in islands) {
-					Vector3 islandVector = island.transform.position - transform.position;
+					// TEST
+					/*
+					float testx = island.GetComponent<CircleCollider2D>().transform.position.x;
+					float testy = island.GetComponent<CircleCollider2D>().transform.position.y;
+					float offsetx = island.GetComponent<CircleCollider2D>().offset.x;
+					float offsety = island.GetComponent<CircleCollider2D>().offset.y;
+					float lol = testx + offsetx;
+					float lol2 = testy + offsety;
+					Debug.Log ("Name: " + island.name);
+					Debug.Log("Circle x: " + lol);
+					Debug.Log("Circle y: " + lol2);
+					*/
+					// END OF TEST
+					float centerIslandX = island.GetComponent<CircleCollider2D>().transform.position.x;
+					float centerIslandY = island.GetComponent<CircleCollider2D>().transform.position.y;
+					// Vector3 islandPos = new Vector3(centerIslandX, centerIslandY, transform.position.z);
+					Vector3 islandPos = new Vector3(centerIslandX, centerIslandY, transform.position.z);
+					Vector3 islandVector = islandPos - transform.position;
+					islandVector.Normalize();
+					// Debug
+					Debug.DrawLine (transform.position, transform.position + islandVector * 50, Color.blue);
+					// end of debug
+					//Vector3 islandVector = island.transform.position - transform.position;
 					Vector3 b;
 					Vector3 desiredVector;
 					float radius = island.GetComponent<CircleCollider2D>().radius;
@@ -62,39 +91,33 @@ public class EnemyAIScript : MonoBehaviour {
 					if(d < e) {
 						x = ((d - radius) / (e - radius));
 
-						/*
-						float angle1 = Vector3.Angle (islandVector, playerVector);
-						float angle3 = Mathf.Acos(Vector3.Dot(islandVector.normalized, playerVector.normalized));
-						Debug.Log ("Angle1: " + angle1);
-						Debug.Log ("Angle3: " + angle3);
-						Debug.Log ("Angle4: " + Mathf.Asin(angle1));
-						Debug.Log ("Angle5: " + Mathf.Sin(angle1));
-						float signedAngle = Mathf.Sin (Vector3.Angle (islandVector, playerVector));
-						if(signedAngle < 0.0) {
-							b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
-						}
-						else {
+						// TEST
+						float z = playerVector.x * islandVector.y - islandVector.x * playerVector.y;
+						Debug.Log ("z: " + z);
+						// END OF TEST
+
+						if(z < 0.1) {
 							b = new Vector3(-islandVector.y, islandVector.x, islandVector.z);
 						}
-						*/
-
-						/*
-						float angle1 = Vector3.Angle (islandVector, playerVector);
-						Debug.Log ("Angle: " + angle1);
-
-						if(0 <= angle1 && angle1 <= 15) {
-							b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
-						}
 						else {
-							b = new Vector3(-islandVector.y, islandVector.x, islandVector.z);
-						}
-						*/
+							b = new Vector3(islandVector.y,-islandVector.x, islandVector.z);
 
-						b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
+						}
+
+						b.Normalize();
+						// Debug
+						Debug.DrawLine (transform.position, transform.position + b, Color.cyan);
+						// end of debug
+
+						// b = new Vector3(islandVector.y, -islandVector.x, islandVector.z);
 
 						desiredVector = x * playerVector + (1 - x) * b;
 						desiredVector.Normalize();
-						
+
+						// Debug
+						Debug.DrawLine (transform.position, transform.position + desiredVector, Color.black);
+						// end of debug
+
 						tmp = false;
 						
 						if (distance > 4) {
