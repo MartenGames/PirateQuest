@@ -182,7 +182,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -262,7 +262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -1021,6 +1021,7 @@ MonoBehaviour:
   enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
   enemy2: {fileID: 136032, guid: 46494cc20ef934392987bfc38c3d58ed, type: 2}
   enemy3: {fileID: 136032, guid: 4589da5eb5aba4c85be87baa26a2199c, type: 2}
+  EnemyBoss: {fileID: 0}
   numberOfEnemies: 5
   numberOfEnemies2: 0
   numberOfEnemies3: 0
