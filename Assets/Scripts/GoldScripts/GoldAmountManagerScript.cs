@@ -23,6 +23,7 @@ public class GoldAmountManagerScript : MonoBehaviour
 	void Update () {
 
 		// Set the displayed text to be the word "Gold: " followed by the score value.
-		text.text = "Gold: " + emptyObject.GetComponent<StoringVarScript>().goldAmount;
+		text.text = "Gold: " + (emptyObject.GetComponent<StoringVarScript>().goldAmount + 
+		                        emptyObject.GetComponent<StoringVarScript>().currentLevelGoldAmount);
 	}
 }

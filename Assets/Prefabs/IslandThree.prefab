@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 491296}
   - 212: {fileID: 21203176}
   - 58: {fileID: 5804108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: IslandThree
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.5415821, y: 4.2810874, z: 0}
+  m_LocalPosition: {x: 13.6000061, y: 10.1999969, z: 0}
   m_LocalScale: {x: .150000006, y: .150000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

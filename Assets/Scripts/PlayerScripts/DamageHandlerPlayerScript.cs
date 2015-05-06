@@ -72,12 +72,17 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.Find ("Enemy(Clone)") == null) {
+			GameObject go = GameObject.Find ("EmptyObject(Clone)");
+			go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
 			winningCanvas.gameObject.SetActive(true);
+			go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		}
 	}
 	
 	void Die() {
 		Destroy (gameObject);
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		defeatCanvas.gameObject.SetActive (true);
 	}
 
