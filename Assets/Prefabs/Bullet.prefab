@@ -13,7 +13,7 @@ GameObject:
   - 50: {fileID: 5057060}
   - 114: {fileID: 11409480}
   - 114: {fileID: 11484696}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
