@@ -4,10 +4,10 @@ using System.Collections;
 public class StoringVarScript : MonoBehaviour {
 
 	public bool secondCannon = false;
-	public bool increaseFirerate_1 = false;
 	public int health = 0;
 	public int damage = 1;
 	public int goldAmount = 0;
+	public float fireRate = 0;
 	public int currentLevelGoldAmount = 0;
 	public int currentLevel;
 

@@ -700,11 +700,11 @@ Prefab:
     - {fileID: 11446250, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1311098666 stripped
+--- !u!4 &1311098666
 Transform:
   m_PrefabParentObject: {fileID: 494236, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_PrefabInternal: {fileID: 1311098665}
---- !u!1 &1311098667 stripped
+--- !u!1 &1311098667
 GameObject:
   m_PrefabParentObject: {fileID: 165418, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_PrefabInternal: {fileID: 1311098665}
@@ -1076,7 +1076,7 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816521987}
---- !u!224 &1951339625 stripped
+--- !u!224 &1951339625
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
