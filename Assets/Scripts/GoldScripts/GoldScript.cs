@@ -10,36 +10,39 @@ public class GoldScript : MonoBehaviour {
 	Color color;
 
 	void Start () {
-		//set startTime as lifeTime
+		// set startTime as lifeTime
 		startTime = Time.time + lifeTime;
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
-		Debug.Log ("Start time: " + startTime);
-		Debug.Log ("Start time Time.time: " + Time.time);
 	}
 	
 	void Update () {
-		Debug.Log ("Time: " + Time.time);
-		Debug.Log ("Time2: " + startTime);
-		// Destroy object when a startTime has passed.
 		if(startTime <= Time.time){
 			Destroy(gameObject);
-		} /*else if (0f < startTime && startTime <= 0.25f) {
-			material.color = Color.red;
-		} else if (1.5f < startTime && startTime <= 1.75f) {
+		} else if (startTime - 3f < Time.time && Time.time <= startTime - 2.75f) {
+			material.color = Color.clear;
+		} else if (startTime - 2.75f < Time.time && Time.time <= startTime - 2.5f) {
 			material.color = color;
-		} else if (1.25f < startTime && startTime <= 1.5f) {
-			material.color = Color.red;
-		} else if (1.0f < startTime && startTime <= 1.25f) {
+		} else if (startTime - 2.5f < Time.time && Time.time <= startTime - 2.25f) {
+			material.color = Color.clear;
+		} else if (startTime - 2.25f < Time.time && Time.time <= startTime - 2f) {
 			material.color = color;
-		} else if (0.75f < startTime && startTime <= 1.0f) {
-			material.color = Color.red;
-		} else if (0.5f < startTime && startTime <= 0.75f) {
+		} else if (startTime - 2f < Time.time && Time.time <= startTime - 1.75f) {
+			material.color = Color.clear;
+		} else if (startTime - 1.75f < Time.time && Time.time <= startTime - 1.5f) {
 			material.color = color;
-		} else if (0.25f < startTime && startTime <= 0.5f) {
-			material.color = Color.red;
-		} else if (0f < startTime && startTime <= 0.25f) {
+		} else if (startTime - 1.5f < Time.time && Time.time <= startTime - 1.25f) {
+			material.color = Color.clear;
+		} else if (startTime - 1.25f < Time.time && Time.time <= startTime - 1f) {
 			material.color = color;
-		}*/
+		} else if(startTime - 1f < Time.time && Time.time <= startTime - 0.75f) {
+			material.color = Color.clear;
+		} else if(startTime - 0.75f < Time.time && Time.time <= startTime - 0.5f) {
+			material.color = color;
+		} else if(startTime - 0.5f < Time.time && Time.time <= startTime - 0.25f) {
+			material.color = Color.clear;
+		} else if(startTime - 0.25f < Time.time && Time.time < startTime - 0f) {
+			material.color = color;
+		}
 	}
 }
