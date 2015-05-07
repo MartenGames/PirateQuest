@@ -126,9 +126,11 @@ MonoBehaviour:
   numberOfEnemies2: 1
   numberOfEnemies3: 0
   SpawnBoss: 0
-  spawnPoints:
+  spawnPoints_enemy1:
   - {fileID: 576190697}
+  spawnPoints_enemy2:
   - {fileID: 1398247897}
+  spawnPoints_enemy3: []
 --- !u!68 &182847557
 EdgeCollider2D:
   m_ObjectHideFlags: 0

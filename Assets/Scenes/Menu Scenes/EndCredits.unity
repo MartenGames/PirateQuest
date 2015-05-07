@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: MARTEN GAMES LTD. 2015
+  m_Text: MARTEN GAMES LTD. - MMXV
 --- !u!222 &1795256706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1194,7 +1194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Marco Bankale
+  m_Text: Marco Bancale
 --- !u!222 &2014145059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "SIndri M\xE1r Kaldal Sigurj\xF3nsson"
+  m_Text: "Sindri M\xE1r Kaldal Sigurj\xF3nsson"
 --- !u!222 &2116988634
 CanvasRenderer:
   m_ObjectHideFlags: 0

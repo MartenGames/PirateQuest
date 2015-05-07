@@ -649,14 +649,17 @@ MonoBehaviour:
   enemy3: {fileID: 136032, guid: 4589da5eb5aba4c85be87baa26a2199c, type: 2}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 3
-  numberOfEnemies2: 1
+  numberOfEnemies2: 2
   numberOfEnemies3: 0
   SpawnBoss: 0
-  spawnPoints:
+  spawnPoints_enemy1:
   - {fileID: 1849286557}
   - {fileID: 283815502}
   - {fileID: 1581764449}
+  spawnPoints_enemy2:
   - {fileID: 270311466}
+  - {fileID: 1581764449}
+  spawnPoints_enemy3: []
 --- !u!68 &736396493
 EdgeCollider2D:
   m_ObjectHideFlags: 0
