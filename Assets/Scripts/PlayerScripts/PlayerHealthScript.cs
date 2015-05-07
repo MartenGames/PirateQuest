@@ -28,15 +28,8 @@ public class PlayerHealthScript : MonoBehaviour
 
 		currentHealth = startingHealth;
 
-		Debug.Log ("healthSlider maxValue FIRST! \n");
-		Debug.Log (healthSlider.maxValue);
-
 		healthSlider.maxValue = currentHealth;
 		healthSlider.value = currentHealth;
-
-		Debug.Log ("healthSlider maxValue AFTER! \n");
-		Debug.Log (healthSlider.maxValue);
-
 	}
 
 	void Awake () {
