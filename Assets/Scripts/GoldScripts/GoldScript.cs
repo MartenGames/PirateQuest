@@ -14,14 +14,9 @@ public class GoldScript : MonoBehaviour {
 		startTime = Time.time + lifeTime;
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
-		Debug.Log ("Start time: " + startTime);
-		Debug.Log ("Start time Time.time: " + Time.time);
 	}
 	
 	void Update () {
-		Debug.Log ("Time: " + Time.time);
-		Debug.Log ("Time2: " + startTime);
-
 		if(startTime <= Time.time){
 			Destroy(gameObject);
 		} else if (startTime - 3f < Time.time && Time.time <= startTime - 2.75f) {
