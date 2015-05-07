@@ -91,7 +91,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			Die ();
 		}
 
-		if ((GameObject.Find ("Enemy(Clone)") == null) && (GameObject.Find ("EnemyBoss(Clone)") == null)) {
+		if (GameObject.FindWithTag ("Enemy") == null) {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
