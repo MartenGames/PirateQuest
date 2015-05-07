@@ -13,10 +13,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public Button goToUpgradeStore;
 	public Button goToMap;
 	//public bool secondCannon = false;
-
 	private Slider mapSlider;
-
-	// Reference to the player GameObject.
+	Material material;
+	Color color;
 	GameObject player;
 	PlayerHealthScript playerHealth;
 	int layer;
@@ -45,13 +44,17 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		cannon.SetActive (GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().secondCannon);
 
 		layer = gameObject.layer;
+		material = GetComponent<SpriteRenderer> ().material;
+		color = material.color;
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
 			playerHealth.TakeDamage(attackDamage);
-			invulnerabilityTimer = 2f;
+			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
+
+			material.color = Color.red;
 		}
 	}
 	
@@ -60,6 +63,23 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		
 		if (invulnerabilityTimer <= 0) {
 			gameObject.layer = layer;
+			material.color = color;
+		} else if (1.75f < invulnerabilityTimer && invulnerabilityTimer <= 2.0f) {
+			material.color = Color.red;
+		} else if (1.5f < invulnerabilityTimer && invulnerabilityTimer <= 1.75f) {
+			material.color = color;
+		} else if (1.25f < invulnerabilityTimer && invulnerabilityTimer <= 1.5f) {
+			material.color = Color.red;
+		} else if (1.0f < invulnerabilityTimer && invulnerabilityTimer <= 1.25f) {
+			material.color = color;
+		} else if (0.75f < invulnerabilityTimer && invulnerabilityTimer <= 1.0f) {
+			material.color = Color.red;
+		} else if (0.5f < invulnerabilityTimer && invulnerabilityTimer <= 0.75f) {
+			material.color = color;
+		} else if (0.25f < invulnerabilityTimer && invulnerabilityTimer <= 0.5f) {
+			material.color = Color.red;
+		} else if (0f < invulnerabilityTimer && invulnerabilityTimer <= 0.25f) {
+			material.color = color;
 		}
 
 		playerHealth.healthSlider.value = playerHealth.currentHealth;
@@ -100,9 +120,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		go.GetComponent<StoringVarScript> ().currentLevel += 1;
 		Application.LoadLevel ("LevelSelection");
 	}
-
-
-
+	
 	public void GoToUpgradeStore() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevel += 1;

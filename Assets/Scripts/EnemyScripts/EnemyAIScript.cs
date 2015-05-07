@@ -102,10 +102,9 @@ public class EnemyAIScript : MonoBehaviour {
 						Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
 						transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
 
-						if (distance > 4) {
-							pos += desiredVector * MoveSpeed * Time.deltaTime;
-							transform.position = pos;
-						}
+						pos += desiredVector * MoveSpeed * Time.deltaTime;
+						transform.position = pos;
+
 					}
 				}
 			}
