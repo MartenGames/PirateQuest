@@ -7,13 +7,15 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 470544}
-  - 50: {fileID: 5016964}
+  - 224: {fileID: 22480254}
   - 212: {fileID: 21297202}
   - 61: {fileID: 6163524}
   - 114: {fileID: 11419470}
   - 114: {fileID: 11432238}
   - 114: {fileID: 11424022}
+  - 222: {fileID: 22275838}
+  - 50: {fileID: 5016964}
+  - 114: {fileID: 11420968}
   m_Layer: 9
   m_Name: EnemyBoss
   m_TagString: Untagged
@@ -37,19 +39,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &470544
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136032}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.2399998, y: 11.5, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
-  m_Children:
-  - {fileID: 491016}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!4 &491016
 Transform:
   m_ObjectHideFlags: 1
@@ -60,7 +49,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.29999995, y: 2.29999995, z: 1}
   m_Children: []
-  m_Father: {fileID: 470544}
+  m_Father: {fileID: 22480254}
   m_RootOrder: 0
 --- !u!50 &5016964
 Rigidbody2D:
@@ -102,11 +91,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  damage: 0
+  damage: 1
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   Gold: {fileID: 194100, guid: a67e203374fad4f95a0c716080f21954, type: 2}
   xCoordinate: 0
   yCoordinate: 0
+--- !u!114 &11420968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 0}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &11424022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b987941088b464596b1b29f25d4eddd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1
+  MoveSpeed: .800000012
   Distance: 3
   rotateSpeed: 40
 --- !u!114 &11432238
@@ -129,14 +166,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 136032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb6b868f7af54e798c93caa43c33828, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ca5b526387914fa29b7ee917f66745f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: .5, z: 0}
-  bulletPrefab: {fileID: 119446, guid: a62c66e034fe74a4e81de62848eee054, type: 2}
+  bulletOffset2: {x: .5, y: 3, z: 0}
+  bulletPrefab: {fileID: 119446, guid: de7a06075c05740b69042dc791c5bf88, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: 0
-  fireDelay: .400000006
+  fireDelay: 1.29999995
 --- !u!212 &21293876
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -189,6 +227,30 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!222 &22275838
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136032}
+--- !u!224 &22480254
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_Children:
+  - {fileID: 491016}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -19.2399998, y: 11.5}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
