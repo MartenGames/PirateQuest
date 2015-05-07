@@ -6,7 +6,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public int attackDamage = 25;
 	public float invulnerabilityTimer = 0;
-	public AudioClip sinkShip;
+	public AudioClip playerDies2;
 	public AudioClip playerGetHit1;
 	public Canvas defeatCanvas;
 	public Canvas winningCanvas;
@@ -50,7 +50,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.name == "EnemyBullet(Clone)" || other.gameObject.name == "BossBullet(Clone)") {
+		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")) {
 			playerHealth.TakeDamage(attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
@@ -106,7 +106,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		defeatCanvas.gameObject.SetActive (true);
-		AudioSource.PlayClipAtPoint (sinkShip, transform.position);
+		AudioSource.PlayClipAtPoint (playerDies2, transform.position);
 	}
 
 	public void RestartLevel() {

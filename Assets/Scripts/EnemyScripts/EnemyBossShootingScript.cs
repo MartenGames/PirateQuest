@@ -5,6 +5,7 @@ using System.Collections;
 public class EnemyBossShootingScript : MonoBehaviour {
 
 	public Vector3 bulletOffset = new Vector3(0, 3f, 0);
+	public Vector3 bulletOffset2 = new Vector3(3f, 0, 0);
 	public GameObject bulletPrefab;
 	public AudioClip gunShot;
 	public float coolDownTimer = 0;
@@ -31,15 +32,16 @@ public class EnemyBossShootingScript : MonoBehaviour {
 		coolDownTimer -= Time.deltaTime;
 
 		//Only shoot within a certain distance
-		if (distance < 20) {
+		if (distance < 10) {
 			if (coolDownTimer <= 0) {
 				coolDownTimer = fireDelay;
 
+				coolDownTimer = fireDelay;
 				Vector3 offset = transform.rotation * bulletOffset;
-
-				GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
+				Vector3 offset2 = transform.rotation * bulletOffset2;
+				Instantiate (bulletPrefab, transform.position + offset, transform.rotation);
+				Instantiate (bulletPrefab, transform.position + offset + offset2, transform.rotation);
 				AudioSource.PlayClipAtPoint(gunShot, transform.position);
-				bulletGO.layer = gameObject.layer;
 
 			}
 		}
