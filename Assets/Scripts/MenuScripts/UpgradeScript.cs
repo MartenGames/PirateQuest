@@ -16,9 +16,20 @@ public class UpgradeScript : MonoBehaviour {
 	public Button continueButton;
 	public Text MoneySignal;
 
+	public Text playerHealth;
+	public Text playerDamage;
+	public Text playerNumberOfCannons;
+	public Text playerFireRate;
+
+	GameObject emptyObject;
 
 	DamageHandlerPlayerScript player;
 	// Use this for initialization
+
+	void Awake () {
+		 emptyObject = GameObject.Find ("EmptyObject(Clone)");
+	}
+
 	void Start () {
 
 		//Initialize the buttons and canvas
@@ -27,6 +38,8 @@ public class UpgradeScript : MonoBehaviour {
 		headline = headline.GetComponent<Canvas> ();
 		attack = attack.GetComponent<Canvas> ();
 		defence = defence.GetComponent<Canvas> ();*/
+
+
 
 		damageButton = damageButton.GetComponent<Button> ();
 		firerateButton = firerateButton.GetComponent<Button> ();
@@ -106,6 +119,15 @@ public class UpgradeScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+
+		playerHealth.text = "Health: " + (emptyObject.GetComponent<StoringVarScript> ().health + 100);
+		playerDamage.text = "Damage: " + emptyObject.GetComponent<StoringVarScript> ().damage;
+		playerFireRate.text = "Firarate: " + (1 - emptyObject.GetComponent<StoringVarScript> ().fireRate) + " second";
+		if (emptyObject.GetComponent<StoringVarScript> ().secondCannon) {
+			playerNumberOfCannons.text = "Number of Cannons: 1";
+		} else {
+			playerNumberOfCannons.text = "Number of Cannons: 1";
+		}
+
 	}
 }
