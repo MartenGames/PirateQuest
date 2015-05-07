@@ -49,7 +49,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.name == "EnemyBullet(Clone)") {
+		if (other.gameObject.name == "EnemyBullet(Clone)" || other.gameObject.name == "BossBullet(Clone)") {
 			playerHealth.TakeDamage(attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
@@ -90,7 +90,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			Die ();
 		}
 
-		if (GameObject.Find ("Enemy(Clone)") == null) {
+		if ((GameObject.Find ("Enemy(Clone)") == null) && (GameObject.Find ("EnemyBoss(Clone)") == null)) {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");

@@ -21,6 +21,7 @@ public class SpawnScript : MonoBehaviour {
 	public int numberOfEnemies;
 	public int numberOfEnemies2;
 	public int numberOfEnemies3;
+	public bool SpawnBoss;
 	public GameObject[] spawnPoints;
 	List<Coordinate> coords = new List<Coordinate> ();
 
@@ -40,6 +41,9 @@ public class SpawnScript : MonoBehaviour {
 		}
 		if (numberOfEnemies3 != 0) {
 			SpawnEnemy3 ();
+		}
+		if (EnemyBoss) {
+			SpawnEnemyBoss();
 		}
 	}
 
@@ -68,6 +72,6 @@ public class SpawnScript : MonoBehaviour {
 	}
 
 	void SpawnEnemyBoss () {
-		Instantiate (EnemyBoss, new Vector3 (coords[1].x, coords[1].y, 0)	, transform.rotation);
+		Instantiate (EnemyBoss, new Vector3 (spawnPoints[1].transform.position.x, spawnPoints[1].transform.position.y, 0)	, transform.rotation);
 	}
 }

@@ -445,7 +445,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -525,7 +525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -696,14 +696,15 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11446250, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1311098666 stripped
+--- !u!4 &1311098666
 Transform:
   m_PrefabParentObject: {fileID: 494236, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_PrefabInternal: {fileID: 1311098665}
---- !u!1 &1311098667 stripped
+--- !u!1 &1311098667
 GameObject:
   m_PrefabParentObject: {fileID: 165418, guid: e9f1c2287be894c01a70dcaf8af651d0, type: 2}
   m_PrefabInternal: {fileID: 1311098665}
@@ -726,6 +727,7 @@ MonoBehaviour:
   numberOfEnemies: 2
   numberOfEnemies2: 0
   numberOfEnemies3: 0
+  SpawnBoss: 0
   spawnPoints:
   - {fileID: 576190697}
   - {fileID: 1598463360}
@@ -1074,7 +1076,7 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1816521987}
---- !u!224 &1951339625 stripped
+--- !u!224 &1951339625
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
