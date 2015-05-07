@@ -6,7 +6,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public int attackDamage = 25;
 	public float invulnerabilityTimer = 0;
-	public AudioClip sinkShip;
+	public AudioClip playerDies2;
 	public AudioClip playerGetHit1;
 	public Canvas defeatCanvas;
 	public Canvas winningCanvas;
@@ -91,7 +91,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			Die ();
 		}
 
-		if ((GameObject.Find ("Enemy(Clone)") == null) && (GameObject.Find ("EnemyBoss(Clone)") == null)) {
+		if (GameObject.FindWithTag ("Enemy") == null) {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
@@ -106,7 +106,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		defeatCanvas.gameObject.SetActive (true);
-		AudioSource.PlayClipAtPoint (sinkShip, transform.position);
+		AudioSource.PlayClipAtPoint (playerDies2, transform.position);
 	}
 
 	public void RestartLevel() {

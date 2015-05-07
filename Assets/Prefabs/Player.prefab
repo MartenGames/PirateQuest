@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 25
   invulnerabilityTimer: 0
-  sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
+  playerDies2: {fileID: 8300000, guid: 260b78e4b94934cb18f084dcbc680ecb, type: 3}
   playerGetHit1: {fileID: 8300000, guid: 50a551934aab54bf997b148cc1f19719, type: 3}
   defeatCanvas: {fileID: 22332440, guid: 3edd965ed9e964523be277313038f102, type: 2}
   winningCanvas: {fileID: 22310128, guid: d3acada25df974ed280519b2a123c189, type: 2}

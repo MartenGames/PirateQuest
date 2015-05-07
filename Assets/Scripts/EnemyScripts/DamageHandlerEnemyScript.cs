@@ -9,20 +9,36 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 	public GameObject Gold;
 	public float xCoordinate;
 	public float yCoordinate;
+	float blinkTime;
+	Material material;
+	Color color;
 
 	void Start() {
 		damage = GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript> ().damage;
+		material = GetComponent<SpriteRenderer> ().material;
+		color = material.color;
+		blinkTime = 0f;
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.name == "Bullet(Clone)" || other.gameObject.name == "SecondBullet(Clone)") {
 			health -= damage;
+			blinkTime = 0.25f;
+			material.color = Color.red;
 		}
 	}
 
 	void Update() {
 		if (health <= 0) {
 			Die ();
+		}
+
+		blinkTime -= Time.deltaTime;
+
+		if (blinkTime <= 0f) {
+			material.color = color;
+		} else {
+			material.color = Color.red;
 		}
 	}
 
