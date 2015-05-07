@@ -21,6 +21,9 @@ public class UpgradeScript : MonoBehaviour {
 	public Text playerNumberOfCannons;
 	public Text playerFireRate;
 
+	public AudioClip upgradeSound;
+	public AudioClip errorSound;
+
 	GameObject emptyObject;
 
 	DamageHandlerPlayerScript player;
@@ -72,8 +75,10 @@ public class UpgradeScript : MonoBehaviour {
 
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		if (go.GetComponent<StoringVarScript> ().goldAmount < 1500) {
+			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
+			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			go.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
 			go.GetComponent<StoringVarScript> ().goldAmount -= 1500;
@@ -83,8 +88,10 @@ public class UpgradeScript : MonoBehaviour {
 	public void PressIncreaseHealth(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		if (go.GetComponent<StoringVarScript> ().goldAmount < 200) {
+			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
+			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			go.GetComponent<StoringVarScript> ().health += 25;
 			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
@@ -95,9 +102,11 @@ public class UpgradeScript : MonoBehaviour {
 	public void PressIncreaseDAmage(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		if(go.GetComponent<StoringVarScript> ().goldAmount < 200){
+			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		}
 		else {
+			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			go.GetComponent<StoringVarScript> ().damage += 1;
 			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
@@ -107,9 +116,11 @@ public class UpgradeScript : MonoBehaviour {
 	public void PressIncreaseFireRate(){
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		if(go.GetComponent<StoringVarScript> ().goldAmount < 1000){
+			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		}
 		else {
+			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			go.GetComponent<StoringVarScript> ().fireRate += 0.2f;
 			go.GetComponent<StoringVarScript> ().goldAmount -= 1000;
