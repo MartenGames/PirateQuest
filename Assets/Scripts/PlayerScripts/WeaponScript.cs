@@ -52,6 +52,7 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
+		Debug.Log (bulletPrefab.layer);
 		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
 		Instantiate (bulletPrefab, firePointPos, transform.rotation);
 		AudioSource.PlayClipAtPoint (cannonSound, transform.position);

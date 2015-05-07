@@ -98,7 +98,6 @@ public class EnemyAIScript : MonoBehaviour {
 
 						tmp = false;
 
-						Debug.Log ("rotate first!");
 						float zAngle = Mathf.Atan2 (desiredVector.y, desiredVector.x) * Mathf.Rad2Deg - 90;
 						Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
 						transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);
@@ -113,7 +112,6 @@ public class EnemyAIScript : MonoBehaviour {
 
 		if (tmp) {
 			// Face the player
-			Debug.Log ("rotate second!");
 			float zAngle = Mathf.Atan2 (playerVector.y, playerVector.x) * Mathf.Rad2Deg - 90;
 			Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
 			transform.rotation = Quaternion.RotateTowards (transform.rotation, desiredRot, rotateSpeed * Time.deltaTime);

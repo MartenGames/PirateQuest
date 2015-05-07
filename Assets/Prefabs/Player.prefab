@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 487132}
-  m_Layer: 14
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491192}
-  m_Layer: 14
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 4: {fileID: 464184}
   - 212: {fileID: 21203406}
   - 114: {fileID: 11446382}
-  m_Layer: 14
+  m_Layer: 8
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - 4: {fileID: 459044}
   - 212: {fileID: 21230082}
   - 114: {fileID: 11495198}
-  m_Layer: 14
+  m_Layer: 8
   m_Name: Cannon2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
