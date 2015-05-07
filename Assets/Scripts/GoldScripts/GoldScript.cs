@@ -14,11 +14,14 @@ public class GoldScript : MonoBehaviour {
 		startTime = Time.time + lifeTime;
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
+		Debug.Log ("Start time: " + startTime);
+		Debug.Log ("Start time Time.time: " + Time.time);
 	}
 	
 	void Update () {
-
-		//Destroy object when a startTime has passed.
+		Debug.Log ("Time: " + Time.time);
+		Debug.Log ("Time2: " + startTime);
+		// Destroy object when a startTime has passed.
 		if(startTime <= Time.time){
 			Destroy(gameObject);
 		} /*else if (0f < startTime && startTime <= 0.25f) {
