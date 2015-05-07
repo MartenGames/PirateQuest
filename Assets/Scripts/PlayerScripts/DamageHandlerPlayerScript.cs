@@ -100,9 +100,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		go.GetComponent<StoringVarScript> ().currentLevel += 1;
 		Application.LoadLevel ("LevelSelection");
 	}
-
-
-
+	
 	public void GoToUpgradeStore() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevel += 1;
