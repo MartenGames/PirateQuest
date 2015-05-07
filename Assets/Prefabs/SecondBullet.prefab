@@ -13,7 +13,7 @@ GameObject:
   - 50: {fileID: 5078938}
   - 114: {fileID: 11447718}
   - 114: {fileID: 11435492}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: SecondBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
