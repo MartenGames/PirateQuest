@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: MARTEN GAMES LTD. - MMXV
+  m_Text: MARTEN GAMES LTD. - gMMXV
 --- !u!222 &1795256706
 CanvasRenderer:
   m_ObjectHideFlags: 0
