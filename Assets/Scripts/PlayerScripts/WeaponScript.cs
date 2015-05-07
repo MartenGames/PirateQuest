@@ -22,6 +22,8 @@ public class WeaponScript : MonoBehaviour {
 		if (firePoint == null) {
 			Debug.LogError("ERROR: No firePoint!");
 		}
+		//If the player updated the fireRate
+		fireDelay -= GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().fireRate; 
 	}
 	
 	// Update is called once per frame

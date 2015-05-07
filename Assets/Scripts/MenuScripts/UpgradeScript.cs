@@ -90,6 +90,20 @@ public class UpgradeScript : MonoBehaviour {
 			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
 		}
 	}
+
+	public void PressIncreaseFireRate(){
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		if(go.GetComponent<StoringVarScript> ().goldAmount < 1000){
+			MoneySignal.enabled = true;
+		}
+		else {
+			MoneySignal.enabled = false;
+			go.GetComponent<StoringVarScript> ().fireRate += 0.2f;
+			go.GetComponent<StoringVarScript> ().goldAmount -= 1000;
+		}
+	}
+
+
 	// Update is called once per frame
 	void Update () {
 	

@@ -55,7 +55,9 @@ public class SpawnScript : MonoBehaviour {
 
 	void SpawnEnemy () {
 		for(int i = 0; i < numberOfEnemies; i++) {
+			Debug.Log (transform.rotation);
 			Instantiate (enemy, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
+
 		}
 	}
 

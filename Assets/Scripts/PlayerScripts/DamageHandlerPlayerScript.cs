@@ -7,6 +7,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public int attackDamage = 25;
 	public float invulnerabilityTimer = 0;
 	public AudioClip sinkShip;
+	public AudioClip playerGetHit1;
 	public Canvas defeatCanvas;
 	public Canvas winningCanvas;
 	public Button restartLevel;
@@ -53,8 +54,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			playerHealth.TakeDamage(attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
-
 			material.color = Color.red;
+			AudioSource.PlayClipAtPoint(playerGetHit1, transform.position);
 		}
 	}
 	
@@ -105,6 +106,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		defeatCanvas.gameObject.SetActive (true);
+		AudioSource.PlayClipAtPoint (sinkShip, transform.position);
 	}
 
 	public void RestartLevel() {
