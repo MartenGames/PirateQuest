@@ -24,6 +24,7 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 		if(other.gameObject.name == "Bullet(Clone)" || other.gameObject.name == "SecondBullet(Clone)") {
 			health -= damage;
 			blinkTime = 0.25f;
+			material.color = Color.red;
 		}
 	}
 
@@ -34,10 +35,10 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 
 		blinkTime -= Time.deltaTime;
 
-		if (0 < blinkTime && blinkTime <= 0.25) {
-			material.color = Color.red;
-		} else {
+		if (blinkTime <= 0f) {
 			material.color = color;
+		} else {
+			material.color = Color.red;
 		}
 	}
 
