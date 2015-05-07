@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11419470}
   - 114: {fileID: 11432238}
   - 114: {fileID: 11424022}
-  - 114: {fileID: 11457878}
   m_Layer: 9
   m_Name: EnemyBoss
   m_TagString: Untagged
@@ -102,7 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0a8e361c7434a45b86ce89e0d56f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 10
+  damage: 0
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   Gold: {fileID: 194100, guid: a67e203374fad4f95a0c716080f21954, type: 2}
   xCoordinate: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 1
   Distance: 3
+  rotateSpeed: 40
 --- !u!114 &11432238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,22 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: .5, z: 0}
-  bulletPrefab: {fileID: 119446, guid: a62c66e034fe74a4e81de62848eee054, type: 2}
+  bulletPrefab: {fileID: 119446, guid: de7a06075c05740b69042dc791c5bf88, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: 0
-  fireDelay: 1
---- !u!114 &11457878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 065bc40560f294db9882c14c5889447c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 40
+  fireDelay: .400000006
 --- !u!212 &21293876
 SpriteRenderer:
   m_ObjectHideFlags: 1
