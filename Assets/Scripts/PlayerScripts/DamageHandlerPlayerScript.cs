@@ -51,7 +51,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "EnemyBullet(Clone)") {
 			playerHealth.TakeDamage(attackDamage);
-			invulnerabilityTimer = 2f;
+			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
 
 			material.color = Color.red;
