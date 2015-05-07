@@ -225,7 +225,7 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 11490870, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
   flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
+  flashColour: {r: 1, g: 0, b: 0, a: .470588237}
 --- !u!114 &11470386
 MonoBehaviour:
   m_ObjectHideFlags: 1
