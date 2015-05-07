@@ -22,16 +22,34 @@ public class SpawnScript : MonoBehaviour {
 	public int numberOfEnemies2;
 	public int numberOfEnemies3;
 	public bool SpawnBoss;
-	public GameObject[] spawnPoints;
-	List<Coordinate> coords = new List<Coordinate> ();
+	public GameObject[] spawnPoints_enemy1;
+	public GameObject[] spawnPoints_enemy2;
+	public GameObject[] spawnPoints_enemy3;
+	List<Coordinate> coords_enemy1 = new List<Coordinate> ();
+	List<Coordinate> coords_enemy2 = new List<Coordinate> ();
+	List<Coordinate> coords_enemy3 = new List<Coordinate> ();
 
 	// Use this for initialization
 	void Start () {
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Coordinate co = new Coordinate();
-			co.x =  spawnPoints[i].transform.position.x;
-			co.y =  spawnPoints[i].transform.position.y;
-			coords.Add(co);
+			co.x =  spawnPoints_enemy1[i].transform.position.x;
+			co.y =  spawnPoints_enemy1[i].transform.position.y;
+			coords_enemy1.Add(co);
+		}
+
+		for(int i = 0; i < numberOfEnemies2; i++) {
+			Coordinate co = new Coordinate();
+			co.x =  spawnPoints_enemy2[i].transform.position.x;
+			co.y =  spawnPoints_enemy2[i].transform.position.y;
+			coords_enemy2.Add(co);
+		}
+
+		for(int i = 0; i < numberOfEnemies3; i++) {
+			Coordinate co = new Coordinate();
+			co.x =  spawnPoints_enemy3[i].transform.position.x;
+			co.y =  spawnPoints_enemy3[i].transform.position.y;
+			coords_enemy3.Add(co);
 		}
 
 		SpawnPlayer ();
@@ -56,24 +74,24 @@ public class SpawnScript : MonoBehaviour {
 	void SpawnEnemy () {
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Debug.Log (transform.rotation);
-			Instantiate (enemy, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
+			Instantiate (enemy, new Vector3 (coords_enemy1[i].x, coords_enemy1[i].y, 0), transform.rotation);
 
 		}
 	}
 
 	void SpawnEnemy2 () {
 		for(int i = 0; i < numberOfEnemies2; i++) {
-			Instantiate (enemy2, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
+			Instantiate (enemy2, new Vector3 (coords_enemy2[i].x, coords_enemy2[i].y, 0), transform.rotation);
 		}
 	}
 
 	void SpawnEnemy3 () {
 		for(int i = 0; i < numberOfEnemies3; i++) {
-			Instantiate (enemy3, new Vector3 (coords[i].x, coords[i].y, 0), transform.rotation);
+			Instantiate (enemy3, new Vector3 (coords_enemy3[i].x, coords_enemy3[i].y, 0), transform.rotation);
 		}
 	}
 
 	void SpawnEnemyBoss () {
-		Instantiate (EnemyBoss, new Vector3 (spawnPoints[1].transform.position.x, spawnPoints[1].transform.position.y, 0)	, transform.rotation);
+		Instantiate (EnemyBoss, new Vector3 (spawnPoints_enemy1[1].transform.position.x, spawnPoints_enemy1[1].transform.position.y, 0)	, transform.rotation);
 	}
 }
