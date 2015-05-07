@@ -638,7 +638,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Increase Armour \n200 Coins."
+  m_Text: 'Increase Health
+
+    200 Coins.'
 --- !u!222 &681577560
 CanvasRenderer:
   m_ObjectHideFlags: 0
