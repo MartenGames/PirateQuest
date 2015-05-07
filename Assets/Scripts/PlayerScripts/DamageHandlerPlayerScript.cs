@@ -49,7 +49,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.name == "EnemyBullet(Clone)" || other.gameObject.name == "BossBullet(Clone)") {
+		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")) {
 			playerHealth.TakeDamage(attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
