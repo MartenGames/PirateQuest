@@ -8,7 +8,9 @@ TagManager:
   - WinningCanvas
   - Island
   - Player
-  - Enemy
+  - Enemy1
+  - Enemy2
+  - Enemy3
   layers:
   - Default
   - TransparentFX
