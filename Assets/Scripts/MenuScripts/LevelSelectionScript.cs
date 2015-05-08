@@ -4,10 +4,10 @@ using System.Collections;
 
 public class LevelSelectionScript : MonoBehaviour {
 
-	public Button[] levels;
+	//public Button[] levels;
 
 	void Start () {
-
+		/*
 		GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
 		int currentLevel = emptyObject.GetComponent<StoringVarScript> ().currentLevel;
 
@@ -20,7 +20,7 @@ public class LevelSelectionScript : MonoBehaviour {
 				levels[i].image.color = Color.gray;
 				levels[i].enabled = false;	
 			}
-		}
+		}*/
 	}
 
 	public void LoadScene(string level)
