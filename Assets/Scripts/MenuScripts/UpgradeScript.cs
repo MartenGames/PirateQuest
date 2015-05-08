@@ -62,10 +62,10 @@ public class UpgradeScript : MonoBehaviour {
 		continueButton = continueButton.GetComponent<Button> ();
 		MoneySignal = MoneySignal.GetComponent<Text> ();
 
-		healthPriceText.text = "Increase Health: \n" + healthPrice;
-		damagePriceText.text = "Increase Damage of Cannon: \n" + damagePrice;
-		fireRatePriceText.text = "Increase Firerate: \n" + fireRatePrice;
-		secondCannonPriceText.text = "Add cannon to the ship: \n" + secondCannonPrice;
+		healthPriceText.text = "Increase Health: \n" + healthPrice + " Coins";
+		damagePriceText.text = "Increase Damage of Cannon: \n" + damagePrice + " Coins";
+		fireRatePriceText.text = "Increase Firerate: \n" + fireRatePrice + " Coins";
+		secondCannonPriceText.text = "Add cannon to the ship: \n" + secondCannonPrice + " Coins";
 
 		/*
 		damageButton.enabled = true;
@@ -87,6 +87,7 @@ public class UpgradeScript : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
+			emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			emptyObject.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
@@ -99,9 +100,12 @@ public class UpgradeScript : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
+
+		
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			emptyObject.GetComponent<StoringVarScript> ().health += 25;
+			emptyObject.GetComponent<StoringVarScript> ().healthPrice *= 2;
 			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= healthPrice;
 		}
 
@@ -114,6 +118,7 @@ public class UpgradeScript : MonoBehaviour {
 			MoneySignal.enabled = true;
 		}
 		else {
+			emptyObject.GetComponent<StoringVarScript> ().damagePrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			emptyObject.GetComponent<StoringVarScript> ().damage += 1;
@@ -128,6 +133,7 @@ public class UpgradeScript : MonoBehaviour {
 			MoneySignal.enabled = true;
 		}
 		else {
+			emptyObject.GetComponent<StoringVarScript> ().fireRatePrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			emptyObject.GetComponent<StoringVarScript> ().fireRate += 0.2f;
