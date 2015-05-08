@@ -4,6 +4,7 @@ using System.Collections;
 public class GoldScript : MonoBehaviour {
 
 	//The life time of the gold
+	public int goldAmount;
 	private float lifeTime = 8.0f;
 	private float startTime = 0.0f;
 	Material material;
@@ -15,7 +16,7 @@ public class GoldScript : MonoBehaviour {
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
 	}
-	
+
 	void Update () {
 		if(startTime <= Time.time){
 			Destroy(gameObject);
