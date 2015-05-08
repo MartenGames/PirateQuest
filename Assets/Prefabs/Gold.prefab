@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11417724}
   m_Layer: 13
   m_Name: Gold
-  m_TagString: Untagged
+  m_TagString: Gold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca188812e4d43ec87e8a420fdfe0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldAmount: 0
 --- !u!212 &21293690
 SpriteRenderer:
   m_ObjectHideFlags: 1
