@@ -4,7 +4,7 @@ using System.Collections;
 public class GoldScript : MonoBehaviour {
 
 	//The life time of the gold
-	private float lifeTime = 5.0f;
+	private float lifeTime = 8.0f;
 	private float startTime = 0.0f;
 	Material material;
 	Color color;
