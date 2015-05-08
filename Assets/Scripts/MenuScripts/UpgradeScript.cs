@@ -62,10 +62,7 @@ public class UpgradeScript : MonoBehaviour {
 		continueButton = continueButton.GetComponent<Button> ();
 		MoneySignal = MoneySignal.GetComponent<Text> ();
 
-		healthPriceText.text = "Increase Health: \n" + healthPrice + " Coins";
-		damagePriceText.text = "Increase Damage of Cannon: \n" + damagePrice + " Coins";
-		fireRatePriceText.text = "Increase Firerate: \n" + fireRatePrice + " Coins";
-		secondCannonPriceText.text = "Add cannon to the ship: \n" + secondCannonPrice + " Coins";
+
 
 		/*
 		damageButton.enabled = true;
@@ -87,7 +84,7 @@ public class UpgradeScript : MonoBehaviour {
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
-			emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice *= 2;
+			emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice *= 2;	
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
 			emptyObject.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
@@ -153,6 +150,11 @@ public class UpgradeScript : MonoBehaviour {
 		} else {
 			playerNumberOfCannons.text = "Number of Cannons: 1";
 		}
+
+		healthPriceText.text = "Increase Health: \n" + emptyObject.GetComponent<StoringVarScript> ().healthPrice + " Coins";
+		damagePriceText.text = "Increase Damage of Cannon: \n" + emptyObject.GetComponent<StoringVarScript> ().damagePrice + " Coins";
+		fireRatePriceText.text = "Increase Firerate: \n" + emptyObject.GetComponent<StoringVarScript> ().fireRatePrice + " Coins";
+		secondCannonPriceText.text = "Add cannon to the ship: \n" + emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice + " Coins";
 
 	}
 }
