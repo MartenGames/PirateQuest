@@ -5,13 +5,9 @@ public class PlayerCollectScript : MonoBehaviour {
 
 	public AudioClip coinCollect;
 
-	public int goldValue = 100;
-
-
-
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -22,8 +18,9 @@ public class PlayerCollectScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 
 		if(other.gameObject.name == "Gold" || other.gameObject.name == "Gold(Clone)") {
+			int goldAmount = other.gameObject.GetComponent<GoldScript>().goldAmount;
 			GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
-			emptyObject.GetComponent<StoringVarScript> ().currentLevelGoldAmount += goldValue;
+			emptyObject.GetComponent<StoringVarScript> ().currentLevelGoldAmount += goldAmount;
 			//GoldAmountManagerScript.goldAmount += goldValue;
 			AudioSource.PlayClipAtPoint(coinCollect, transform.position);
 			Destroy(other.gameObject);

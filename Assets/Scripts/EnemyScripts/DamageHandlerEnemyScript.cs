@@ -50,17 +50,16 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 		Destroy (gameObject);
 		AudioSource.PlayClipAtPoint(sinkShip, transform.position);
 		GameObject go = (GameObject)Instantiate (Gold, new Vector3 (xCoordinate, yCoordinate, 0), transform.rotation);
-		Debug.Log ("NAME: " + gameObject.tag);
-		if (gameObject.tag == "Enemy1") {
-			Debug.Log ("enemy1");
-		} else if (gameObject.tag == "Enemy2") {
-			Debug.Log ("enemy2");
-		} else if (gameObject.tag == "Enemy3") {
-			Debug.Log ("enemy3");
-		} else {
-			Debug.Log ("enemy??");
-		}
 
-		go.GetComponent<GoldScript> ().goldAmount = 100;
+		if (gameObject.tag == "Enemy1") {
+			go.GetComponent<GoldScript> ().goldAmount = 100;
+		} else if (gameObject.tag == "Enemy2") {
+			go.GetComponent<GoldScript> ().goldAmount = 200;
+		} else if (gameObject.tag == "Enemy3") {
+			go.GetComponent<GoldScript> ().goldAmount = 300;
+		} else {
+			Debug.Log ("This should never happen, check DamageHandlerEnemyScript");
+			go.GetComponent<GoldScript> ().goldAmount = 100;
+		}
 	}
 }
