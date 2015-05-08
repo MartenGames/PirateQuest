@@ -11,6 +11,12 @@ public class StoringVarScript : MonoBehaviour {
 	public int currentLevelGoldAmount = 0;
 	public int currentLevel;
 
+	//Prices in upgrade store
+	public int healthPrice = 200;
+	public int damagePrice = 500;
+	public int fireRatePrice = 500;
+	public int secondCannonPrice = 1000;
+
 	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);
 	}

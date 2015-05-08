@@ -218,6 +218,14 @@ MonoBehaviour:
   playerDamage: {fileID: 1399986528}
   playerNumberOfCannons: {fileID: 1675772505}
   playerFireRate: {fileID: 1198371132}
+  healthPriceText: {fileID: 681577559}
+  damagePriceText: {fileID: 1219486248}
+  fireRatePriceText: {fileID: 1650344568}
+  secondCannonPriceText: {fileID: 1501464622}
+  healthPrice: 0
+  damagePrice: 0
+  fireRatePrice: 0
+  secondCannonPrice: 0
   upgradeSound: {fileID: 8300000, guid: d3d287bd28dd546e8a3ca5df8a9b778c, type: 3}
   errorSound: {fileID: 8300000, guid: 8556ed1569bcb48f79565885a3018f96, type: 3}
 --- !u!1 &303813264

@@ -16,10 +16,24 @@ public class UpgradeScript : MonoBehaviour {
 	public Button continueButton;
 	public Text MoneySignal;
 
+	//Stats for the player to show in upgrade store
 	public Text playerHealth;
 	public Text playerDamage;
 	public Text playerNumberOfCannons;
 	public Text playerFireRate;
+
+	//Text for prices of upgrades in upgrade store
+	public Text healthPriceText;
+	public Text damagePriceText;
+	public Text fireRatePriceText;
+	public Text secondCannonPriceText;
+
+	//Prices of upgrades
+	public int healthPrice;
+	public int damagePrice;
+	public int fireRatePrice;
+	public int secondCannonPrice;
+
 
 	public AudioClip upgradeSound;
 	public AudioClip errorSound;
@@ -31,19 +45,16 @@ public class UpgradeScript : MonoBehaviour {
 
 	void Awake () {
 		 emptyObject = GameObject.Find ("EmptyObject(Clone)");
+
+		healthPrice = emptyObject.GetComponent<StoringVarScript> ().healthPrice;
+		damagePrice = emptyObject.GetComponent<StoringVarScript> ().damagePrice;
+		fireRatePrice = emptyObject.GetComponent<StoringVarScript> ().fireRatePrice;
+		secondCannonPrice = emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice;
 	}
 
 	void Start () {
 
-		//Initialize the buttons and canvas
-
-		/*playerShip = playerShip.GetComponent<Canvas> ();
-		headline = headline.GetComponent<Canvas> ();
-		attack = attack.GetComponent<Canvas> ();
-		defence = defence.GetComponent<Canvas> ();*/
-
-
-
+		//Initalize the buttons and enable them
 		damageButton = damageButton.GetComponent<Button> ();
 		firerateButton = firerateButton.GetComponent<Button> ();
 		armourButton = armourButton.GetComponent<Button> ();
@@ -51,18 +62,17 @@ public class UpgradeScript : MonoBehaviour {
 		continueButton = continueButton.GetComponent<Button> ();
 		MoneySignal = MoneySignal.GetComponent<Text> ();
 
-		//make everything visable
+		healthPriceText.text = "Increase Health: \n" + healthPrice + " Coins";
+		damagePriceText.text = "Increase Damage of Cannon: \n" + damagePrice + " Coins";
+		fireRatePriceText.text = "Increase Firerate: \n" + fireRatePrice + " Coins";
+		secondCannonPriceText.text = "Add cannon to the ship: \n" + secondCannonPrice + " Coins";
 
-		/*playerShip.enabled = true;
-		headline.enabled = true;
-		attack.enabled = true;
-		defence.enabled = true;*/
-
+		/*
 		damageButton.enabled = true;
 		firerateButton.enabled = true;
 		armourButton.enabled = true;
 		continueButton.enabled = true;
-		multiCannonsButton.enabled = true;
+		multiCannonsButton.enabled = true;*/
 		MoneySignal.enabled = false;
 	
 	}
@@ -73,57 +83,61 @@ public class UpgradeScript : MonoBehaviour {
 
 	public void PressMultiCannons(){
 
-		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		if (go.GetComponent<StoringVarScript> ().goldAmount < 1500) {
+		if (emptyObject.GetComponent<StoringVarScript> ().goldAmount < secondCannonPrice) {
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
+			emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
-			go.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
-			go.GetComponent<StoringVarScript> ().goldAmount -= 1500;
+			emptyObject.GetComponent<StoringVarScript> ().SetMultiCannonsTrue ();
+			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= secondCannonPrice;
 		}
 	}
 
 	public void PressIncreaseHealth(){
-		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		if (go.GetComponent<StoringVarScript> ().goldAmount < 200) {
+		if (emptyObject.GetComponent<StoringVarScript> ().goldAmount < healthPrice) {
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		} else {
+
+		
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
-			go.GetComponent<StoringVarScript> ().health += 25;
-			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
+			emptyObject.GetComponent<StoringVarScript> ().health += 25;
+			emptyObject.GetComponent<StoringVarScript> ().healthPrice *= 2;
+			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= healthPrice;
 		}
 
 	}
 
 	public void PressIncreaseDAmage(){
-		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		if(go.GetComponent<StoringVarScript> ().goldAmount < 200){
+
+		if(emptyObject.GetComponent<StoringVarScript> ().goldAmount < damagePrice){
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		}
 		else {
+			emptyObject.GetComponent<StoringVarScript> ().damagePrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
-			go.GetComponent<StoringVarScript> ().damage += 1;
-			go.GetComponent<StoringVarScript> ().goldAmount -= 200;
+			emptyObject.GetComponent<StoringVarScript> ().damage += 1;
+			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= damagePrice;
 		}
 	}
 
 	public void PressIncreaseFireRate(){
-		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		if(go.GetComponent<StoringVarScript> ().goldAmount < 1000){
+
+		if(emptyObject.GetComponent<StoringVarScript> ().goldAmount < fireRatePrice){
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		}
 		else {
+			emptyObject.GetComponent<StoringVarScript> ().fireRatePrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
-			go.GetComponent<StoringVarScript> ().fireRate += 0.2f;
-			go.GetComponent<StoringVarScript> ().goldAmount -= 1000;
+			emptyObject.GetComponent<StoringVarScript> ().fireRate += 0.2f;
+			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= fireRatePrice;
 		}
 	}
 
