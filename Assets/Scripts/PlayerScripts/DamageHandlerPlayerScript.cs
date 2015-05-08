@@ -97,7 +97,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
 			go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
-			winningCanvas.gameObject.SetActive(true);
+			if(GameObject.FindWithTag ("Gold") == null) {
+				winningCanvas.gameObject.SetActive(true);
+			}
 			go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		}
 	}
