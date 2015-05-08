@@ -49,6 +49,18 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 		yCoordinate = gameObject.transform.position.y;
 		Destroy (gameObject);
 		AudioSource.PlayClipAtPoint(sinkShip, transform.position);
-		Instantiate (Gold, new Vector3 (xCoordinate, yCoordinate, 0), transform.rotation);
+		GameObject go = (GameObject)Instantiate (Gold, new Vector3 (xCoordinate, yCoordinate, 0), transform.rotation);
+		Debug.Log ("NAME: " + gameObject.tag);
+		if (gameObject.tag == "Enemy1") {
+			Debug.Log ("enemy1");
+		} else if (gameObject.tag == "Enemy2") {
+			Debug.Log ("enemy2");
+		} else if (gameObject.tag == "Enemy3") {
+			Debug.Log ("enemy3");
+		} else {
+			Debug.Log ("enemy??");
+		}
+
+		go.GetComponent<GoldScript> ().goldAmount = 100;
 	}
 }
