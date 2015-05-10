@@ -12,6 +12,7 @@ public class MainMenuScript : MonoBehaviour {
 	public Button ExitButton;
 	public Button InfoButton;
 	public GameObject EmptyObject;
+	public AudioSource mainMenuMusic;
 
 	GameObject theInstance;
 	static bool firstTime = true;
@@ -25,7 +26,8 @@ public class MainMenuScript : MonoBehaviour {
 		InfoButton = InfoButton.GetComponent<Button> ();
 		PlayButton = PlayButton.GetComponent<Button> ();
 		ExitButton = ExitButton.GetComponent<Button> ();
-		
+		mainMenuMusic = mainMenuMusic.GetComponent<AudioSource> ();
+
 		//Hide the QuitMenu and InfoMenu and enable the main menu buttons
 		InfoMenu.enabled = false;
 		QuitMenu.enabled = false;
@@ -98,6 +100,12 @@ public class MainMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown (KeyCode.M)) {
+			if(mainMenuMusic.mute) {
+				mainMenuMusic.mute = false;
+			} else {
+				mainMenuMusic.mute = true;
+			}
+		}
 	}
 }

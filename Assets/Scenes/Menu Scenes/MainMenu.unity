@@ -736,6 +736,7 @@ MonoBehaviour:
   ExitButton: {fileID: 592311621}
   InfoButton: {fileID: 1718146483}
   EmptyObject: {fileID: 174620, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
+  mainMenuMusic: {fileID: 2084681116}
 --- !u!1 &592311620
 GameObject:
   m_ObjectHideFlags: 0
