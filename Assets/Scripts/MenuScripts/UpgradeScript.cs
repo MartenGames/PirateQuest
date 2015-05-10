@@ -142,6 +142,10 @@ public class UpgradeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+		int gold = emptyObject.GetComponent<StoringVarScript> ().goldAmount;
+
+		//Print out the stats of the player.	
 		playerHealth.text = "Health: " + (emptyObject.GetComponent<StoringVarScript> ().health + 100);
 		playerDamage.text = "Damage: " + emptyObject.GetComponent<StoringVarScript> ().damage;
 		playerFireRate.text = "Firarate: " + (1 - emptyObject.GetComponent<StoringVarScript> ().fireRate) + " second";
@@ -151,6 +155,21 @@ public class UpgradeScript : MonoBehaviour {
 			playerNumberOfCannons.text = "Number of Cannons: 1";
 		}
 
+
+
+
+		if (gold < healthPrice) {
+			healthPriceText.color = Color.red;
+		}
+		if (gold < damagePrice) {
+			damagePriceText.color = Color.red;
+		}
+		if (gold < fireRatePrice) {
+			fireRatePriceText.color = Color.red;
+		}
+		if (gold < secondCannonPrice) {
+			secondCannonPriceText.color = Color.red;
+		}
 		healthPriceText.text = "Increase Health: \n" + emptyObject.GetComponent<StoringVarScript> ().healthPrice + " Coins";
 		damagePriceText.text = "Increase Damage of Cannon: \n" + emptyObject.GetComponent<StoringVarScript> ().damagePrice + " Coins";
 		fireRatePriceText.text = "Increase Firerate: \n" + emptyObject.GetComponent<StoringVarScript> ().fireRatePrice + " Coins";
