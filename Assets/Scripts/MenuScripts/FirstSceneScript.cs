@@ -3,11 +3,11 @@ using System.Collections;
 
 public class FirstSceneScript : MonoBehaviour {
 
-	public AudioSource audio;
+	public AudioSource firstAudio;
 
 	// Use this for initialization
 	void Start () {
-		audio = audio.GetComponent<AudioSource>();
+		firstAudio = firstAudio.GetComponent<AudioSource>();
 	}
 
 	public void pressContinue() {
@@ -20,11 +20,11 @@ public class FirstSceneScript : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.M)) {
-			if (audio.mute) {
-				audio.mute = false;
+			if (firstAudio.mute) {
+				firstAudio.mute = false;
 			}
 			else {
-				audio.mute = true;
+				firstAudio.mute = true;
 			}
 		}
 	}
