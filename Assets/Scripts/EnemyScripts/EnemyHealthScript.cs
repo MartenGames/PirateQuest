@@ -21,31 +21,27 @@ public class EnemyHealthScript : MonoBehaviour {
 		//GameObject go = GameObject.Find ("DamageImage");
 		//GameObject go2 = GameObject.Find ("HealthSlider");
 		var canvas = this.transform.GetComponentInChildren<Transform> ();
-		Transform go;
-		Transform go2;
+		Transform go, go2, go3;
 		Debug.Log ("letsgo!!");
 		foreach (Transform child in canvas) {
 			Debug.Log ("TEST: " + child.name);
 			go = child.FindChild("DamageImage");
-			go2 = child.FindChild ("HealthSlider");
-			Debug.Log ("HEHE: " + go.name);
-			Debug.Log ("HEHE22: " + go2.name);
+			go2 = child.FindChild ("HealthUI");
+			go3 = go2.FindChild ("HealthSlider");
+			Debug.Log ("DamageImage: " + go.name);
+			Debug.Log ("HealthUI: " + go2.name);
+			Debug.Log ("HealthSlider: " + go3.name);
 			damageImage = go.GetComponent<Image>();
-
+			healthSlider = go3.GetComponent<Slider>();
 		}
 
-
-
-		/*
-		damageImage = go.GetComponent<Image> ();
-		healthSlider = go2.GetComponent<Slider> ();
 		currentHealth = startingHealth;
 		healthSlider.maxValue = currentHealth;
 		healthSlider.value = currentHealth;
+		Debug.Log ("Finally:");
 		Debug.Log ("TEST: " + damageImage.name);
 		Debug.Log ("TEST: " + damageImage.type);
 		Debug.Log ("TEST: " + healthSlider.name);
-		*/
 	}
 	
 	// Update is called once per frame
