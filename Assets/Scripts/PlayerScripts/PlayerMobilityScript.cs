@@ -16,9 +16,14 @@ public class PlayerMobilityScript : MonoBehaviour {
 		keyPressed = false;
 
 		//Move the ship forward
-		if (Input.GetKey (KeyCode.UpArrow)) {
+		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
 
 			keyPressed = true;
+
+			//If the ship is in a backward motion we quickly change that
+			if(moveSpeed < 0) {
+				moveSpeed += Acceleration * 2 * Time.deltaTime;
+			}
 
 			//Increase the speed gradually with respect to the acceleration
 			moveSpeed += Acceleration * Time.deltaTime;
@@ -29,9 +34,14 @@ public class PlayerMobilityScript : MonoBehaviour {
 		}
 
 		//Move the ship backwards
-		if (Input.GetKey (KeyCode.DownArrow)) {
+		if (Input.GetKey (KeyCode.DownArrow)|| Input.GetKey (KeyCode.S)) {
 
 			keyPressed = true;
+
+			//If the ship is in a forward motion we quickly change that
+			if(moveSpeed > 0) {
+				moveSpeed -= Acceleration * 2 * Time.deltaTime;
+			}
 
 			//Increase the speed gradually with respect to the acceleration
 			moveSpeed -= Acceleration * Time.deltaTime;
@@ -41,14 +51,14 @@ public class PlayerMobilityScript : MonoBehaviour {
 
 		}
 		//Rotate the ship to the left
-		if (Input.GetKey (KeyCode.LeftArrow)) {
+		if (Input.GetKey (KeyCode.LeftArrow)|| Input.GetKey (KeyCode.A)) {
 
 			transform.Rotate (new Vector3 (0, 0, rotateSpeed));
 			
 		}
 		
 		//Rotate the ship to the right
-		if (Input.GetKey (KeyCode.RightArrow)) {
+		if (Input.GetKey (KeyCode.RightArrow)|| Input.GetKey (KeyCode.D)) {
 
 			transform.Rotate (0, 0, -rotateSpeed);
 		} 
