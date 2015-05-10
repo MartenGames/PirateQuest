@@ -189,7 +189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad63ff2bb00e4c76a64eac0c95f10c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: .0500000007
+  moveSpeed: 0
+  rotateSpeed: 1
+  MaxSpeed: .0500000007
+  Acceleration: .0250000004
 --- !u!114 &11446382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,7 +261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCollect: {fileID: 8300000, guid: d57d89f1f3c6446d5b6176e1a4866962, type: 3}
-  goldValue: 100
 --- !u!114 &11495198
 MonoBehaviour:
   m_ObjectHideFlags: 1
