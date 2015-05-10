@@ -297,10 +297,26 @@ Prefab:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
+    - target: {fileID: 11494584, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+      propertyPath: m_Text
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 22468468, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 140.199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487390, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 39.3000031
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487390, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 41.7999992
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &101403064
+--- !u!224 &101403064 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}

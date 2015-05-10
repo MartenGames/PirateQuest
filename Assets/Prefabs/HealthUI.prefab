@@ -193,9 +193,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 175
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 175
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 275
 --- !u!222 &22207398
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -297,7 +297,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 130, y: 0}
+  m_AnchoredPosition: {x: 140.199997, y: 0}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22479024
@@ -349,8 +349,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 34.1999969, y: 0}
-  m_SizeDelta: {x: 31.6000004, y: 30}
+  m_AnchoredPosition: {x: 39.3000031, y: 0}
+  m_SizeDelta: {x: 41.7999992, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
