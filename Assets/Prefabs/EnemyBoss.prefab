@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 11420968}
   m_Layer: 9
   m_Name: EnemyBoss
-  m_TagString: Enemy
+  m_TagString: EnemyBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,11 +87,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 136032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0a8e361c7434a45b86ce89e0d56f35, type: 3}
+  m_Script: {fileID: 11500000, guid: 370be09f078dd414cb894f6c15c48f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  damage: 1
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   Gold: {fileID: 194100, guid: a67e203374fad4f95a0c716080f21954, type: 2}
   xCoordinate: 0

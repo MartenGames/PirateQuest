@@ -13,18 +13,31 @@ public class Coordinate {
 }
 
 public class SpawnScript : MonoBehaviour {
+
+	//References to enemies
 	public GameObject player;
 	public GameObject enemy;
 	public GameObject enemy2;
 	public GameObject enemy3;
 	public GameObject EnemyBoss;
+
+	//Number of enemies to spawn
 	public int numberOfEnemies;
 	public int numberOfEnemies2;
 	public int numberOfEnemies3;
+
+	//Boolean value to decide if to spawn enemy boss
 	public bool SpawnBoss;
+
+	//Arrays to keep track of spawnpoints  of where to spawn enemeis
 	public GameObject[] spawnPoints_enemy1;
 	public GameObject[] spawnPoints_enemy2;
 	public GameObject[] spawnPoints_enemy3;
+
+	//Spawnpoint for the enemy boss
+	public GameObject BossSpawn;
+
+	//Coordinates of the spawn points
 	List<Coordinate> coords_enemy1 = new List<Coordinate> ();
 	List<Coordinate> coords_enemy2 = new List<Coordinate> ();
 	List<Coordinate> coords_enemy3 = new List<Coordinate> ();
@@ -92,6 +105,6 @@ public class SpawnScript : MonoBehaviour {
 	}
 
 	void SpawnEnemyBoss () {
-		Instantiate (EnemyBoss, new Vector3 (spawnPoints_enemy1[1].transform.position.x, spawnPoints_enemy1[1].transform.position.y, 0)	, transform.rotation);
+		Instantiate (EnemyBoss, new Vector3 (BossSpawn.transform.position.x, BossSpawn.transform.position.y, 0)	, transform.rotation);
 	}
 }
