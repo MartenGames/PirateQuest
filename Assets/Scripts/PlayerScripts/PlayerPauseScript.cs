@@ -10,12 +10,14 @@ public class PlayerPauseScript : MonoBehaviour {
 	void Update () {
 
 		//Pause the game when playing.
-		if (Input.GetKey (KeyCode.P)) {
+		if (Input.GetKeyDown (KeyCode.P)) {
 			if(Time.timeScale == 0){
 				Time.timeScale = 1;
+				AudioListener.volume = 1.0f;
 			}
 			else {
-				Time.timeScale = 0; 
+				Time.timeScale = 0;
+				AudioListener.volume = 0.0f;
 			}
 		}
 	}
