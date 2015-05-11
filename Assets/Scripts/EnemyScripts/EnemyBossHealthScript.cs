@@ -13,9 +13,6 @@ public class EnemyBossHealthScript : MonoBehaviour {
 	bool isDead;
 
 	void Start () {
-
-		var canvas = this.transform.GetComponentInChildren<Transform> ();
-
 		healthSlider = GameObject.Find ("EnemyBossHealthSlider").GetComponent<Slider>();
 		healthText = GameObject.Find ("CurrentHealth").GetComponent<Text> ();
 
