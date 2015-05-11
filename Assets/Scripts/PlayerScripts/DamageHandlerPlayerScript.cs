@@ -17,7 +17,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	private Slider mapSlider;
 	Material material;
 	Color color;
-	GameObject player;
 	PlayerHealthScript playerHealth;
 	int layer;
 	
@@ -28,7 +27,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("HealthSlider");
 		mapSlider = go.GetComponent<Slider> ();
 
-		player = GameObject.Find("Player");
 		playerHealth = GetComponent <PlayerHealthScript> ();
 
 		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();
