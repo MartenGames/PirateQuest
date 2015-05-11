@@ -8,6 +8,7 @@ public class OctoIntroScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		AudioListener.volume = 1.0f;
 		firstSentence.enabled = true;
 		secondSentence.enabled = false;
 		StartCoroutine ("wait");
