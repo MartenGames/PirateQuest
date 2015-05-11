@@ -8,11 +8,11 @@ public class EnemyBossHealthSliderScript : MonoBehaviour {
 	public Text currentHealth;	
 
 	void Start () {
-		//healthSlider.maxValue = GameObject.Find ("EnemyBoss(Clone)").GetComponent<DamageHandlerEnemyBossScript>().health;
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-		currentHealth.text = "" + healthSlider.value;
+		currentHealth.text = "" + (healthSlider.value * 10);
 	}
 }

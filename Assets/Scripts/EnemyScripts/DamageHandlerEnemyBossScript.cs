@@ -11,7 +11,7 @@ public class DamageHandlerEnemyBossScript : MonoBehaviour {
 	float blinkTime;
 	Material material;
 	Color color;
-	EnemyHealthScript enemyHealth;
+	EnemyBossHealthScript enemyHealth;
 
 
 	void Start() {
@@ -19,7 +19,7 @@ public class DamageHandlerEnemyBossScript : MonoBehaviour {
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
 		blinkTime = 0f;
-		enemyHealth = gameObject.GetComponent<EnemyHealthScript> ();
+		enemyHealth = gameObject.GetComponent<EnemyBossHealthScript> ();
 
 	}
 
