@@ -8,8 +8,6 @@ public class EnemyHealthScript : MonoBehaviour {
 	public int currentHealth;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-	//public GameObject damImg;
-	//public Slider healthSlider;
 	Slider healthSlider;
 	Image damageImage;
 	bool isDead;
@@ -18,8 +16,6 @@ public class EnemyHealthScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//GameObject go = GameObject.Find ("DamageImage");
-		//GameObject go2 = GameObject.Find ("HealthSlider");
 		var canvas = this.transform.GetComponentInChildren<Transform> ();
 		Transform go, go2, go3;
 
@@ -28,11 +24,6 @@ public class EnemyHealthScript : MonoBehaviour {
 			go = child.FindChild("DamageImage");
 			go2 = child.FindChild ("HealthUI");
 			go3 = go2.FindChild ("HealthSlider");
-			/*
-			Debug.Log ("DamageImage: " + go.name);
-			Debug.Log ("HealthUI: " + go2.name);
-			Debug.Log ("HealthSlider: " + go3.name);
-			*/
 			damageImage = go.GetComponent<Image>();
 			healthSlider = go3.GetComponent<Slider>();
 		}
@@ -50,9 +41,6 @@ public class EnemyHealthScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// Vector3 pos = new Vector3 (0, 0, 1);
-		//damageImage.transform.position = pos;
-		//healthSlider.transform.position = pos;
 		if (damaged) {
 			damageImage.color = flashColour;
 		} else {
@@ -74,6 +62,4 @@ public class EnemyHealthScript : MonoBehaviour {
 	void Death() {
 		isDead = true;
 	}
-
-
 }
