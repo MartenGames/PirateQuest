@@ -42,8 +42,21 @@ public class SpawnScript : MonoBehaviour {
 	List<Coordinate> coords_enemy2 = new List<Coordinate> ();
 	List<Coordinate> coords_enemy3 = new List<Coordinate> ();
 
+	//Players health
+	int health;
+
+	//Different sprite that varies by players health
+	public Sprite firstSprite;
+	public Sprite secondSprite;
+	public Sprite thirdSprite;
+	private SpriteRenderer spriteRenderer;
+
 	// Use this for initialization
 	void Start () {
+		health = GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health;
+		spriteRenderer = player.GetComponent<SpriteRenderer> ();
+		spriteRenderer.sprite = firstSprite;
+
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Coordinate co = new Coordinate();
 			co.x =  spawnPoints_enemy1[i].transform.position.x;
@@ -80,6 +93,19 @@ public class SpawnScript : MonoBehaviour {
 
 	void SpawnPlayer() {
 		Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
+		if (health == 0) {
+			Debug.Log ("healt == 0");
+			spriteRenderer.sprite = firstSprite;
+		} else if (health == 25) {
+			Debug.Log ("healt == 25");
+			spriteRenderer.sprite = secondSprite;
+		} else if (health == 50) {
+			Debug.Log ("healt == 50");
+			spriteRenderer.sprite = thirdSprite;
+		} else {
+			Debug.Log ("healt == bigger than 50");
+			spriteRenderer.sprite = thirdSprite;
+		}
 		//GameObject spawnPlayer = (GameObject)Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
 		//Debug.Log (spawnPlayer.GetComponent<DamageHandlerPlayerScript>().defeatCanvas);
 	}
@@ -88,7 +114,6 @@ public class SpawnScript : MonoBehaviour {
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Debug.Log (transform.rotation);
 			Instantiate (enemy, new Vector3 (coords_enemy1[i].x, coords_enemy1[i].y, 0), transform.rotation);
-
 		}
 	}
 
