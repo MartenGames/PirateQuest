@@ -10,22 +10,14 @@ public class EnemyBossHealthScript : MonoBehaviour {
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 	public Slider healthSlider;
 	public Text healthText;
-	Image damageImage;
 	bool isDead;
 
 	void Start () {
 
 		var canvas = this.transform.GetComponentInChildren<Transform> ();
 
-		Transform go;
-
 		healthSlider = GameObject.Find ("EnemyBossHealthSlider").GetComponent<Slider>();
 		healthText = GameObject.Find ("CurrentHealth").GetComponent<Text> ();
-
-		foreach (Transform child in canvas) {
-			go = child.FindChild("DamageImage");
-			damageImage = go.GetComponent<Image>();
-		}
 
 		currentHealth = startingHealth;
 		healthSlider.maxValue = currentHealth;

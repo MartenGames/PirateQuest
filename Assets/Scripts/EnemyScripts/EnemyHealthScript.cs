@@ -13,7 +13,7 @@ public class EnemyHealthScript : MonoBehaviour {
 
 	void Start () {
 		var canvas = this.transform.GetComponentInChildren<Transform> ();
-		Transform go, go2, go3;
+		Transform go2, go3;
 
 		foreach (Transform child in canvas) {
 			go2 = child.FindChild ("HealthUI");
