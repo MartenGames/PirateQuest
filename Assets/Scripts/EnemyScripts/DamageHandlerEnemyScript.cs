@@ -3,7 +3,6 @@ using System.Collections;
 
 public class DamageHandlerEnemyScript : MonoBehaviour {
 
-	public int health;
 	public int damage;
 	public AudioClip sinkShip;
 	public GameObject Gold;
@@ -12,24 +11,31 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 	float blinkTime;
 	Material material;
 	Color color;
+	EnemyHealthScript enemyHealth;
 
 	void Start() {
 		damage = GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript> ().damage;
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
 		blinkTime = 0f;
+		Debug.Log ("damageHandler: " + gameObject.name);
+		enemyHealth = gameObject.GetComponent<EnemyHealthScript> ();
+		Debug.Log ("currentHealthTets: " + enemyHealth.currentHealth);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.name == "Bullet(Clone)" || other.gameObject.name == "SecondBullet(Clone)") {
-			health -= damage;
+			enemyHealth.TakeDamage(damage);
 			blinkTime = 0.25f;
 			material.color = Color.red;
+			Debug.Log("HIT current health: " + enemyHealth.currentHealth);
 		}
 	}
 
 	void Update() {
-		if (health <= 0) {
+		enemyHealth.healthSlider.value = enemyHealth.currentHealth;
+
+		if (enemyHealth.healthSlider.value <= 0) {
 			Die ();
 		}
 
@@ -43,8 +49,8 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 	}
 
 	void Die() {
-		//Spawn gold when enemy ship is destroyed.
-		//Get the position of the sinking ship.
+		// Spawn gold when enemy ship is destroyed.
+		// Get the position of the sinking ship.
 		xCoordinate = gameObject.transform.position.x;
 		yCoordinate = gameObject.transform.position.y;
 		Destroy (gameObject);
