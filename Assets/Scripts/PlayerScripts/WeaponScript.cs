@@ -11,6 +11,7 @@ public class WeaponScript : MonoBehaviour {
 	public LayerMask whatToHit;
 	public GameObject bulletPrefab;
 	public GameObject fireBulletPrefab;
+	public GameObject energyBulletPrefab;
 	public AudioClip cannonSound;
 	
 	float timeToFire = 0;
@@ -56,16 +57,15 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
-		Debug.Log ("DAMAGE: " + damage);
 		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
 		if (damage == 1) {
 			Instantiate (bulletPrefab, firePointPos, transform.rotation);
 		} else if (damage == 2) {
-			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+			Instantiate (energyBulletPrefab, firePointPos, transform.rotation);
 		} else if (damage == 3) {
 			Instantiate (fireBulletPrefab, firePointPos, transform.rotation);
 		} else {
-			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+			Instantiate (fireBulletPrefab, firePointPos, transform.rotation);
 		}
 		AudioSource.PlayClipAtPoint (cannonSound, transform.position);
 	}

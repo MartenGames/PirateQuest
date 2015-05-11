@@ -15,6 +15,7 @@ TagManager:
   - PauseCanvas
   - Enemy
   - EnemyBoss
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

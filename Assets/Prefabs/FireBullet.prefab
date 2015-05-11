@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11476846}
   m_Layer: 14
   m_Name: FireBullet
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.1056805, y: -7.36729813, z: 0}
-  m_LocalScale: {x: 1.08837938, y: 1.2062217, z: 1}
+  m_LocalPosition: {x: 114.532021, y: 78.2125397, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .109999999, y: .109999999}
+  m_Size: {x: .600000024, y: .389999986}
 --- !u!114 &11476846
 MonoBehaviour:
   m_ObjectHideFlags: 1

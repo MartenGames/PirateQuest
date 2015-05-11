@@ -225,6 +225,7 @@ MonoBehaviour:
     m_Bits: 4294967035
   bulletPrefab: {fileID: 182776, guid: b76a19cc9973947e28fa570dcc508d96, type: 2}
   fireBulletPrefab: {fileID: 168518, guid: dcce16ca7e6d5474e8a1871e41e22beb, type: 2}
+  energyBulletPrefab: {fileID: 178332, guid: a034b19786f1140f28127f81611429d9, type: 2}
   cannonSound: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
 --- !u!114 &11465228
 MonoBehaviour:
@@ -292,7 +293,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967035
   bulletPrefab: {fileID: 100404, guid: 3979e25ee48844d9895570b4ee87faa5, type: 2}
-  fireBulletPrefab: {fileID: 168518, guid: dcce16ca7e6d5474e8a1871e41e22beb, type: 2}
+  fireBulletPrefab: {fileID: 158138, guid: 4e4adbc56f8564127a89c774a5e5ef91, type: 2}
+  energyBulletPrefab: {fileID: 183270, guid: 3c87c6bfcfe9646be87adc282b507fc0, type: 2}
   cannonSound: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
 --- !u!212 &21203406
 SpriteRenderer:
