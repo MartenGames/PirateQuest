@@ -2,26 +2,48 @@
 using System.Collections;
 
 public class DamageHandlerEnemyBossScript : MonoBehaviour {
-
-	public int health;
+	
+	public int damage;
 	public AudioClip sinkShip;
 	public GameObject Gold;
 	public float xCoordinate;
 	public float yCoordinate;
+	float blinkTime;
+	Material material;
+	Color color;
+	EnemyHealthScript enemyHealth;
+
 
 	void Start() {
+		damage = GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript> ().damage;
+		material = GetComponent<SpriteRenderer> ().material;
+		color = material.color;
+		blinkTime = 0f;
+		enemyHealth = gameObject.GetComponent<EnemyHealthScript> ();
 
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.name == "Bullet(Clone)") {
-			health--;
+			enemyHealth.TakeDamage(damage);
+			blinkTime = 0.25f;
+			material.color = Color.red;
 		}
 	}
 
 	void Update() {
-		if (health <= 0) {
+		enemyHealth.healthSlider.value = enemyHealth.currentHealth;
+		
+		if (enemyHealth.healthSlider.value <= 0) {
 			Die ();
+		}
+		
+		blinkTime -= Time.deltaTime;
+		
+		if (blinkTime <= 0f) {
+			material.color = color;
+		} else {
+			material.color = Color.red;
 		}
 	}
 
