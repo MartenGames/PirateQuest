@@ -24,7 +24,7 @@ public class DamageHandlerEnemyBossScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name == "Bullet(Clone)") {
+		if(other.gameObject.tag == "PlayerBullet") {
 			enemyHealth.TakeDamage(damage);
 			blinkTime = 0.25f;
 			material.color = Color.red;
