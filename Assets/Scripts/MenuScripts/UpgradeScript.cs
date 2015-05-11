@@ -155,7 +155,9 @@ public class UpgradeScript : MonoBehaviour {
 			emptyObject.GetComponent<StoringVarScript> ().speedPrice *= 2;
 			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 			MoneySignal.enabled = false;
-			//emptyObject.GetComponent<StoringVarScript> ().fireRate += 0.2f;
+			emptyObject.GetComponent<StoringVarScript> ().speed += 0.05f;
+			emptyObject.GetComponent<StoringVarScript> ().acceleration += 0.025f;
+			emptyObject.GetComponent<StoringVarScript> ().rotateSpeed += 0.25f;
 			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= speedPrice;
 		}
 	}
@@ -171,7 +173,7 @@ public class UpgradeScript : MonoBehaviour {
 		playerHealth.text = "Health: " + (emptyObject.GetComponent<StoringVarScript> ().health + 100);
 		playerDamage.text = "Damage: " + emptyObject.GetComponent<StoringVarScript> ().damage;
 		playerFireRate.text = "Firerate: " + (1 - emptyObject.GetComponent<StoringVarScript> ().fireRate) + " second";
-		playerSpeed.text = "Speed: " + (emptyObject.GetComponent<StoringVarScript> ().speed);
+		playerSpeed.text = "Speed: " + (emptyObject.GetComponent<StoringVarScript> ().speed + 0.05f);
 		if (emptyObject.GetComponent<StoringVarScript> ().secondCannon) {
 			playerNumberOfCannons.text = "Number of Cannons: 1";
 		} else {

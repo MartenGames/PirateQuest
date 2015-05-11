@@ -7,7 +7,9 @@ public class StoringVarScript : MonoBehaviour {
 	public int health = 0;
 	public int damage = 1;
 	public int goldAmount = 0;
-	public int speed = 0;
+	public float speed = 0;
+	public float acceleration = 0;
+	public float rotateSpeed = 0;
 	public float fireRate = 0;
 	public int currentLevelGoldAmount = 0;
 	public int currentLevel;
