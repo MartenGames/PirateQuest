@@ -5,8 +5,10 @@ using System.Collections;
 public class LevelSelectionScript : MonoBehaviour {
 
 	//public Button[] levels;
+	public AudioSource levelMenuAudio;
 
 	void Start () {
+		levelMenuAudio = levelMenuAudio.GetComponent<AudioSource> ();
 		/*
 		GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
 		int currentLevel = emptyObject.GetComponent<StoringVarScript> ().currentLevel;
@@ -21,6 +23,16 @@ public class LevelSelectionScript : MonoBehaviour {
 				levels[i].enabled = false;	
 			}
 		}*/
+	}
+
+	void Update () {
+		if (Input.GetKeyDown (KeyCode.M)) {
+			if(levelMenuAudio.mute) {
+				levelMenuAudio.mute = false;
+			} else {
+				levelMenuAudio.mute = true;
+			}
+		}
 	}
 
 	public void LoadScene(string level)
