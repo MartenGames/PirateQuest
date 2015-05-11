@@ -9,6 +9,12 @@ public class PlayerMobilityScript : MonoBehaviour {
 	public float MaxSpeed;     //This is the maximum speed that the ship will achieve 
 	public float Acceleration; //How fast will object reach a maximum speed
 	bool keyPressed;		   //boolean value that checks if the user is pressing the up or down arrow
+
+	void Start() {
+		MaxSpeed += GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().speed;
+		Acceleration += GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().acceleration;
+		rotateSpeed += GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().rotateSpeed;
+	}
 	
 	void Update () {
 
@@ -88,53 +94,4 @@ public class PlayerMobilityScript : MonoBehaviour {
 		}
 		
 	} 
-	/*
-	public float moveSpeed;
-	public float Acceleration;
-	public float maxSpeed;
-
-	void Start () {
-		
-	}
-
-	void Update () {	
-
-
-		if (Input.GetKey (KeyCode.DownArrow)) {
-			
-			//Move down. If the ship is at the edge of the map it stops.
-
-			if (moveSpeed > -maxSpeed) {
-				moveSpeed -= Acceleration * Time.deltaTime;			
-			}
-		}
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			
-			//Move up. If the ship is at the edge of the map it stops.
-			 
-			if (moveSpeed < maxSpeed) {
-				moveSpeed += Acceleration * Time.deltaTime;
-			}
-		}
-
-		//Rotate the ship to the left
-		if (Input.GetKey (KeyCode.LeftArrow)) {
-			transform.Rotate (new Vector3 (0, 0, moveSpeed * 20));
-			
-		}
-		
-		//Rotate the ship to the right
-		if (Input.GetKey (KeyCode.RightArrow)) {
-			transform.Rotate (0, 0, -moveSpeed * 20);
-		} 
-		else {
-			if (moveSpeed > 0) {
-				moveSpeed -= Acceleration * Time.deltaTime;			
-			}
-		}
-
-		transform.Translate(new Vector3(0, moveSpeed, 0));
-	}
-*/
-
 }
