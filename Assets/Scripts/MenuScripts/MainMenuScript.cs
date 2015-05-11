@@ -101,10 +101,10 @@ public class MainMenuScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.M)) {
-			if(mainMenuMusic.mute) {
-				mainMenuMusic.mute = false;
+			if (AudioListener.volume == 1.0f) {
+				AudioListener.volume = 0.0f;
 			} else {
-				mainMenuMusic.mute = true;
+				AudioListener.volume = 1.0f;
 			}
 		}
 	}

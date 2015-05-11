@@ -27,10 +27,10 @@ public class LevelSelectionScript : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.M)) {
-			if(levelMenuAudio.mute) {
-				levelMenuAudio.mute = false;
+			if (AudioListener.volume == 1.0f) {
+				AudioListener.volume = 0.0f;
 			} else {
-				levelMenuAudio.mute = true;
+				AudioListener.volume = 1.0f;
 			}
 		}
 	}
