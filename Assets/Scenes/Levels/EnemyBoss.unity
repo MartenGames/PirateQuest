@@ -483,6 +483,10 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11494584, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
   m_IsPrefabParent: 0
@@ -1175,6 +1179,14 @@ Prefab:
     - target: {fileID: 11427834, guid: 34f396ed37555428bbaa080903cba20d, type: 2}
       propertyPath: m_FontData.m_BestFit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22430382, guid: 34f396ed37555428bbaa080903cba20d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22430382, guid: 34f396ed37555428bbaa080903cba20d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -1.62920685e-07
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11449880, guid: 34f396ed37555428bbaa080903cba20d, type: 2}
