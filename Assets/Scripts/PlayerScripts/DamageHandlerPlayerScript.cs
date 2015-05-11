@@ -93,13 +93,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 		if (GameObject.FindWithTag ("Enemy1") == null && GameObject.FindWithTag ("Enemy2") == null 
 		    && GameObject.FindWithTag ("Enemy3") == null && GameObject.FindWithTag ("EnemyBoss") == null) {
-			Debug.Log("All enemies are dead!!!");
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
 			go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
 			if(GameObject.FindWithTag ("Gold") == null) {
-				Debug.Log("here the gold is null and the winning canvas should be on!!!");
 				winningCanvas.gameObject.SetActive(true);
 			}
 			go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
