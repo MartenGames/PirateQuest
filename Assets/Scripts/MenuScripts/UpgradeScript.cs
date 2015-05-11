@@ -117,16 +117,31 @@ public class UpgradeScript : MonoBehaviour {
 
 	public void PressIncreaseDAmage(){
 
+
+
 		if(emptyObject.GetComponent<StoringVarScript> ().goldAmount < damagePrice){
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			MoneySignal.enabled = true;
 		}
 		else {
-			emptyObject.GetComponent<StoringVarScript> ().damagePrice *= 2;
-			AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
+			//When the player can not upgrade this item further.
+			if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
+				Debug.Log("out of stock");
+			}
+			//the last time the player can upgrade this item.
+			else if (emptyObject.GetComponent<StoringVarScript> ().damage == 2){
+				AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
+				emptyObject.GetComponent<StoringVarScript> ().damage += 1;
+				emptyObject.GetComponent<StoringVarScript> ().goldAmount -= damagePrice;
+			}
+			//Normal upgrade
+			else{
+				emptyObject.GetComponent<StoringVarScript> ().damagePrice *= 2;
+				AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
+				emptyObject.GetComponent<StoringVarScript> ().damage += 1;
+				emptyObject.GetComponent<StoringVarScript> ().goldAmount -= damagePrice;
+			}
 			MoneySignal.enabled = false;
-			emptyObject.GetComponent<StoringVarScript> ().damage += 1;
-			emptyObject.GetComponent<StoringVarScript> ().goldAmount -= damagePrice;
 		}
 	}
 
