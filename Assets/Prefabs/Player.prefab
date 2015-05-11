@@ -218,13 +218,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0
-  damage: 10
   coolDownTimer: 0
   fireDelay: 1
   whatToHit:
     serializedVersion: 2
     m_Bits: 4294967035
   bulletPrefab: {fileID: 182776, guid: b76a19cc9973947e28fa570dcc508d96, type: 2}
+  fireBulletPrefab: {fileID: 168518, guid: dcce16ca7e6d5474e8a1871e41e22beb, type: 2}
   cannonSound: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
 --- !u!114 &11465228
 MonoBehaviour:
@@ -286,13 +286,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0
-  damage: 10
   coolDownTimer: 0
   fireDelay: 1
   whatToHit:
     serializedVersion: 2
     m_Bits: 4294967035
   bulletPrefab: {fileID: 100404, guid: 3979e25ee48844d9895570b4ee87faa5, type: 2}
+  fireBulletPrefab: {fileID: 168518, guid: dcce16ca7e6d5474e8a1871e41e22beb, type: 2}
   cannonSound: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
 --- !u!212 &21203406
 SpriteRenderer:

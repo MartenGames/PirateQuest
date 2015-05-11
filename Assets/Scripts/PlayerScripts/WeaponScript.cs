@@ -5,15 +5,16 @@ public class WeaponScript : MonoBehaviour {
 
 
 	public float fireRate = 0;
-	public float damage = 10;
+	// public float damage = 10;
 	public float coolDownTimer = 0;
 	public float fireDelay = 1f;
 	public LayerMask whatToHit;
 	public GameObject bulletPrefab;
-
+	public GameObject fireBulletPrefab;
 	public AudioClip cannonSound;
 	
 	float timeToFire = 0;
+	int damage;
 	Transform  firePoint;
 	
 	// Use this for initialization
@@ -23,7 +24,8 @@ public class WeaponScript : MonoBehaviour {
 			Debug.LogError("ERROR: No firePoint!");
 		}
 		//If the player updated the fireRate
-		fireDelay -= GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().fireRate; 
+		fireDelay -= GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().fireRate;
+		damage = GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().damage;
 	}
 	
 	// Update is called once per frame
@@ -54,8 +56,17 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
+		Debug.Log ("DAMAGE: " + damage);
 		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
-		Instantiate (bulletPrefab, firePointPos, transform.rotation);
+		if (damage == 1) {
+			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+		} else if (damage == 2) {
+			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+		} else if (damage == 3) {
+			Instantiate (fireBulletPrefab, firePointPos, transform.rotation);
+		} else {
+			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+		}
 		AudioSource.PlayClipAtPoint (cannonSound, transform.position);
 	}
 }
