@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00999999046, y: .900000036, z: 0}
+  m_LocalPosition: {x: 107.25647, y: 187.336578, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 464184}
@@ -176,9 +176,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.200000003, y: 0}
+  m_Offset: {x: -.300000012, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.75999999, y: 4.46000004}
+  m_Size: {x: 1.75999999, y: 4.19000006}
 --- !u!114 &11407078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471f186cb49848a8a9ac2134e8a6dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseCanvas: {fileID: 22310128, guid: 977e16a61becf4a1690972a0cb98cb5f, type: 2}
+  pauseCanvas: {fileID: 0}
 --- !u!114 &11418566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -293,8 +293,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967035
   bulletPrefab: {fileID: 100404, guid: 3979e25ee48844d9895570b4ee87faa5, type: 2}
-  fireBulletPrefab: {fileID: 168518, guid: dcce16ca7e6d5474e8a1871e41e22beb, type: 2}
-  energyBulletPrefab: {fileID: 178332, guid: a034b19786f1140f28127f81611429d9, type: 2}
+  fireBulletPrefab: {fileID: 158138, guid: 4e4adbc56f8564127a89c774a5e5ef91, type: 2}
+  energyBulletPrefab: {fileID: 183270, guid: 3c87c6bfcfe9646be87adc282b507fc0, type: 2}
   cannonSound: {fileID: 8300000, guid: 9ff2e27c5525743adac68ff2db585202, type: 3}
 --- !u!212 &21203406
 SpriteRenderer:
@@ -346,7 +346,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bba77ea7783ec4b24bc0856bfe4faf9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21230082
 SpriteRenderer:

@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 136032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -45.7000008, y: -29.7000008, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22465298}
   m_Father: {fileID: 0}
@@ -162,11 +162,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: 3, z: 0}
+  babyOctopusOffset: {x: 0, y: 6, z: 0}
   bulletOffset2: {x: 3, y: 0, z: 0}
+  bulletOffset3: {x: 6, y: 0, z: 0}
   bulletPrefab: {fileID: 119446, guid: de7a06075c05740b69042dc791c5bf88, type: 2}
+  octopusBaby: {fileID: 136032, guid: 42ffdb1e846f0481a973ae0b811dedd1, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
-  coolDownTimer: 0
-  fireDelay: .400000006
+  coolDownTimer: .100000001
+  fireDelay: 1.5
 --- !u!114 &11447870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,11 +181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1185952d0be4f9f9078f8d9ea72d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 10
+  startingHealth: 20
   currentHealth: 0
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
   healthSlider: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!114 &11473184
 MonoBehaviour:
   m_ObjectHideFlags: 1

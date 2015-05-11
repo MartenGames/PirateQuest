@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StoringVarScript : MonoBehaviour {
 
-	public bool secondCannon = false;
+	public bool secondCannon = true;
 	public int health = 0;
 	public int damage = 1;
 	public int goldAmount = 0;
