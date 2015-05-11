@@ -55,7 +55,6 @@ public class SpawnScript : MonoBehaviour {
 	void Start () {
 		health = GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health;
 		spriteRenderer = player.GetComponent<SpriteRenderer> ();
-		spriteRenderer.sprite = firstSprite;
 
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Coordinate co = new Coordinate();
@@ -92,7 +91,6 @@ public class SpawnScript : MonoBehaviour {
 	}
 
 	void SpawnPlayer() {
-		Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
 		if (health == 0) {
 			Debug.Log ("healt == 0");
 			spriteRenderer.sprite = firstSprite;
@@ -106,6 +104,7 @@ public class SpawnScript : MonoBehaviour {
 			Debug.Log ("healt == bigger than 50");
 			spriteRenderer.sprite = thirdSprite;
 		}
+		Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
 		//GameObject spawnPlayer = (GameObject)Instantiate (player, new Vector3 (0, 0, 0), transform.rotation);
 		//Debug.Log (spawnPlayer.GetComponent<DamageHandlerPlayerScript>().defeatCanvas);
 	}
