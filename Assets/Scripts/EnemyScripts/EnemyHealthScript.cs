@@ -8,13 +8,11 @@ public class EnemyHealthScript : MonoBehaviour {
 	public int currentHealth;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-	Slider healthSlider;
+	public Slider healthSlider;
 	Image damageImage;
 	bool isDead;
 	bool damaged;
-
-
-	// Use this for initialization
+	
 	void Start () {
 		var canvas = this.transform.GetComponentInChildren<Transform> ();
 		Transform go, go2, go3;
@@ -31,15 +29,8 @@ public class EnemyHealthScript : MonoBehaviour {
 		currentHealth = startingHealth;
 		healthSlider.maxValue = currentHealth;
 		healthSlider.value = currentHealth;
-		/*
-		Debug.Log ("Finally:");
-		Debug.Log ("TEST: " + damageImage.name);
-		Debug.Log ("TEST: " + damageImage.type);
-		Debug.Log ("TEST: " + healthSlider.name);
-		*/
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (damaged) {
 			damageImage.color = flashColour;
