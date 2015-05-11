@@ -15,17 +15,10 @@ public class LevelAudio : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.M)) {
-			if (seaAudio.mute) {
-				seaAudio.mute = false;
-			}
-			else if(!seaAudio.mute) {
-				seaAudio.mute = true;
-			}
-			if (battleAudio.mute) {
-				battleAudio.mute = false;
-			}
-			else if (!battleAudio.mute) {
-				battleAudio.mute = true;
+			if (AudioListener.volume == 1.0f) {
+				AudioListener.volume = 0.0f;
+			} else {
+				AudioListener.volume = 1.0f;
 			}
 		}
 	}
