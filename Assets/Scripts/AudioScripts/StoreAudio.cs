@@ -13,11 +13,10 @@ public class StoreAudio : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.M)) {
-			if (storeAudio.mute) {
-				storeAudio.mute = false;
-			}
-			else {
-				storeAudio.mute = true;
+			if (AudioListener.volume == 1.0f) {
+				AudioListener.volume = 0.0f;
+			} else {
+				AudioListener.volume = 1.0f;
 			}
 		}
 	}
