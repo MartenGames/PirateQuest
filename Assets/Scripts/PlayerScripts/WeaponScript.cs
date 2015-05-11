@@ -5,7 +5,6 @@ public class WeaponScript : MonoBehaviour {
 
 
 	public float fireRate = 0;
-	// public float damage = 10;
 	public float coolDownTimer = 0;
 	public float fireDelay = 1f;
 	public LayerMask whatToHit;
@@ -13,8 +12,7 @@ public class WeaponScript : MonoBehaviour {
 	public GameObject fireBulletPrefab;
 	public GameObject energyBulletPrefab;
 	public AudioClip cannonSound;
-	
-	float timeToFire = 0;
+
 	int damage;
 	Transform  firePoint;
 	
@@ -41,15 +39,6 @@ public class WeaponScript : MonoBehaviour {
 			// Check if we pushed the space button
 			if(Input.GetKeyDown(KeyCode.Space) && coolDownTimer <= 0) {
 				coolDownTimer = fireDelay;
-				Shoot();
-			}
-		}
-		// Not single fire weapon
-		// Will maybe implement later but erase this if we do not use
-		else {
-			// Check if we are holding down the space button
-			if(Input.GetKey(KeyCode.Space) && Time.time > timeToFire) {
-				timeToFire = (Time.time +  (1 / fireRate));
 				Shoot();
 			}
 		}
