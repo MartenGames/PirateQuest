@@ -11,8 +11,7 @@ public class EnemyHealthScript : MonoBehaviour {
 	public Slider healthSlider;
 	Image damageImage;
 	bool isDead;
-	bool damaged;
-	
+
 	void Start () {
 		var canvas = this.transform.GetComponentInChildren<Transform> ();
 		Transform go, go2, go3;
@@ -31,16 +30,10 @@ public class EnemyHealthScript : MonoBehaviour {
 	}
 
 	void Update () {
-		if (damaged) {
-			damageImage.color = flashColour;
-		} else {
-			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-		}
-		damaged = false;
+
 	}
 
 	public void TakeDamage(int amount) {
-		damaged = true;
 		currentHealth -= amount;
 		healthSlider.value = currentHealth;
 
