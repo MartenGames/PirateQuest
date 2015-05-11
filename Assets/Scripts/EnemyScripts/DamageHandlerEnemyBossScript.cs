@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DamageHandlerEnemyBossScript : MonoBehaviour {
 
-	public int health = 100;
+	public int health;
 	public AudioClip sinkShip;
 	public GameObject Gold;
 	public float xCoordinate;

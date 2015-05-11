@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -137.706909, y: -37.050808, z: 0}
+  m_LocalPosition: {x: 130.260727, y: 86.6687775, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children:
   - {fileID: 22460484}
@@ -503,15 +503,15 @@ RectTransform:
   m_GameObject: {fileID: 176748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0700000003, y: .300000012, z: 1}
+  m_LocalScale: {x: .0700000003, y: 1, z: 1}
   m_Children:
   - {fileID: 22457824}
   m_Father: {fileID: 22442408}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 10}
+  m_AnchoredPosition: {x: 0, y: -22.7299995}
+  m_SizeDelta: {x: 160, y: 3.6400001}
   m_Pivot: {x: .5, y: .5}
 --- !u!225 &22573586
 CanvasGroup:
