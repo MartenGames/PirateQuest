@@ -3,8 +3,6 @@ using System.Collections;
 
 public class WeaponScript : MonoBehaviour {
 
-
-	public float fireRate = 0;
 	public float coolDownTimer = 0;
 	public float fireDelay = 1f;
 	public LayerMask whatToHit;
@@ -30,17 +28,13 @@ public class WeaponScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		coolDownTimer -= Time.deltaTime;
-		// Debug : Shoot ();
-		// Single fire weapon
-		if (fireRate == 0) {
-			// Just a reminder for Daniel
-			// I will remove this comment later
-			// Input.GetButtonDown("Fire1");
-			// Check if we pushed the space button
-			if(Input.GetKeyDown(KeyCode.Space) && coolDownTimer <= 0) {
-				coolDownTimer = fireDelay;
-				Shoot();
-			}
+		// Just a reminder for Daniel
+		// I will remove this comment later
+		// Input.GetButtonDown("Fire1");
+		// Check if we pushed the space button
+		if(Input.GetKeyDown(KeyCode.Space) && coolDownTimer <= 0) {
+			coolDownTimer = fireDelay;
+			Shoot();
 		}
 	}
 	
