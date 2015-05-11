@@ -22,7 +22,8 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name == "Bullet(Clone)" || other.gameObject.name == "SecondBullet(Clone)" || other.gameObject.name == "FireBullet(Clone)") {
+		if(other.gameObject.name == "Bullet(Clone)" || other.gameObject.name == "SecondBullet(Clone)" ||
+		   other.gameObject.name == "FireBullet(Clone)" || other.gameObject.name == "EnergyBall(Clone)") {
 			enemyHealth.TakeDamage(damage);
 			blinkTime = 0.25f;
 			material.color = Color.red;

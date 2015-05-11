@@ -11,6 +11,7 @@ public class WeaponScript : MonoBehaviour {
 	public LayerMask whatToHit;
 	public GameObject bulletPrefab;
 	public GameObject fireBulletPrefab;
+	public GameObject energyBulletPrefab;
 	public AudioClip cannonSound;
 	
 	float timeToFire = 0;
@@ -60,11 +61,11 @@ public class WeaponScript : MonoBehaviour {
 		if (damage == 1) {
 			Instantiate (bulletPrefab, firePointPos, transform.rotation);
 		} else if (damage == 2) {
-			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+			Instantiate (energyBulletPrefab, firePointPos, transform.rotation);
 		} else if (damage == 3) {
 			Instantiate (fireBulletPrefab, firePointPos, transform.rotation);
 		} else {
-			Instantiate (bulletPrefab, firePointPos, transform.rotation);
+			Instantiate (fireBulletPrefab, firePointPos, transform.rotation);
 		}
 		AudioSource.PlayClipAtPoint (cannonSound, transform.position);
 	}
