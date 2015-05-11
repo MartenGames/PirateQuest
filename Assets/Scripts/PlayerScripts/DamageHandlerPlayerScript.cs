@@ -28,8 +28,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("HealthSlider");
 		mapSlider = go.GetComponent<Slider> ();
 
-		player = GameObject.Find("Player(Clone)");
-		playerHealth = player.GetComponent <PlayerHealthScript> ();
+		player = GameObject.Find("Player");
+		playerHealth = GetComponent <PlayerHealthScript> ();
 
 		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();
 		defeatCanvas.gameObject.SetActive (false);
