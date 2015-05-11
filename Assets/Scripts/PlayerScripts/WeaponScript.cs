@@ -56,7 +56,6 @@ public class WeaponScript : MonoBehaviour {
 	
 	// Shooting function
 	void Shoot() {
-		Debug.Log ("DAMAGE: " + damage);
 		Vector3 firePointPos = new Vector3 (firePoint.position.x, firePoint.position.y, 0);
 		if (damage == 1) {
 			Instantiate (bulletPrefab, firePointPos, transform.rotation);
