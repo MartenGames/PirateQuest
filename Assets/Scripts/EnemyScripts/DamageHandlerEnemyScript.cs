@@ -18,9 +18,7 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
 		blinkTime = 0f;
-		Debug.Log ("damageHandler: " + gameObject.name);
 		enemyHealth = gameObject.GetComponent<EnemyHealthScript> ();
-		Debug.Log ("currentHealthTets: " + enemyHealth.currentHealth);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -28,7 +26,6 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 			enemyHealth.TakeDamage(damage);
 			blinkTime = 0.25f;
 			material.color = Color.red;
-			Debug.Log("HIT current health: " + enemyHealth.currentHealth);
 		}
 	}
 

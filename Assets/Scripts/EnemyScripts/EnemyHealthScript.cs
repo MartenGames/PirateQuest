@@ -18,7 +18,6 @@ public class EnemyHealthScript : MonoBehaviour {
 		Transform go, go2, go3;
 
 		foreach (Transform child in canvas) {
-			Debug.Log ("TEST: " + child.name);
 			go = child.FindChild("DamageImage");
 			go2 = child.FindChild ("HealthUI");
 			go3 = go2.FindChild ("HealthSlider");
