@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CleanUpScript : MonoBehaviour {
 
-	public float timer = 1f;
+	public float timer = 2f;
 
 	// Use this for initialization
 	void Start () {
