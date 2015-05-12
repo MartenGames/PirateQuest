@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471f186cb49848a8a9ac2134e8a6dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 22310128, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
 --- !u!114 &11418566
 MonoBehaviour:
   m_ObjectHideFlags: 1
