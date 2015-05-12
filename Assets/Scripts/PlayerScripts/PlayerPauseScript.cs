@@ -22,22 +22,18 @@ public class PlayerPauseScript : MonoBehaviour {
 
 		if(Time.timeScale == 0){
 			Time.timeScale = 1;
-			AudioListener.volume = 1.0f;
 			pauseCanvas.gameObject.SetActive(false);
 		}
 		else {
 			Time.timeScale = 0;
-			AudioListener.volume = 0.0f;
 			pauseCanvas.gameObject.SetActive(true);
 		}
 	}
 
 	public void RestartLevelFromPause(){
-		//killAll ();
 		//If the player wants to restart the level, the timeScale can not be 0
 		if (Time.timeScale == 0) {
 			Time.timeScale = 1;
-			//AudioListener.volume = 1.0f;
 			Application.LoadLevel (Application.loadedLevel);
 		} 
 		else {
@@ -46,11 +42,11 @@ public class PlayerPauseScript : MonoBehaviour {
 
 	}
 
-//	void killAll(){
-//		Debug.Log("Kill everyone!!!!");
-//		Destroy (GameObject.FindGameObjectsWithTag ("Enemy1"));
-//		Destroy (GameObject.FindGameObjectsWithTag ("Enemy2"));
-//		Destroy (GameObject.FindGameObjectsWithTag ("Enemy3"));
-//	}
+	public void GoToMapFromPause(){
+		Time.timeScale = 1;
+		Application.LoadLevel ("LevelSelection");
+	}
+
+
 
 }
