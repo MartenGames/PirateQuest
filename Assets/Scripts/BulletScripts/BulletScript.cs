@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BulletScript : MonoBehaviour {
 
+	public GameObject explosionGO;
+	public AudioClip explosionAudio;
 	float speed = 5;
 	
 	// Use this for initialization
@@ -10,7 +12,12 @@ public class BulletScript : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D() {
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag != "BackgroundOcean") {
+			GameObject ex = (GameObject) Instantiate(explosionGO);
+			ex.transform.position = transform.position;
+			AudioSource.PlayClipAtPoint(explosionAudio, transform.position);
+		}
 		Destroy (gameObject);
 	}
 

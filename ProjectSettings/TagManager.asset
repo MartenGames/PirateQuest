@@ -16,6 +16,9 @@ TagManager:
   - Enemy
   - EnemyBoss
   - PlayerBullet
+  - EnemyBullet
+  - Food
+  - BackgroundOcean
   layers:
   - Default
   - TransparentFX

@@ -991,7 +991,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 406756, guid: 4f3a67b136ea242328f1031cf8d80490, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f3a67b136ea242328f1031cf8d80490, type: 2}
@@ -1023,7 +1023,7 @@ GameObject:
   - 114: {fileID: 1311098668}
   m_Layer: 0
   m_Name: BackgroundOcean
-  m_TagString: Untagged
+  m_TagString: BackgroundOcean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1238,7 +1238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492764, guid: c4e29fa4a1a54431a927385ffbdc256e, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5818342, guid: c4e29fa4a1a54431a927385ffbdc256e, type: 2}
       propertyPath: m_Material
@@ -1515,7 +1515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418988, guid: c74a98f5bd47d419cb009bad9427e310, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22418988, guid: c74a98f5bd47d419cb009bad9427e310, type: 2}
       propertyPath: m_AnchoredPosition.x

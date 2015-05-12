@@ -42,7 +42,6 @@ public class PlayerHealthScript : MonoBehaviour
 		// If the player has just been damaged...
 		if(damaged)
 		{
-			Debug.Log("inside update in PHS, damaged");
 			// ... set the colour of the damageImage to the flash colour.
 			damageImage.color = flashColour;
 		}
@@ -60,7 +59,6 @@ public class PlayerHealthScript : MonoBehaviour
 	{
 		// Set the damaged flag so the screen will flash.
 		damaged = true;
-		Debug.Log ("damaged: " + damaged);
 		// Reduce the current health by the damage amount.
 		currentHealth -= amount;
 		

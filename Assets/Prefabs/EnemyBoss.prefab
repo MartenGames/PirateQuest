@@ -166,6 +166,9 @@ MonoBehaviour:
   bulletOffset2: {x: 3, y: 0, z: 0}
   bulletOffset3: {x: 6, y: 0, z: 0}
   bulletPrefab: {fileID: 119446, guid: de7a06075c05740b69042dc791c5bf88, type: 2}
+  bulletPrefabBackward: {fileID: 119446, guid: 9f099764ff55a42bb99fe2a519a1d15c, type: 2}
+  bulletPrefabRight: {fileID: 119446, guid: b6f6b88ae74ed4d35b89fab54c07d295, type: 2}
+  bulletPrefabLeft: {fileID: 119446, guid: 820323d4977ea413f80c9c8e1350f1c4, type: 2}
   octopusBaby: {fileID: 136032, guid: 42ffdb1e846f0481a973ae0b811dedd1, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: .100000001

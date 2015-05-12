@@ -21,6 +21,14 @@ public class StoringVarScript : MonoBehaviour {
 	public int secondCannonPrice = 1000;
 	public int speedPrice = 500;
 
+
+	//Counter to know how many times a item has been upgrated
+	public int healthCounter = 0;
+	public int damageCounter = 0;
+	public int fireRateCounter = 0;
+	public int secondCannonCounter = 0;
+	public int speedCounter = 0;
+
 	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);
 	}

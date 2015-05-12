@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCollect: {fileID: 8300000, guid: d57d89f1f3c6446d5b6176e1a4866962, type: 3}
+  foodCollect: {fileID: 8300000, guid: 8ef6bb6f2a02847dc92016ccb2d3b06d, type: 3}
 --- !u!114 &11495198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,7 +283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 197856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26dd61e11a478457cbf69e7c2d50c315, type: 3}
+  m_Script: {fileID: 11500000, guid: c06943e73c1f74a12851d96d0eff2b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   coolDownTimer: 0

@@ -2,16 +2,20 @@
 using System.Collections;
 
 public class EnemyBulletScript : MonoBehaviour {
-	
+
+	public GameObject explosionGO;
 	float speed = 5;
-	
 	
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	void OnTriggerEnter2D() {
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag != "BackgroundOcean") {
+			GameObject ex = (GameObject) Instantiate(explosionGO);
+			ex.transform.position = transform.position;
+		}
 		Destroy (gameObject);
 	}
 	
