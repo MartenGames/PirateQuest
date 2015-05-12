@@ -30,6 +30,10 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 	}
 
 	void Update() {
+
+		//This is where the null reference happens in the famous "YOU LOST" bug !!!!!!
+		//Hilmar wrote this
+
 		enemyHealth.healthSlider.value = enemyHealth.currentHealth;
 
 		if (enemyHealth.healthSlider.value <= 0) {
