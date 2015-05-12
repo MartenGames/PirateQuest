@@ -16,6 +16,7 @@ TagManager:
   - Enemy
   - EnemyBoss
   - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
