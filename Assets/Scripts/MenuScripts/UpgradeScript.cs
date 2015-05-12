@@ -38,7 +38,13 @@ public class UpgradeScript : MonoBehaviour {
 	public int secondCannonPrice;
 	public int speedPrice;
 
-
+	//Counter to know how many times a item has been upgrated
+	private int healthCounter = 0;
+	private int damageCounter = 0;
+	private int fireRateCounter = 0;
+	private int secondCannonCounter = 0;
+	private int speedCounter = 0;
+	
 	public AudioClip upgradeSound;
 	public AudioClip errorSound;
 
@@ -126,7 +132,7 @@ public class UpgradeScript : MonoBehaviour {
 		else {
 			//When the player can not upgrade this item further.
 			if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
-				Debug.Log("out of stock");
+				AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			}
 			//the last time the player can upgrade this item.
 			else if (emptyObject.GetComponent<StoringVarScript> ().damage == 2){
@@ -190,7 +196,7 @@ public class UpgradeScript : MonoBehaviour {
 		playerFireRate.text = "Firerate: " + (1 - emptyObject.GetComponent<StoringVarScript> ().fireRate) + " second";
 		playerSpeed.text = "Speed: " + (emptyObject.GetComponent<StoringVarScript> ().speed + 0.05f);
 		if (emptyObject.GetComponent<StoringVarScript> ().secondCannon) {
-			playerNumberOfCannons.text = "Number of Cannons: 1";
+			playerNumberOfCannons.text = "Number of Cannons: 2";
 		} else {
 			playerNumberOfCannons.text = "Number of Cannons: 1";
 		}
@@ -202,7 +208,13 @@ public class UpgradeScript : MonoBehaviour {
 			healthPriceText.color = Color.red;
 		}
 		if (gold < damagePrice) {
-			damagePriceText.color = Color.red;
+			//The color if the player has reached maximum.
+			if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
+				damagePriceText.color = Color.black;
+			}
+			else{
+				damagePriceText.color = Color.red;
+			}
 		}
 		if (gold < fireRatePrice) {
 			fireRatePriceText.color = Color.red;
@@ -213,8 +225,17 @@ public class UpgradeScript : MonoBehaviour {
 		if (gold < speedPrice) {
 			speedPriceText.color = Color.red;
 		}
+
+		//The text that the player sees in the upgrade store
+		if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
+			damagePriceText.color = Color.black;
+			damagePriceText.text = "Increase Damage of Cannon: \n" + "Reached maximum!";
+		} 
+		else {
+			damagePriceText.text = "Increase Damage of Cannon: \n" + emptyObject.GetComponent<StoringVarScript> ().damagePrice + " Coins";
+		}
+
 		healthPriceText.text = "Increase Health: \n" + emptyObject.GetComponent<StoringVarScript> ().healthPrice + " Coins";
-		damagePriceText.text = "Increase Damage of Cannon: \n" + emptyObject.GetComponent<StoringVarScript> ().damagePrice + " Coins";
 		fireRatePriceText.text = "Increase Firerate: \n" + emptyObject.GetComponent<StoringVarScript> ().fireRatePrice + " Coins";
 		secondCannonPriceText.text = "Add cannon to the ship: \n" + emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice + " Coins";
 		speedPriceText.text = "Increase Speed: \n" + emptyObject.GetComponent<StoringVarScript> ().speedPrice + " Coins";
