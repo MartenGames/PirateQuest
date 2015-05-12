@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 439514}
   - 212: {fileID: 21293690}
   - 61: {fileID: 6163342}
-  - 114: {fileID: 11417724}
   m_Layer: 13
   m_Name: Food
   m_TagString: Food
@@ -43,18 +42,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 5.11999989, y: 5.11999989}
---- !u!114 &11417724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94ca188812e4d43ec87e8a420fdfe0cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldAmount: 0
 --- !u!212 &21293690
 SpriteRenderer:
   m_ObjectHideFlags: 1
