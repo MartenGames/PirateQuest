@@ -610,6 +610,7 @@ GameObject:
   - 222: {fileID: 518414205}
   - 114: {fileID: 518414204}
   - 114: {fileID: 518414206}
+  - 95: {fileID: 518414207}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -737,6 +738,23 @@ MonoBehaviour:
   InfoButton: {fileID: 1718146483}
   EmptyObject: {fileID: 174620, guid: 2a747699c5e744110bcde70628f71b7f, type: 2}
   mainMenuMusic: {fileID: 2084681116}
+--- !u!95 &518414207
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518414199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55a5c36fcf64c41db8c391e5831ef10b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &592311620
 GameObject:
   m_ObjectHideFlags: 0
