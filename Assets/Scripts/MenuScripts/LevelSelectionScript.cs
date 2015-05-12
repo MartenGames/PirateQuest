@@ -6,9 +6,13 @@ public class LevelSelectionScript : MonoBehaviour {
 
 	//public Button[] levels;
 	public AudioSource levelMenuAudio;
+	public Button muteButton;
+	public Sprite mute;
+	public Sprite unmute;
 
 	void Start () {
 		levelMenuAudio = levelMenuAudio.GetComponent<AudioSource> ();
+		muteButton = muteButton.GetComponent<Button> ();
 		/*
 		GameObject emptyObject = GameObject.Find ("EmptyObject(Clone)");
 		int currentLevel = emptyObject.GetComponent<StoringVarScript> ().currentLevel;
@@ -29,8 +33,10 @@ public class LevelSelectionScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.M)) {
 			if (AudioListener.volume == 1.0f) {
 				AudioListener.volume = 0.0f;
+				muteButton.image.overrideSprite = mute;
 			} else {
 				AudioListener.volume = 1.0f;
+				muteButton.image.overrideSprite = unmute;
 			}
 		}
 	}
