@@ -12,10 +12,8 @@ public class BulletScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "EnemyBullet") {
-			GameObject ex = (GameObject) Instantiate(explosionGO);
-			ex.transform.position = transform.position;
-		}
+		GameObject ex = (GameObject) Instantiate(explosionGO);
+		ex.transform.position = transform.position;
 		Destroy (gameObject);
 	}
 
