@@ -40,8 +40,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondCannon: 0
-  increaseFirerate_1: 0
-  increaseHealth_1: 0
+  health: 0
+  damage: 1
+  goldAmount: 0
+  speed: 0
+  acceleration: 0
+  rotateSpeed: 0
+  fireRate: 0
+  currentLevelGoldAmount: 0
+  currentLevel: 0
+  healthPrice: 200
+  damagePrice: 500
+  fireRatePrice: 500
+  secondCannonPrice: 1000
+  speedPrice: 500
+  healthCounter: 0
+  damageCounter: 0
+  fireRateCounter: 0
+  secondCannonCounter: 0
+  speedCounter: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
