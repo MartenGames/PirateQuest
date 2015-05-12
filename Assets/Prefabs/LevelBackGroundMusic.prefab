@@ -237,6 +237,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seaAudio: {fileID: 8250752}
   battleAudio: {fileID: 8285830}
+  muteButton: {fileID: 0}
+  mute: {fileID: 21300000, guid: 9073cb6bacbcc43858f02130bbeff363, type: 3}
+  unmute: {fileID: 21300000, guid: 67521221dedc940b09633f4df0189861, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
