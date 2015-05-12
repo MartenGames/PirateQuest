@@ -16,7 +16,6 @@ public class BulletScript : MonoBehaviour {
 		if (other.tag != "BackgroundOcean") {
 			GameObject ex = (GameObject) Instantiate(explosionGO);
 			ex.transform.position = transform.position;
-			//AudioSource.SetScheduledStartTime(1);
 			AudioSource.PlayClipAtPoint(explosionAudio, transform.position);
 		}
 		Destroy (gameObject);
