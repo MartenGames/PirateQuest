@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BulletScript : MonoBehaviour {
 
+	public GameObject explosionGO;
 	float speed = 5;
 	
 	// Use this for initialization
@@ -12,7 +13,8 @@ public class BulletScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "EnemyBullet") {
-			//Debug.Log ("EXPLOSION!");
+			GameObject ex = (GameObject) Instantiate(explosionGO);
+			ex.transform.position = transform.position;
 		}
 		Destroy (gameObject);
 	}
