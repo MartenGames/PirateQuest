@@ -1,8 +1,8 @@
-﻿	using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponScript : MonoBehaviour {
-
+public class WeaponScript2 : MonoBehaviour {
+	
 	public float coolDownTimer = 0;
 	public float fireDelay = 1f;
 	public LayerMask whatToHit;
@@ -10,7 +10,7 @@ public class WeaponScript : MonoBehaviour {
 	public GameObject fireBulletPrefab;
 	public GameObject energyBulletPrefab;
 	public AudioClip cannonSound;
-
+	
 	int damage;
 	Transform  firePoint;
 	
@@ -32,7 +32,7 @@ public class WeaponScript : MonoBehaviour {
 		// I will remove this comment later
 		// Input.GetButtonDown("Fire1");
 		// Check if we pushed the space button
-		if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)) && coolDownTimer <= 0) {
+		if((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K)) && coolDownTimer <= 0) {
 			coolDownTimer = fireDelay;
 			Shoot();
 		}
