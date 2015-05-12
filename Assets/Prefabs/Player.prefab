@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCollect: {fileID: 8300000, guid: d57d89f1f3c6446d5b6176e1a4866962, type: 3}
+  foodCollect: {fileID: 8300000, guid: 8ef6bb6f2a02847dc92016ccb2d3b06d, type: 3}
 --- !u!114 &11495198
 MonoBehaviour:
   m_ObjectHideFlags: 1
