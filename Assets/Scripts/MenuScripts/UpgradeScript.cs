@@ -201,6 +201,12 @@ public class UpgradeScript : MonoBehaviour {
 			playerNumberOfCannons.text = "Number of Cannons: 1";
 		}
 
+		//Constantly be on top of what the current price is
+		healthPrice = emptyObject.GetComponent<StoringVarScript> ().healthPrice;
+		damagePrice = emptyObject.GetComponent<StoringVarScript> ().damagePrice;
+		fireRatePrice = emptyObject.GetComponent<StoringVarScript> ().fireRatePrice;
+		secondCannonPrice = emptyObject.GetComponent<StoringVarScript> ().secondCannonPrice;
+		speedPrice = emptyObject.GetComponent<StoringVarScript> ().speedPrice;
 
 
 
