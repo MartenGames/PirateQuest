@@ -121,24 +121,27 @@ public class UpgradeScript : MonoBehaviour {
 
 	}
 
-	public void PressIncreaseDAmage(){
-
-
-
+	public void PressIncreaseDamage(){
 		if(emptyObject.GetComponent<StoringVarScript> ().goldAmount < damagePrice){
+			if (damageCounter >= 3) {
+				MoneySignal.enabled = false;
+			}
+			else {
+				MoneySignal.enabled = true;
+			}
 			AudioSource.PlayClipAtPoint(errorSound, transform.position);
-			MoneySignal.enabled = true;
 		}
 		else {
 			//When the player can not upgrade this item further.
-			if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
+			if (damageCounter >= 3) {
 				AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			}
 			//the last time the player can upgrade this item.
-			else if (emptyObject.GetComponent<StoringVarScript> ().damage == 2){
+			else if (damageCounter == 2){
 				AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 				emptyObject.GetComponent<StoringVarScript> ().damage += 1;
 				emptyObject.GetComponent<StoringVarScript> ().goldAmount -= damagePrice;
+				damageCounter++;
 			}
 			//Normal upgrade
 			else{
@@ -146,6 +149,7 @@ public class UpgradeScript : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 				emptyObject.GetComponent<StoringVarScript> ().damage += 1;
 				emptyObject.GetComponent<StoringVarScript> ().goldAmount -= damagePrice;
+				damageCounter++;
 			}
 			MoneySignal.enabled = false;
 		}
@@ -215,7 +219,7 @@ public class UpgradeScript : MonoBehaviour {
 		}
 		if (gold < damagePrice) {
 			//The color if the player has reached maximum.
-			if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
+			if (damageCounter >= 3) {
 				damagePriceText.color = Color.black;
 			}
 			else{
@@ -233,7 +237,7 @@ public class UpgradeScript : MonoBehaviour {
 		}
 
 		//The text that the player sees in the upgrade store
-		if (emptyObject.GetComponent<StoringVarScript> ().damage >= 3) {
+		if (damageCounter >= 3) {
 			damagePriceText.color = Color.black;
 			damagePriceText.text = "Increase Damage of Cannon: \n" + "Reached maximum!";
 		} 
