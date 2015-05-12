@@ -33,12 +33,11 @@ public class PlayerPauseScript : MonoBehaviour {
 	}
 
 	public void RestartLevelFromPause(){
-		Debug.Log("does this happen!!!!");
 		//killAll ();
 		//If the player wants to restart the level, the timeScale can not be 0
 		if (Time.timeScale == 0) {
 			Time.timeScale = 1;
-			AudioListener.volume = 1.0f;
+			//AudioListener.volume = 1.0f;
 			Application.LoadLevel (Application.loadedLevel);
 		} 
 		else {
@@ -47,12 +46,11 @@ public class PlayerPauseScript : MonoBehaviour {
 
 	}
 
-	void killAll(){
-		Debug.Log("Kill everyone!!!!");
-		Destroy (GameObject.FindWithTag ("Enemy1"));
-		Destroy (GameObject.FindWithTag ("Enemy2"));
-		Destroy (GameObject.FindWithTag ("Enemy3"));
-		Destroy (gameObject);
-	}
+//	void killAll(){
+//		Debug.Log("Kill everyone!!!!");
+//		Destroy (GameObject.FindGameObjectsWithTag ("Enemy1"));
+//		Destroy (GameObject.FindGameObjectsWithTag ("Enemy2"));
+//		Destroy (GameObject.FindGameObjectsWithTag ("Enemy3"));
+//	}
 
 }
