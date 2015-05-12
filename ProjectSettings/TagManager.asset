@@ -17,6 +17,7 @@ TagManager:
   - EnemyBoss
   - PlayerBullet
   - EnemyBullet
+  - Food
   layers:
   - Default
   - TransparentFX

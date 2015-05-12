@@ -90,7 +90,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.FindWithTag ("Enemy1") == null && GameObject.FindWithTag ("Enemy2") == null 
-		    && GameObject.FindWithTag ("Enemy3") == null && GameObject.FindWithTag ("EnemyBoss") == null) {
+		    && GameObject.FindWithTag ("Enemy3") == null && GameObject.FindWithTag ("EnemyBoss") == null
+		    && GameObject.FindWithTag("Food") == null) {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
