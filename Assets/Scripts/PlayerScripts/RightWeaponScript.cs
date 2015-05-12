@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponScript2 : MonoBehaviour {
+public class RightWeaponScript : MonoBehaviour {
 	
 	public float coolDownTimer = 0;
 	public float fireDelay = 1f;
