@@ -186,7 +186,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .666666687
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -266,7 +266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .666666687
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -626,7 +626,7 @@ GameObject:
   - 114: {fileID: 736396492}
   m_Layer: 0
   m_Name: BackgroundOcean
-  m_TagString: Untagged
+  m_TagString: BackgroundOcean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,9 +11,11 @@ public class EnemyBulletScript : MonoBehaviour {
 		
 	}
 	
-	void OnTriggerEnter2D() {
-		GameObject ex = (GameObject) Instantiate(explosionGO);
-		ex.transform.position = transform.position;
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag != "BackgroundOcean") {
+			GameObject ex = (GameObject) Instantiate(explosionGO);
+			ex.transform.position = transform.position;
+		}
 		Destroy (gameObject);
 	}
 	

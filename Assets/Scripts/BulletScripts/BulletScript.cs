@@ -12,8 +12,10 @@ public class BulletScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		GameObject ex = (GameObject) Instantiate(explosionGO);
-		ex.transform.position = transform.position;
+		if (other.tag != "BackgroundOcean") {
+			GameObject ex = (GameObject) Instantiate(explosionGO);
+			ex.transform.position = transform.position;
+		}
 		Destroy (gameObject);
 	}
 
