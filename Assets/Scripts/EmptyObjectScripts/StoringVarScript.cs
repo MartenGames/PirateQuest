@@ -4,6 +4,7 @@ using System.Collections;
 public class StoringVarScript : MonoBehaviour {
 
 	public bool secondCannon = true;
+	public bool AllowedToWin = true;
 	public int health = 0;
 	public int damage = 1;
 	public int goldAmount = 0;
@@ -13,6 +14,7 @@ public class StoringVarScript : MonoBehaviour {
 	public float fireRate = 0;
 	public int currentLevelGoldAmount = 0;
 	public int currentLevel;
+	public int attackDamage = 25;
 
 	//Prices in upgrade store
 	public int healthPrice = 200;
