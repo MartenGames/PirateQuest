@@ -11,7 +11,6 @@ public class FakeMainMenuScript : MonoBehaviour {
 	public Button PlayButton;
 	public Button ExitButton;
 	public Button InfoButton;
-	public GameObject EmptyObject;
 	public AudioSource mainMenuMusic;
 	public Button muteButton;
 	public Sprite mute;
