@@ -21,10 +21,12 @@ public class PlayerPauseScript : MonoBehaviour {
 	void Pause(){
 
 		if(Time.timeScale == 0){
+			GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
 			Time.timeScale = 1;
 			pauseCanvas.gameObject.SetActive(false);
 		}
 		else {
+			GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = true;
 			Time.timeScale = 0;
 			pauseCanvas.gameObject.SetActive(true);
 		}
@@ -32,12 +34,14 @@ public class PlayerPauseScript : MonoBehaviour {
 
 	public void RestartLevelFromPause(){
 		//If the player wants to restart the level, the timeScale can not be 0
+		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
 		Time.timeScale = 1;
 		Application.LoadLevel (Application.loadedLevel);
 
 	}
 
 	public void GoToMapFromPause(){
+		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
 		Time.timeScale = 1;
 		Application.LoadLevel ("LevelSelection");
 	}
