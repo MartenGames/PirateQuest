@@ -22,13 +22,31 @@ public class PlayerPauseScript : MonoBehaviour {
 
 		if(Time.timeScale == 0){
 			Time.timeScale = 1;
-			AudioListener.volume = 1.0f;
 			pauseCanvas.gameObject.SetActive(false);
 		}
 		else {
 			Time.timeScale = 0;
-			AudioListener.volume = 0.0f;
 			pauseCanvas.gameObject.SetActive(true);
 		}
 	}
+
+	public void RestartLevelFromPause(){
+		//If the player wants to restart the level, the timeScale can not be 0
+		if (Time.timeScale == 0) {
+			Time.timeScale = 1;
+			Application.LoadLevel (Application.loadedLevel);
+		} 
+		else {
+			Application.LoadLevel (Application.loadedLevel);
+		}
+
+	}
+
+	public void GoToMapFromPause(){
+		Time.timeScale = 1;
+		Application.LoadLevel ("LevelSelection");
+	}
+
+
+
 }

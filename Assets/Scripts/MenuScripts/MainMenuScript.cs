@@ -13,6 +13,9 @@ public class MainMenuScript : MonoBehaviour {
 	public Button InfoButton;
 	public GameObject EmptyObject;
 	public AudioSource mainMenuMusic;
+	public Button muteButton;
+	public Sprite mute;
+	public Sprite unmute;
 
 	GameObject theInstance;
 	static bool firstTime = true;
@@ -26,6 +29,7 @@ public class MainMenuScript : MonoBehaviour {
 		InfoButton = InfoButton.GetComponent<Button> ();
 		PlayButton = PlayButton.GetComponent<Button> ();
 		ExitButton = ExitButton.GetComponent<Button> ();
+		muteButton = muteButton.GetComponent<Button> ();
 		mainMenuMusic = mainMenuMusic.GetComponent<AudioSource> ();
 
 		//Hide the QuitMenu and InfoMenu and enable the main menu buttons
@@ -103,8 +107,10 @@ public class MainMenuScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.M)) {
 			if (AudioListener.volume == 1.0f) {
 				AudioListener.volume = 0.0f;
+				muteButton.image.overrideSprite = mute;
 			} else {
 				AudioListener.volume = 1.0f;
+				muteButton.image.overrideSprite = unmute;
 			}
 		}
 	}
