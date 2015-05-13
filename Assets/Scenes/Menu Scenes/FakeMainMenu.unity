@@ -251,7 +251,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 518414206}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 518414206}
         m_MethodName: ExitQuitMenu
         m_Mode: 1
         m_Arguments:
@@ -735,7 +735,7 @@ MonoBehaviour:
   InfoMenu: {fileID: 424334818}
   QuitMenu: {fileID: 66331716}
   PlayButton: {fileID: 1719849449}
-  ExitButton: {fileID: 592311621}
+  ExitButton: {fileID: 0}
   InfoButton: {fileID: 1718146483}
   EmptyObject: {fileID: 0}
   mainMenuMusic: {fileID: 2084681116}
@@ -816,7 +816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 518414206}
         m_MethodName: PressQuit
         m_Mode: 1
         m_Arguments:
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 518414206}
         m_MethodName: QuitInfoMenu
         m_Mode: 1
         m_Arguments:
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 518414206}
         m_MethodName: PressHowTo
         m_Mode: 1
         m_Arguments:
@@ -1844,8 +1844,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: ae6fef364a80e4710aa2c96e9799c6e7, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 518414206}
+        m_MethodName: PressPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
