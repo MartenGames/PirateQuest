@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11456778}
   m_Layer: 0
   m_Name: TNTBarrelMoving
-  m_TagString: Untagged
+  m_TagString: Barrell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

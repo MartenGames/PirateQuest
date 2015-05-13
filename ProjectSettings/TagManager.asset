@@ -20,6 +20,7 @@ TagManager:
   - Food
   - BackgroundOcean
   - Enemy4
+  - Barrell
   layers:
   - Default
   - TransparentFX
