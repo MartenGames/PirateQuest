@@ -95,11 +95,13 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
-			go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
-			if(GameObject.FindWithTag ("Gold") == null) {
-				winningCanvas.gameObject.SetActive(true);
+			if(go.GetComponent<StoringVarScript>().AllowedToWin) {
+				go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
+				if(GameObject.FindWithTag ("Gold") == null) {
+					winningCanvas.gameObject.SetActive(true);
+				}
+				go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 			}
-			go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		}
 	}
 	
