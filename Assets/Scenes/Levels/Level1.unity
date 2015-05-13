@@ -951,6 +951,30 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22427172, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427172, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 22462692, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 22462692, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490714, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490714, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
   m_IsPrefabParent: 0
@@ -1043,16 +1067,19 @@ MonoBehaviour:
   enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
+  octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 2
   numberOfEnemies2: 0
   numberOfEnemies3: 0
+  numberOfBabies: 0
   SpawnBoss: 0
   spawnPoints_enemy1:
   - {fileID: 576190697}
   - {fileID: 1598463360}
   spawnPoints_enemy2: []
   spawnPoints_enemy3: []
+  spawnPoints_babies: []
   BossSpawn: {fileID: 0}
   firstSprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}
   secondSprite: {fileID: 21300000, guid: 995d1abc5cce64915b6275924971f5be, type: 3}
@@ -1555,10 +1582,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418988, guid: c74a98f5bd47d419cb009bad9427e310, type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22445848, guid: c74a98f5bd47d419cb009bad9427e310, type: 2}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
