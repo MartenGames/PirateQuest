@@ -20,7 +20,9 @@ TagManager:
   - Food
   - BackgroundOcean
   - Enemy4
+  - PauseButtonCanvas
   - Barrell
+  - Enemy5
   layers:
   - Default
   - TransparentFX
