@@ -32,13 +32,8 @@ public class PlayerPauseScript : MonoBehaviour {
 
 	public void RestartLevelFromPause(){
 		//If the player wants to restart the level, the timeScale can not be 0
-		if (Time.timeScale == 0) {
-			Time.timeScale = 1;
-			Application.LoadLevel (Application.loadedLevel);
-		} 
-		else {
-			Application.LoadLevel (Application.loadedLevel);
-		}
+		Time.timeScale = 1;
+		Application.LoadLevel (Application.loadedLevel);
 
 	}
 
