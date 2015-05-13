@@ -196,10 +196,12 @@ MonoBehaviour:
   enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
   enemy2: {fileID: 136032, guid: 46494cc20ef934392987bfc38c3d58ed, type: 2}
   enemy3: {fileID: 136032, guid: 4589da5eb5aba4c85be87baa26a2199c, type: 2}
+  octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 2
   numberOfEnemies2: 1
   numberOfEnemies3: 1
+  numberOfBabies: 0
   SpawnBoss: 0
   spawnPoints_enemy1:
   - {fileID: 576190697}
@@ -208,6 +210,7 @@ MonoBehaviour:
   - {fileID: 160253027}
   spawnPoints_enemy3:
   - {fileID: 2008509878}
+  spawnPoints_babies: []
   BossSpawn: {fileID: 0}
   firstSprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}
   secondSprite: {fileID: 21300000, guid: 995d1abc5cce64915b6275924971f5be, type: 3}
