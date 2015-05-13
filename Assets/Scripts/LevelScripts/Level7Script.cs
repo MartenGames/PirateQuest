@@ -4,39 +4,49 @@ using System.Collections;
 public class Level7Script : MonoBehaviour {
 
 
-	public GameObject enemy;
+	public GameObject enemy; //Enemy to be spawned
+	public GameObject spawnPoint; //Spawn location of enemies
 
-	public GameObject spawnPoint;
+	public int numberOfEnemies; //number of enemies to be spawned
 
-	public int numberOfEnemies;
+	bool spawned; //
 
 	public int secondsBetweenEnemies;
+
+	int counter;
+
 	GameObject go;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().AllowedToWin = false;
+		spawned = false;
+		counter = 1;
 	}
 
-	void spawnEnemies() {
+	IEnumerator spawnEnemies() {
 
-		for (int i = 0; i < numberOfEnemies; i++) {
-			Instantiate (enemy, new Vector3 (spawnPoint.transform.position.x, spawnPoint.transform.position.y, 0), transform.rotation);
-			StartCoroutine("waitFor");
-		}
+		spawned = true;
+			
+		Instantiate (enemy, new Vector3 (spawnPoint.transform.position.x, spawnPoint.transform.position.y, 0), transform.rotation);
+		yield return new WaitForSeconds (secondsBetweenEnemies);	
+		counter++;
 
-		go.GetComponent<StoringVarScript> ().AllowedToWin = true;
+		spawned = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-	}
+		if (!spawned && counter <= numberOfEnemies) {
+			StartCoroutine("spawnEnemies");
+		}
 
-	IEnumerator waitFor () {
-		yield return new WaitForSeconds(secondsBetweenEnemies);
-	}
-	          
+		if (counter == numberOfEnemies) {
+			go.GetComponent<StoringVarScript> ().AllowedToWin = true;
+		}
+
+	}       
 }
