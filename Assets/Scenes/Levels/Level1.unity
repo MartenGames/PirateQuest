@@ -939,7 +939,7 @@ MonoBehaviour:
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
   enemy4: {fileID: 0}
-  enemy5: {fileID: 0}
+  enemy5: {fileID: 171416, guid: 01ff40e037b5c4bcbb7f78526f87f45e, type: 2}
   octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 2

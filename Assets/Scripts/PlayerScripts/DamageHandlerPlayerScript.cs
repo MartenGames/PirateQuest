@@ -62,6 +62,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			gameObject.layer = 11;
 			material.color = Color.red;
 			AudioSource.PlayClipAtPoint (playerGetHit1, transform.position);
+		} else if (other.gameObject.name == "EnemyFireBall(Clone)") {
+			playerHealth.TakeDamage (attackDamage + 50);
+			invulnerabilityTimer = 2.0f;
+			gameObject.layer = 11;
+			material.color = Color.red;
+			AudioSource.PlayClipAtPoint (playerGetHit1, transform.position);
 		}
 	}
 	
@@ -98,8 +104,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 
 		if (GameObject.FindWithTag ("Enemy1") == null && GameObject.FindWithTag ("Enemy2") == null 
-		    && GameObject.FindWithTag ("Enemy3") == null && GameObject.FindWithTag ("Enemy4") == null && 
-		    GameObject.FindWithTag ("EnemyBoss") == null && GameObject.FindWithTag("Food") == null) {
+		    && GameObject.FindWithTag ("Enemy3") == null && GameObject.FindWithTag ("Enemy4") == null &&
+		    GameObject.FindWithTag("Enemy5") == null && GameObject.FindWithTag ("EnemyBoss") == null &&
+		    GameObject.FindWithTag("Food") == null) {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
