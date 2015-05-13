@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DamageHandlerPlayerScript : MonoBehaviour {
 
-	public int attackDamage = 25;
+	public int attackDamage;
 	public float invulnerabilityTimer = 0;
 	public AudioClip playerDies2;
 	public AudioClip playerGetHit1;
@@ -45,10 +45,13 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		layer = gameObject.layer;
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
+
+		attackDamage = GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().attackDamage;
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")) {
+		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")
+		    || (other.gameObject.name == "EnemyEnergyBall(Clone)")) {
 			playerHealth.TakeDamage(attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
