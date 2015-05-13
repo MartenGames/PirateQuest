@@ -19,6 +19,7 @@ TagManager:
   - EnemyBullet
   - Food
   - BackgroundOcean
+  - Enemy4
   layers:
   - Default
   - TransparentFX
