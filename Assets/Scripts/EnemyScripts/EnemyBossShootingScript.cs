@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 
@@ -15,14 +16,14 @@ public class EnemyBossShootingScript : MonoBehaviour {
 	public GameObject bulletPrefabLeft;
 
 	public GameObject octopusBaby;
-
+		
 	public AudioClip gunShot;
 	public float coolDownTimer = 0;
 	public float fireDelay = 0.3f;
 	float spawnBabyTime;
 	Transform Player;
 
-
+	/*
 	void shootAllDirections () {
 		Vector3 offset = new Vector3(0, 3f, 0);
 		Vector3 offset2 = new Vector3(0, -3f, 0);
@@ -47,28 +48,29 @@ public class EnemyBossShootingScript : MonoBehaviour {
 		Instantiate (bulletPrefabRight, transform.position + offset10, transform.rotation);
 		
 	}
-	
 
+*/
 
 	void Start() {
 		spawnBabyTime = 10f;
 	}
 
 	//Spawn octopus Baby every give time limit
+	/*
 	void spawnBaby () {
 		Vector3 offset = transform.rotation * babyOctopusOffset;
 		Instantiate (octopusBaby, transform.position + offset, transform.rotation);
 		spawnBabyTime = 10f;
 	}
+	*/
 
 	void Update () {
 
 		spawnBabyTime -= Time.deltaTime;
 
-
 		if (spawnBabyTime < 0) {
-			spawnBaby();
-			shootAllDirections();
+	//		spawnBaby();
+			//shootAllDirections();
 		}
 
 		if (Player == null) {

@@ -171,7 +171,7 @@ MonoBehaviour:
   bulletPrefabLeft: {fileID: 119446, guid: 820323d4977ea413f80c9c8e1350f1c4, type: 2}
   octopusBaby: {fileID: 136032, guid: 42ffdb1e846f0481a973ae0b811dedd1, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
-  coolDownTimer: .100000001
+  coolDownTimer: 1
   fireDelay: 1.5
 --- !u!114 &11447870
 MonoBehaviour:

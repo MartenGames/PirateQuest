@@ -19,20 +19,27 @@ public class SpawnScript : MonoBehaviour {
 	public GameObject enemy;
 	public GameObject enemy2;
 	public GameObject enemy3;
+	public GameObject octopusBaby;
 	public GameObject EnemyBoss;
+
 
 	//Number of enemies to spawn
 	public int numberOfEnemies;
 	public int numberOfEnemies2;
 	public int numberOfEnemies3;
+	public int numberOfBabies;
 
 	//Boolean value to decide if to spawn enemy boss
 	public bool SpawnBoss;
+	bool babiesSpawned;
 
 	//Arrays to keep track of spawnpoints  of where to spawn enemeis
 	public GameObject[] spawnPoints_enemy1;
 	public GameObject[] spawnPoints_enemy2;
 	public GameObject[] spawnPoints_enemy3;
+	public GameObject[] spawnPoints_babies;
+
+
 
 	//Spawnpoint for the enemy boss
 	public GameObject BossSpawn;
@@ -41,9 +48,11 @@ public class SpawnScript : MonoBehaviour {
 	List<Coordinate> coords_enemy1 = new List<Coordinate> ();
 	List<Coordinate> coords_enemy2 = new List<Coordinate> ();
 	List<Coordinate> coords_enemy3 = new List<Coordinate> ();
+	List<Coordinate> coords_babies = new List<Coordinate> ();
 
 	//Players health
 	int health;
+	int enemyBossHealth;
 
 	//Different sprite that varies by players health
 	public Sprite firstSprite;
@@ -55,6 +64,8 @@ public class SpawnScript : MonoBehaviour {
 	void Start () {
 		health = GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().health;
 		spriteRenderer = player.GetComponent<SpriteRenderer> ();
+
+		babiesSpawned = false;
 
 		for(int i = 0; i < numberOfEnemies; i++) {
 			Coordinate co = new Coordinate();
@@ -77,6 +88,13 @@ public class SpawnScript : MonoBehaviour {
 			coords_enemy3.Add(co);
 		}
 
+		for(int i = 0; i < numberOfBabies; i++) {
+			Coordinate co = new Coordinate();
+			co.x =  spawnPoints_babies[i].transform.position.x;
+			co.y =  spawnPoints_babies[i].transform.position.y;
+			coords_babies.Add(co);
+		}
+
 		SpawnPlayer ();
 		SpawnEnemy ();
 		if (numberOfEnemies2 != 0) {
@@ -85,9 +103,10 @@ public class SpawnScript : MonoBehaviour {
 		if (numberOfEnemies3 != 0) {
 			SpawnEnemy3 ();
 		}
-		if (EnemyBoss) {
+		if (SpawnBoss) {
 			SpawnEnemyBoss();
 		}
+
 	}
 
 	void SpawnPlayer() {
@@ -125,5 +144,28 @@ public class SpawnScript : MonoBehaviour {
 
 	void SpawnEnemyBoss () {
 		Instantiate (EnemyBoss, new Vector3 (BossSpawn.transform.position.x, BossSpawn.transform.position.y, 0)	, transform.rotation);
+	}
+
+	void SpawnBabies() {
+
+		for(int i = 0; i < numberOfBabies; i++) {
+			Instantiate (octopusBaby, new Vector3 (coords_babies[i].x, coords_babies[i].y, 0), transform.rotation);
+		}
+		babiesSpawned = true;
+	}
+
+	void Update () {
+
+
+		enemyBossHealth = GameObject.Find ("EnemyBoss(Clone)").GetComponent<EnemyBossHealthScript> ().currentHealth;
+
+		if (EnemyBoss != null) {
+			if (enemyBossHealth < 10 && enemyBossHealth >= 0 && !babiesSpawned) {
+				Debug.Log ("SPAWN BABIES");
+				SpawnBabies ();
+			}
+		}
+
+
 	}
 }
