@@ -956,12 +956,14 @@ MonoBehaviour:
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
   enemy4: {fileID: 0}
+  enemy5: {fileID: 171416, guid: 01ff40e037b5c4bcbb7f78526f87f45e, type: 2}
   octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 2
   numberOfEnemies2: 0
   numberOfEnemies3: 0
   numberOfEnemies4: 0
+  numberOfEnemies5: 0
   numberOfBabies: 0
   SpawnBoss: 0
   spawnPoints_enemy1:
@@ -970,6 +972,7 @@ MonoBehaviour:
   spawnPoints_enemy2: []
   spawnPoints_enemy3: []
   spawnPoints_enemy4: []
+  spawnPoints_enemy5: []
   spawnPoints_babies: []
   BossSpawn: {fileID: 0}
   firstSprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}

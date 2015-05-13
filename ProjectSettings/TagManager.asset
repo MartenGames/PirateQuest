@@ -21,6 +21,7 @@ TagManager:
   - BackgroundOcean
   - Enemy4
   - Barrell
+  - Enemy5
   layers:
   - Default
   - TransparentFX
