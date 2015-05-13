@@ -343,7 +343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22451974, guid: 16137a4fb9b0c4fafa9a99d6e802edb6, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22451974, guid: 16137a4fb9b0c4fafa9a99d6e802edb6, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -557,7 +557,7 @@ Transform:
   m_LocalScale: {x: 7.21083641, y: 8.61055851, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1001 &562786064
 Prefab:
   m_ObjectHideFlags: 0
@@ -1006,21 +1006,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 169508, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
-  enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
+  enemy: {fileID: 0}
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
+  enemy4: {fileID: 0}
   octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
-  numberOfEnemies: 2
+  numberOfEnemies: 0
   numberOfEnemies2: 0
   numberOfEnemies3: 0
+  numberOfEnemies4: 0
   numberOfBabies: 0
   SpawnBoss: 0
-  spawnPoints_enemy1:
-  - {fileID: 576190697}
-  - {fileID: 0}
+  spawnPoints_enemy1: []
   spawnPoints_enemy2: []
   spawnPoints_enemy3: []
+  spawnPoints_enemy4: []
   spawnPoints_babies: []
   BossSpawn: {fileID: 0}
   firstSprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}
@@ -1082,10 +1083,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd640fa0a70c34e12bbc7b46e64faff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  spawnPoint: {fileID: 0}
-  numberOfEnemies: 0
-  secondsBetweenEnemies: 0
+  enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
+  spawnPoint: {fileID: 576190697}
+  numberOfEnemies: 3
+  secondsBetweenEnemies: 10
 --- !u!1 &1359518174
 GameObject:
   m_ObjectHideFlags: 0
