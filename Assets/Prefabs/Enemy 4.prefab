@@ -128,8 +128,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5799999, y: -8.14000034, z: 0}
-  m_LocalScale: {x: .300000012, y: .300000012, z: 1}
+  m_LocalPosition: {x: -20.6874771, y: -9.79415321, z: 0}
+  m_LocalScale: {x: .159999996, y: .25999999, z: 1}
   m_Children:
   - {fileID: 22464012}
   m_Father: {fileID: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b987941088b464596b1b29f25d4eddd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1.20000005
+  MoveSpeed: 1.60000002
   Distance: 3
   rotateSpeed: 40
 --- !u!114 &11468614
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: .5, z: 0}
-  bulletPrefab: {fileID: 178332, guid: a034b19786f1140f28127f81611429d9, type: 2}
+  bulletPrefab: {fileID: 139196, guid: 2fb78ff979f3c428997221344f96ace8, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: 0
   fireDelay: 1
@@ -458,8 +458,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -5.61000013}
-  m_SizeDelta: {x: 42.7799988, y: 3.6400001}
+  m_AnchoredPosition: {x: -5.84000015, y: -6.63000011}
+  m_SizeDelta: {x: 86.4000015, y: 3.6400001}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22469144
 RectTransform:

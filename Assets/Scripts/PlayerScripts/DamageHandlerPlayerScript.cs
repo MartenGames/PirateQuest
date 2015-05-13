@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DamageHandlerPlayerScript : MonoBehaviour {
 
-	public int attackDamage = 25;
+	public int attackDamage;
 	public float invulnerabilityTimer = 0;
 	public AudioClip playerDies2;
 	public AudioClip playerGetHit1;
@@ -45,15 +45,23 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		layer = gameObject.layer;
 		material = GetComponent<SpriteRenderer> ().material;
 		color = material.color;
+
+		attackDamage = GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().attackDamage;
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")) {
-			playerHealth.TakeDamage(attackDamage);
+			playerHealth.TakeDamage (attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
 			material.color = Color.red;
-			AudioSource.PlayClipAtPoint(playerGetHit1, transform.position);
+			AudioSource.PlayClipAtPoint (playerGetHit1, transform.position);
+		} else if (other.gameObject.name == "EnemyEnergyBall(Clone)") {
+			playerHealth.TakeDamage (attackDamage + 25);
+			invulnerabilityTimer = 2.0f;
+			gameObject.layer = 11;
+			material.color = Color.red;
+			AudioSource.PlayClipAtPoint (playerGetHit1, transform.position);
 		}
 	}
 	
@@ -95,11 +103,13 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			//make the player invinsible when he has killed every enemy
 			gameObject.layer = 11;
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
-			go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
-			if(GameObject.FindWithTag ("Gold") == null) {
-				winningCanvas.gameObject.SetActive(true);
+			if(go.GetComponent<StoringVarScript>().AllowedToWin) {
+				go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
+				if(GameObject.FindWithTag ("Gold") == null) {
+					winningCanvas.gameObject.SetActive(true);
+				}
+				go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 			}
-			go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		}
 	}
 	
