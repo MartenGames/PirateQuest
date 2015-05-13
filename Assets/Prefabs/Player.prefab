@@ -45,7 +45,6 @@ GameObject:
   - 114: {fileID: 11470386}
   - 114: {fileID: 11471260}
   - 114: {fileID: 11465228}
-  - 114: {fileID: 11407078}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -179,18 +178,6 @@ BoxCollider2D:
   m_Offset: {x: -.300000012, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.75999999, y: 4.19000006}
---- !u!114 &11407078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4471f186cb49848a8a9ac2134e8a6dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseCanvas: {fileID: 22310128, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
 --- !u!114 &11418566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,7 +332,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 995d1abc5cce64915b6275924971f5be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21230082
 SpriteRenderer:
