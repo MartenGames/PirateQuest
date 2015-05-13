@@ -41,3 +41,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/EnemyBoss.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Level6.unity
+  - enabled: 1
+    path: Assets/Scenes/Menu Scenes/FakeMainMenu.unity

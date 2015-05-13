@@ -735,7 +735,7 @@ MonoBehaviour:
   InfoMenu: {fileID: 424334818}
   QuitMenu: {fileID: 66331716}
   PlayButton: {fileID: 1719849449}
-  ExitButton: {fileID: 0}
+  ExitButton: {fileID: 592311621}
   InfoButton: {fileID: 1718146483}
   EmptyObject: {fileID: 0}
   mainMenuMusic: {fileID: 2084681116}
