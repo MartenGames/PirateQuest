@@ -12,9 +12,15 @@ public class BarrelMobilityScript : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "BackgroundOcean") {
+		if (other.tag == "BackgroundOcean" || other.gameObject.tag == "Island") {
 			moveSpeed *= -1;
-		} 
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "Island") {
+			moveSpeed *= -1;
+		}		                                 
 	}
 
 	// Update is called once per frame
