@@ -36,7 +36,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &148860
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11407078, guid: 18688edaf4adc4f7d8c971e4518746c0, type: 2}
+      - m_Target: {fileID: 11432920, guid: 16137a4fb9b0c4fafa9a99d6e802edb6, type: 2}
         m_MethodName: GoToMapFromPause
         m_Mode: 1
         m_Arguments:
