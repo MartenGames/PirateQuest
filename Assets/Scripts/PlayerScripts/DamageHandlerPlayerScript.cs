@@ -84,7 +84,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		playerHealth.healthSlider.value = playerHealth.currentHealth;
 
 		mapSlider.value = playerHealth.currentHealth;
-
+		//Debug.Log ("This is the player health in Update" + playerHealth.currentHealth);
 		if (playerHealth.currentHealth <= 0) {
 			Die ();
 		}
