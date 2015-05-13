@@ -4,7 +4,7 @@ using System.Collections;
 
 public class EnemyShootingScript : MonoBehaviour {
 
-	public Vector3 bulletOffset = new Vector3(0, 0.5f, 0);
+	public Vector3 bulletOffset = new Vector3(0, 2f, 0);
 	public GameObject bulletPrefab;
 	public AudioClip gunShot;
 	public float coolDownTimer = 0;

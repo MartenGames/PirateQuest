@@ -50,13 +50,18 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")
-		    || (other.gameObject.name == "EnemyEnergyBall(Clone)")) {
-			playerHealth.TakeDamage(attackDamage);
+		if ((other.gameObject.name == "EnemyBullet(Clone)") || (other.gameObject.name == "BossBullet(Clone)")) {
+			playerHealth.TakeDamage (attackDamage);
 			invulnerabilityTimer = 2.0f;
 			gameObject.layer = 11;
 			material.color = Color.red;
-			AudioSource.PlayClipAtPoint(playerGetHit1, transform.position);
+			AudioSource.PlayClipAtPoint (playerGetHit1, transform.position);
+		} else if (other.gameObject.name == "EnemyEnergyBall(Clone)") {
+			playerHealth.TakeDamage (attackDamage + 25);
+			invulnerabilityTimer = 2.0f;
+			gameObject.layer = 11;
+			material.color = Color.red;
+			AudioSource.PlayClipAtPoint (playerGetHit1, transform.position);
 		}
 	}
 	
@@ -117,6 +122,14 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 
 	public void RestartLevel() {
+		Application.LoadLevel (Application.loadedLevel);
+	}
+		
+	public void RestartLevelFromWinning() {
+		//Still need to fix this
+		//Hilmar
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
