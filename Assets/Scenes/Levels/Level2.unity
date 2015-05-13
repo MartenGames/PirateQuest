@@ -186,7 +186,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .571428597
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -266,7 +266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .571428597
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -316,7 +316,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &101403064
+--- !u!224 &101403064 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
@@ -745,10 +745,12 @@ MonoBehaviour:
   enemy: {fileID: 136032, guid: 159572c91720146bb8e8e39d2041e429, type: 2}
   enemy2: {fileID: 136032, guid: 46494cc20ef934392987bfc38c3d58ed, type: 2}
   enemy3: {fileID: 136032, guid: 4589da5eb5aba4c85be87baa26a2199c, type: 2}
+  octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 2
   numberOfEnemies2: 2
   numberOfEnemies3: 0
+  numberOfBabies: 0
   SpawnBoss: 0
   spawnPoints_enemy1:
   - {fileID: 1849286557}
@@ -757,6 +759,7 @@ MonoBehaviour:
   - {fileID: 270311466}
   - {fileID: 1581764449}
   spawnPoints_enemy3: []
+  spawnPoints_babies: []
   BossSpawn: {fileID: 0}
   firstSprite: {fileID: 21300000, guid: 038a47e59e60f42b1bfff31d3288926b, type: 3}
   secondSprite: {fileID: 21300000, guid: 995d1abc5cce64915b6275924971f5be, type: 3}
@@ -1272,7 +1275,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 736396491}
   m_RootOrder: 2
---- !u!114 &1805218397
+--- !u!114 &1805218397 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
