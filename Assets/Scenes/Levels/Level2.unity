@@ -316,7 +316,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &101403064 stripped
+--- !u!224 &101403064
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
@@ -1367,7 +1367,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
   m_IsPrefabParent: 0
---- !u!223 &1408291866 stripped
+--- !u!223 &1408291866
 Canvas:
   m_PrefabParentObject: {fileID: 22310128, guid: 9446d108e344f49468cc92bf705094b2,
     type: 2}
@@ -1528,10 +1528,19 @@ Prefab:
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 1408291866}
+    - target: {fileID: 11423942, guid: aded51eebb54f40bd9786271b63ca065, type: 2}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 1748937418}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aded51eebb54f40bd9786271b63ca065, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1805218397 stripped
+--- !u!223 &1748937418
+Canvas:
+  m_PrefabParentObject: {fileID: 22311966, guid: aded51eebb54f40bd9786271b63ca065,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748937417}
+--- !u!114 &1805218397
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
