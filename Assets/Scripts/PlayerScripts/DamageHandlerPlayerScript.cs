@@ -124,6 +124,14 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	public void RestartLevel() {
 		Application.LoadLevel (Application.loadedLevel);
 	}
+		
+	public void RestartLevelFromWinning() {
+		//Still need to fix this
+		//Hilmar
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
+		Application.LoadLevel (Application.loadedLevel);
+	}
 
 	public void GoToMapDefeat() {
 		Application.LoadLevel ("LevelSelection");
