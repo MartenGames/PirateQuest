@@ -13,12 +13,14 @@ public class EnemyBulletScript : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag != "BackgroundOcean") {
-			GameObject ex = (GameObject) Instantiate(explosionGO);
-			ex.transform.position = transform.position;
-			AudioSource.PlayClipAtPoint(explosionAudio, transform.position);
+		if (other.tag != "Barrell") {
+			if (other.tag != "BackgroundOcean") {
+				GameObject ex = (GameObject)Instantiate (explosionGO);
+				ex.transform.position = transform.position;
+				AudioSource.PlayClipAtPoint (explosionAudio, transform.position);
+			}
+			Destroy (gameObject);
 		}
-		Destroy (gameObject);
 	}
 	
 	// Update is called once per frame
