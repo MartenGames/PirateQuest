@@ -30,6 +30,9 @@ public class StoringVarScript : MonoBehaviour {
 	public int secondCannonCounter = 0;
 	public int speedCounter = 0;
 
+	//Is the game paused or not
+	public bool isPaused = false;
+
 	void Awake () {
 		DontDestroyOnLoad (transform.gameObject);
 	}

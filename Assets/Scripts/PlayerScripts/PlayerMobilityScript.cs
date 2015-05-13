@@ -21,77 +21,77 @@ public class PlayerMobilityScript : MonoBehaviour {
 		//The player isn't holding any key 
 		keyPressed = false;
 
-		//Move the ship forward
-		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
+		if (GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused == false) {
+			//Move the ship forward
+			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
 
-			keyPressed = true;
+				keyPressed = true;
 
-			//If the ship is in a backward motion we quickly change that
-			if(moveSpeed < 0) {
-				moveSpeed += Acceleration * 2 * Time.deltaTime;
-			}
+				//If the ship is in a backward motion we quickly change that
+				if (moveSpeed < 0) {
+					moveSpeed += Acceleration * 2 * Time.deltaTime;
+				}
 
-			//Increase the speed gradually with respect to the acceleration
-			moveSpeed += Acceleration * Time.deltaTime;
-
-			//Actual moving of the ship
-			transform.Translate(new Vector3(0,-moveSpeed,0));
-
-		}
-
-		//Move the ship backwards
-		if (Input.GetKey (KeyCode.DownArrow)|| Input.GetKey (KeyCode.S)) {
-
-			keyPressed = true;
-
-			//If the ship is in a forward motion we quickly change that
-			if(moveSpeed > 0) {
-				moveSpeed -= Acceleration * 2 * Time.deltaTime;
-			}
-
-			//Increase the speed gradually with respect to the acceleration
-			moveSpeed -= Acceleration * Time.deltaTime;
-
-			//Actual moving of the ship
-			transform.Translate(new Vector3(0, -moveSpeed, 0));
-
-		}
-		//Rotate the ship to the left
-		if (Input.GetKey (KeyCode.LeftArrow)|| Input.GetKey (KeyCode.A)) {
-
-			transform.Rotate (new Vector3 (0, 0, rotateSpeed));
-			
-		}
-		
-		//Rotate the ship to the right
-		if (Input.GetKey (KeyCode.RightArrow)|| Input.GetKey (KeyCode.D)) {
-
-			transform.Rotate (0, 0, -rotateSpeed);
-		} 
-
-		//Make sure that the ship doesn't go too fast forward or backwards
-		if (moveSpeed > MaxSpeed) {
-			moveSpeed = MaxSpeed;
-		}
-
-		if (moveSpeed < -MaxSpeed) {
-			moveSpeed = -MaxSpeed;
-		}
-
-
-		//If the user isn't pressing the up and down arrow we decrese the movement of the ship to 0
-		if (!keyPressed) {
-
-			if(moveSpeed > 0) {
-				moveSpeed -= Acceleration * Time.deltaTime;
-			}
-			else if(moveSpeed < 0) {
+				//Increase the speed gradually with respect to the acceleration
 				moveSpeed += Acceleration * Time.deltaTime;
+
+				//Actual moving of the ship
+				transform.Translate (new Vector3 (0, -moveSpeed, 0));
+
 			}
-			transform.Translate(new Vector3(0, -moveSpeed, 0));
+
+			//Move the ship backwards
+			if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
+
+				keyPressed = true;
+
+				//If the ship is in a forward motion we quickly change that
+				if (moveSpeed > 0) {
+					moveSpeed -= Acceleration * 2 * Time.deltaTime;
+				}
+
+				//Increase the speed gradually with respect to the acceleration
+				moveSpeed -= Acceleration * Time.deltaTime;
+
+				//Actual moving of the ship
+				transform.Translate (new Vector3 (0, -moveSpeed, 0));
+
+			}
+			//Rotate the ship to the left
+			if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
+
+				transform.Rotate (new Vector3 (0, 0, rotateSpeed));
+				
+			}
+			
+			//Rotate the ship to the right
+			if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
+
+				transform.Rotate (0, 0, -rotateSpeed);
+			} 
+
+			//Make sure that the ship doesn't go too fast forward or backwards
+			if (moveSpeed > MaxSpeed) {
+				moveSpeed = MaxSpeed;
+			}
+
+			if (moveSpeed < -MaxSpeed) {
+				moveSpeed = -MaxSpeed;
+			}
 
 
-		}
-		
+			//If the user isn't pressing the up and down arrow we decrese the movement of the ship to 0
+			if (!keyPressed) {
+
+				if (moveSpeed > 0) {
+					moveSpeed -= Acceleration * Time.deltaTime;
+				} else if (moveSpeed < 0) {
+					moveSpeed += Acceleration * Time.deltaTime;
+				}
+				transform.Translate (new Vector3 (0, -moveSpeed, 0));
+
+
+			}
+		} 
 	} 
 }
