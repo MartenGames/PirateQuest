@@ -28,7 +28,7 @@ public class BarrellExplosionScript : MonoBehaviour {
 	}
 
 	void Start () {
-		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();
+		defeatCanvas = GameObject.FindGameObjectWithTag("DefeatCanvas").GetComponent<Canvas> ();	
 	}
 	
 	// Update is called once per frame
