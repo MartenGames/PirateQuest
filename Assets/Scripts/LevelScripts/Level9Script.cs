@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Level8Script : MonoBehaviour {
+public class Level9Script : MonoBehaviour {
 	
 	
 	public GameObject enemy1;
@@ -67,7 +67,7 @@ public class Level8Script : MonoBehaviour {
 		yield return new WaitForSeconds (secondsBetweenEnemies);
 
 		for (int i = 0; i < numberOfEnemies5; i++) {
-			Instantiate (enemy4, new Vector3 (spawnPoints_enemy5[i].transform.position.x, spawnPoints_enemy5[i].transform.position.y, 0), transform.rotation);
+			Instantiate (enemy5, new Vector3 (spawnPoints_enemy5[i].transform.position.x, spawnPoints_enemy5[i].transform.position.y, 0), transform.rotation);
 			counter++;
 		}
 

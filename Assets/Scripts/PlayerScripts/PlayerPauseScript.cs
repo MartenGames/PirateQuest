@@ -5,23 +5,50 @@ using System.Collections;
 public class PlayerPauseScript : MonoBehaviour {
 
 	public Canvas pauseCanvas;
+	public Canvas startCanvas;
 	public Button pauseButton;
 	public Sprite pause;
 	public Sprite play;
+
+	private int startCounter = 0;
 
 	void Start () {
 		pauseCanvas = pauseCanvas.GetComponent<Canvas> ();
 		pauseCanvas = GameObject.FindGameObjectWithTag ("PauseCanvas").GetComponent<Canvas> ();
 		pauseCanvas.gameObject.SetActive (false);
+
+		startCanvas = startCanvas.GetComponent<Canvas> ();
+		startCanvas = GameObject.FindGameObjectWithTag ("StartCanvas").GetComponent<Canvas> ();
+		startCanvas.gameObject.SetActive (false);
+
 		pauseButton = pauseButton.GetComponent<Button> ();
 	}
 
 	void Update () {
 
+		if(startCounter == 0){
+			startCounter++;
+			StartCoroutine(PauseBeginning());
+		}
+		startCanvas.gameObject.SetActive (false);
 		//Pause the game when playing.
 		if (Input.GetKeyDown (KeyCode.P)) {
 			Pause ();
 		}
+	}
+
+	//Make the scene start after 2 seconds
+	private IEnumerator PauseBeginning() {
+
+		Time.timeScale = 0.1f;
+		float pauseEndTime = Time.realtimeSinceStartup + 4;
+		while (Time.realtimeSinceStartup < pauseEndTime) {
+			Debug.Log ("TimeScale is: " + Time.timeScale);
+			startCanvas.gameObject.SetActive (true);
+			yield return 0;
+		}
+		startCanvas.gameObject.SetActive (false);
+		Time.timeScale = 1;
 	}
 
 	public void Pause(){
@@ -40,7 +67,6 @@ public class PlayerPauseScript : MonoBehaviour {
 				Time.timeScale = 0;
 				pauseCanvas.gameObject.SetActive (true);
 				pauseButton.image.overrideSprite = play;
-				Debug.Log (this.name);
 			}
 		}
 	}
@@ -50,7 +76,6 @@ public class PlayerPauseScript : MonoBehaviour {
 		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
 		Time.timeScale = 1;
 		Application.LoadLevel (Application.loadedLevel);
-		Debug.Log(this.name);
 
 	}
 

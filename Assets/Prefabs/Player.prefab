@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 22310128, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
+  startCanvas: {fileID: 22307272, guid: 098c74964f8fa498ca37ab59a3d225c1, type: 2}
   pauseButton: {fileID: 11458366, guid: aded51eebb54f40bd9786271b63ca065, type: 2}
   pause: {fileID: 21300000, guid: 28662391fdf684c3fb3960663629924f, type: 3}
   play: {fileID: 21300000, guid: 5a35f39fced2142b998f0e3cc4043b95, type: 3}

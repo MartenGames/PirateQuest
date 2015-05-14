@@ -7,7 +7,7 @@ public class EnemyAIScript : MonoBehaviour {
 	public float Distance;
 	public float rotateSpeed;
 	Transform Player;
-	
+
 	void Start () {
 
 	}
