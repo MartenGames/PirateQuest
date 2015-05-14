@@ -212,8 +212,8 @@ public class UpgradeScript : MonoBehaviour {
 				emptyObject.GetComponent<StoringVarScript> ().speedPrice *= 2;
 				AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 				MoneySignal.enabled = false;
-				emptyObject.GetComponent<StoringVarScript> ().speed += 0.02f;
-				emptyObject.GetComponent<StoringVarScript> ().acceleration += 0.025f;
+				emptyObject.GetComponent<StoringVarScript> ().speed += 0.01f;
+				emptyObject.GetComponent<StoringVarScript> ().acceleration += 0.015f;
 				emptyObject.GetComponent<StoringVarScript> ().rotateSpeed += 0.25f;
 				emptyObject.GetComponent<StoringVarScript> ().goldAmount -= speedPrice;
 				emptyObject.GetComponent<StoringVarScript> ().speedCounter++;
