@@ -138,7 +138,7 @@ public class UpgradeScript : MonoBehaviour {
 
 	public void PressIncreaseDamage(){
 		if(emptyObject.GetComponent<StoringVarScript> ().goldAmount < damagePrice){
-			if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 3) {
+			if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 2) {
 				MoneySignal.enabled = false;
 			}
 			else {
@@ -148,7 +148,7 @@ public class UpgradeScript : MonoBehaviour {
 		}
 		else {
 			//When the player can not upgrade this item further.
-			if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 3) {
+			if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 2) {
 				AudioSource.PlayClipAtPoint(errorSound, transform.position);
 			}
 			//Normal upgrade
@@ -212,7 +212,7 @@ public class UpgradeScript : MonoBehaviour {
 				emptyObject.GetComponent<StoringVarScript> ().speedPrice *= 2;
 				AudioSource.PlayClipAtPoint(upgradeSound, transform.position);
 				MoneySignal.enabled = false;
-				emptyObject.GetComponent<StoringVarScript> ().speed += 0.05f;
+				emptyObject.GetComponent<StoringVarScript> ().speed += 0.02f;
 				emptyObject.GetComponent<StoringVarScript> ().acceleration += 0.025f;
 				emptyObject.GetComponent<StoringVarScript> ().rotateSpeed += 0.25f;
 				emptyObject.GetComponent<StoringVarScript> ().goldAmount -= speedPrice;
@@ -232,7 +232,7 @@ public class UpgradeScript : MonoBehaviour {
 		playerHealth.text = "Health: " + (emptyObject.GetComponent<StoringVarScript> ().health + 100);
 		playerDamage.text = "Damage: " + emptyObject.GetComponent<StoringVarScript> ().damage;
 		playerFireRate.text = "Firerate: " + (1 - emptyObject.GetComponent<StoringVarScript> ().fireRate) + " second";
-		playerSpeed.text = "Speed: " + (emptyObject.GetComponent<StoringVarScript> ().speed + 0.05f);
+		playerSpeed.text = "Speed: " + (emptyObject.GetComponent<StoringVarScript> ().speed + 0.02f);
 		if (emptyObject.GetComponent<StoringVarScript> ().secondCannon) {
 			playerNumberOfCannons.text = "Number of Cannons: 2";
 		} else {
@@ -260,7 +260,7 @@ public class UpgradeScript : MonoBehaviour {
 		//color of the increase damage text
 		if (gold < damagePrice) {
 			//The color if the player has reached maximum.
-			if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 3) {
+			if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 2) {
 				damagePriceText.color = Color.black;
 			}
 			else{
@@ -297,7 +297,7 @@ public class UpgradeScript : MonoBehaviour {
 
 		//The text that the player sees in the upgrade store
 		//increase damage
-		if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 3) {
+		if (emptyObject.GetComponent<StoringVarScript> ().damageCounter >= 2) {
 			damagePriceText.text = "Increase Damage of Cannon: \n" + "Reached maximum!";
 			damagePriceText.color = Color.black;
 		} 

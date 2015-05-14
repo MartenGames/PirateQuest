@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondCannon: 0
+  AllowedToWin: 1
   health: 0
   damage: 1
   goldAmount: 0
@@ -49,6 +50,10 @@ MonoBehaviour:
   fireRate: 0
   currentLevelGoldAmount: 0
   currentLevel: 0
+  attackDamage: 25
+  numberOfDeaths: 0
+  totalAmountOfGold: 0
+  totalAmountOfPlayTime: 0
   healthPrice: 200
   damagePrice: 500
   fireRatePrice: 500
@@ -59,6 +64,7 @@ MonoBehaviour:
   fireRateCounter: 0
   secondCannonCounter: 0
   speedCounter: 0
+  isPaused: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
