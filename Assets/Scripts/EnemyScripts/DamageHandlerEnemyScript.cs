@@ -66,7 +66,7 @@ public class DamageHandlerEnemyScript : MonoBehaviour {
 			go.GetComponent<GoldScript> ().goldAmount = 300;
 		} else if (gameObject.tag == "Enemy4") {
 			go.GetComponent<GoldScript> ().goldAmount = 400;
-		} else if (gameObject.tag == "Enemy4") {
+		} else if (gameObject.tag == "Enemy5") {
 			go.GetComponent<GoldScript> ().goldAmount = 500;
 		} else {
 			Debug.Log ("This should never happen, check DamageHandlerEnemyScript");
