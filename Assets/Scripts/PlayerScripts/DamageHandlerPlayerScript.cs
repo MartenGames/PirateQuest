@@ -19,6 +19,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	Color color;
 	PlayerHealthScript playerHealth;
 	int layer;
+
+	//This is the gold that the player has collected through the level he is in
+	//This variable is needed to restart the level from winning and drop the gold
+	//the player has collected in that level.
+	private int currLevelGoldForRestart;
 	
 	void Start() {
 
@@ -118,6 +123,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 				if(GameObject.FindWithTag ("Gold") == null) {
 					winningCanvas.gameObject.SetActive(true);
 				}
+				currLevelGoldForRestart = go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
 				go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 			}
 		}
@@ -140,7 +146,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		//Still need to fix this
 		//Hilmar
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
+		go.GetComponent<StoringVarScript> ().goldAmount -= currLevelGoldForRestart;
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
