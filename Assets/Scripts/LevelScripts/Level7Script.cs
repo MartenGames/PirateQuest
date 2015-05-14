@@ -5,9 +5,9 @@ public class Level7Script : MonoBehaviour {
 
 
 	public GameObject enemy; //Enemy to be spawned
-	public GameObject spawnPoint; //Spawn location of enemies
+	public GameObject[] spawnPoints; //Spawn location of enemies
 
-	public int numberOfEnemies; //number of enemies to be spawned
+	int numberOfEnemies; //number of enemies to be spawned
 
 	bool spawned; //
 
@@ -24,15 +24,19 @@ public class Level7Script : MonoBehaviour {
 		go.GetComponent<StoringVarScript> ().AllowedToWin = false;
 		spawned = false;
 		counter = 1;
+		numberOfEnemies = spawnPoints.Length;
+
 	}
 
 	IEnumerator spawnEnemies() {
 
 		spawned = true;
-			
-		Instantiate (enemy, new Vector3 (spawnPoint.transform.position.x, spawnPoint.transform.position.y, 0), transform.rotation);
-		yield return new WaitForSeconds (secondsBetweenEnemies);	
-		counter++;
+
+		for (int i = 0; i < spawnPoints.Length; i++) {
+			Instantiate (enemy, new Vector3 (spawnPoints[i].transform.position.x, spawnPoints[i].transform.position.y, 0), transform.rotation);
+			yield return new WaitForSeconds (secondsBetweenEnemies);
+			counter++;
+		}
 
 		spawned = false;
 	}
