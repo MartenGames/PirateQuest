@@ -5,6 +5,7 @@ using System.Collections;
 public class PlayerPauseScript : MonoBehaviour {
 
 	public Canvas pauseCanvas;
+	public Canvas startCanvas;
 	public Button pauseButton;
 	public Sprite pause;
 	public Sprite play;
@@ -15,14 +16,21 @@ public class PlayerPauseScript : MonoBehaviour {
 		pauseCanvas = pauseCanvas.GetComponent<Canvas> ();
 		pauseCanvas = GameObject.FindGameObjectWithTag ("PauseCanvas").GetComponent<Canvas> ();
 		pauseCanvas.gameObject.SetActive (false);
+
+		startCanvas = startCanvas.GetComponent<Canvas> ();
+		startCanvas = GameObject.FindGameObjectWithTag ("StartCanvas").GetComponent<Canvas> ();
+		startCanvas.gameObject.SetActive (false);
+
 		pauseButton = pauseButton.GetComponent<Button> ();
 	}
 
 	void Update () {
 
 		if(startCounter == 0){
+			startCounter++;
 			StartCoroutine(PauseBeginning());
 		}
+		startCanvas.gameObject.SetActive (false);
 		//Pause the game when playing.
 		if (Input.GetKeyDown (KeyCode.P)) {
 			Pause ();
@@ -32,14 +40,15 @@ public class PlayerPauseScript : MonoBehaviour {
 	//Make the scene start after 2 seconds
 	private IEnumerator PauseBeginning() {
 
-		Time.timeScale = 0.1f;
+		Time.timeScale = 0.0f;
 		float pauseEndTime = Time.realtimeSinceStartup + 4;
 		while (Time.realtimeSinceStartup < pauseEndTime) {
 			Debug.Log ("TimeScale is: " + Time.timeScale);
+			startCanvas.gameObject.SetActive (true);
 			yield return 0;
 		}
+		startCanvas.gameObject.SetActive (false);
 		Time.timeScale = 1;
-		startCounter++;
 	}
 
 	public void Pause(){
@@ -53,13 +62,11 @@ public class PlayerPauseScript : MonoBehaviour {
 				Time.timeScale = 1;
 				pauseCanvas.gameObject.SetActive (false);
 				pauseButton.image.overrideSprite = pause;
-				Debug.Log ("Canvas should be false!!!, the game is on!");
 			} else {
 				GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = true;
 				Time.timeScale = 0;
 				pauseCanvas.gameObject.SetActive (true);
 				pauseButton.image.overrideSprite = play;
-				Debug.Log ("Canvas should be true, the game should be paused!" + Time.timeScale);
 			}
 		}
 	}

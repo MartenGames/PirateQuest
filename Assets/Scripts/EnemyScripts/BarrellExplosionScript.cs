@@ -24,6 +24,7 @@ public class BarrellExplosionScript : MonoBehaviour {
 	void Die() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
+		go.GetComponent<StoringVarScript> ().numberOfDeaths += 1;
 		defeatCanvas.gameObject.SetActive (true);
 	}
 

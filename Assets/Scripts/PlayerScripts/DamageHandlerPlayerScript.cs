@@ -73,6 +73,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	
 	void Update() {
 		invulnerabilityTimer -= Time.deltaTime;
+
+		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().totalAmountOfPlayTime += Time.deltaTime;
 		
 		if (invulnerabilityTimer <= 0) {
 			gameObject.layer = layer;
@@ -112,6 +114,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			GameObject go = GameObject.Find ("EmptyObject(Clone)");
 			if(go.GetComponent<StoringVarScript>().AllowedToWin) {
 				go.GetComponent<StoringVarScript> ().goldAmount += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
+				go.GetComponent<StoringVarScript> ().totalAmountOfGold += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
 				if(GameObject.FindWithTag ("Gold") == null) {
 					winningCanvas.gameObject.SetActive(true);
 				}
@@ -121,6 +124,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 	
 	void Die() {
+		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().numberOfDeaths += 1;
 		Destroy (gameObject);
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
