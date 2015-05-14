@@ -150,14 +150,24 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public void GoToMapWin() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().currentLevel += 1;
-		Application.LoadLevel ("LevelSelection");
+
+		if (go.GetComponent<StoringVarScript> ().currentLevel == 10) {
+			Application.LoadLevel ("HighScore");
+		} else {
+			go.GetComponent<StoringVarScript> ().currentLevel += 1;
+			Application.LoadLevel ("LevelSelection");
+		}
 	}
 	
 	public void GoToUpgradeStore() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().currentLevel += 1;
-		Application.LoadLevel ("UpgradeStore");
+
+		if (go.GetComponent<StoringVarScript> ().currentLevel == 10) {
+			Application.LoadLevel ("HighScore");
+		} else {
+			go.GetComponent<StoringVarScript> ().currentLevel += 1;
+			Application.LoadLevel ("UpgradeStore");
+		}
 	}
 
 }
