@@ -32,7 +32,7 @@ public class RightWeaponScript : MonoBehaviour {
 		// I will remove this comment later
 		// Input.GetButtonDown("Fire1");
 		// Check if we pushed the space button
-		if((Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K)) && coolDownTimer <= 0) {
+		if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K)) && coolDownTimer <= 0) {
 			coolDownTimer = fireDelay;
 			Shoot();
 		}
