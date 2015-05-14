@@ -18,6 +18,7 @@ public class LevelSelectionScript : MonoBehaviour {
 		int currentLevel = emptyObject.GetComponent<StoringVarScript> ().currentLevel;
 
 		//Grey out the levels that are not available to the player. 
+		/*
 		for (int i = 0; i < levels.Length; i++) {
 			if((i + 1) == currentLevel) {
 				levels[i].enabled = true;
@@ -27,6 +28,7 @@ public class LevelSelectionScript : MonoBehaviour {
 				levels[i].enabled = false;
 			}
 		}
+		*/
 	}
 
 	void Update () {
