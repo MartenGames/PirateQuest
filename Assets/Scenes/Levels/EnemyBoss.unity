@@ -585,7 +585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -923,16 +923,22 @@ MonoBehaviour:
   enemy: {fileID: 0}
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
+  enemy4: {fileID: 0}
+  enemy5: {fileID: 0}
   octopusBaby: {fileID: 136032, guid: 42ffdb1e846f0481a973ae0b811dedd1, type: 2}
   EnemyBoss: {fileID: 136032, guid: 2048c63c39fa145498f8bf2322e2ded5, type: 2}
   numberOfEnemies: 0
   numberOfEnemies2: 0
   numberOfEnemies3: 0
+  numberOfEnemies4: 0
+  numberOfEnemies5: 0
   numberOfBabies: 12
   SpawnBoss: 1
   spawnPoints_enemy1: []
   spawnPoints_enemy2: []
   spawnPoints_enemy3: []
+  spawnPoints_enemy4: []
+  spawnPoints_enemy5: []
   spawnPoints_babies:
   - {fileID: 576190697}
   - {fileID: 583034767}
