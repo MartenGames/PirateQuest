@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1185952d0be4f9f9078f8d9ea72d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
+  startingHealth: 40
   currentHealth: 0
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .100000001}
