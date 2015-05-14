@@ -1778,7 +1778,7 @@ MonoBehaviour:
   numberOfEnemies4: 3
   numberOfEnemies5: 2
   totalNumberOfEnemies: 18
-  secondsBetweenEnemies: 12
+  secondsBetweenEnemies: 18
 --- !u!1 &1385393255
 GameObject:
   m_ObjectHideFlags: 0
