@@ -50,6 +50,27 @@ public class Level8Script : MonoBehaviour {
 			counter++;
 		}
 
+		yield return new WaitForSeconds (secondsBetweenEnemies);
+
+		for (int i = 0; i < numberOfEnemies3; i++) {
+			Instantiate (enemy3, new Vector3 (spawnPoints_enemy3[i].transform.position.x, spawnPoints_enemy3[i].transform.position.y, 0), transform.rotation);
+			counter++;
+		}
+
+		yield return new WaitForSeconds (secondsBetweenEnemies);
+
+		for (int i = 0; i < numberOfEnemies4; i++) {
+			Instantiate (enemy4, new Vector3 (spawnPoints_enemy4[i].transform.position.x, spawnPoints_enemy4[i].transform.position.y, 0), transform.rotation);
+			counter++;
+		}
+
+		yield return new WaitForSeconds (secondsBetweenEnemies);
+
+		for (int i = 0; i < numberOfEnemies5; i++) {
+			Instantiate (enemy4, new Vector3 (spawnPoints_enemy5[i].transform.position.x, spawnPoints_enemy5[i].transform.position.y, 0), transform.rotation);
+			counter++;
+		}
+
 		/*
 		for (int i = 0; i < spawnPoints.Length; i++) {
 			Instantiate (enemy, new Vector3 (spawnPoints[i].transform.position.x, spawnPoints[i].transform.position.y, 0), transform.rotation);

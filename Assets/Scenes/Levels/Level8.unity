@@ -501,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 147332, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
@@ -1611,7 +1611,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 147332, guid: d3acada25df974ed280519b2a123c189, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3acada25df974ed280519b2a123c189, type: 2}
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   enemy2: {fileID: 136032, guid: 46494cc20ef934392987bfc38c3d58ed, type: 2}
   enemy3: {fileID: 136032, guid: 4589da5eb5aba4c85be87baa26a2199c, type: 2}
   enemy4: {fileID: 167488, guid: 4dd7a93933de34477b8d1fae1173a61d, type: 2}
-  enemy5: {fileID: 0}
+  enemy5: {fileID: 171416, guid: 01ff40e037b5c4bcbb7f78526f87f45e, type: 2}
   octopusBaby: {fileID: 0}
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 0
@@ -1760,16 +1760,25 @@ MonoBehaviour:
   - {fileID: 1176326855}
   - {fileID: 60160883}
   - {fileID: 375956066}
-  spawnPoints_enemy3: []
-  spawnPoints_enemy4: []
-  spawnPoints_enemy5: []
+  spawnPoints_enemy3:
+  - {fileID: 419187847}
+  - {fileID: 1971650581}
+  - {fileID: 60160883}
+  - {fileID: 375956066}
+  spawnPoints_enemy4:
+  - {fileID: 419187847}
+  - {fileID: 1176326855}
+  - {fileID: 375956066}
+  spawnPoints_enemy5:
+  - {fileID: 1971650581}
+  - {fileID: 60160883}
   numberOfEnemies1: 5
   numberOfEnemies2: 4
-  numberOfEnemies3: 0
-  numberOfEnemies4: 0
-  numberOfEnemies5: 0
-  totalNumberOfEnemies: 9
-  secondsBetweenEnemies: 8
+  numberOfEnemies3: 4
+  numberOfEnemies4: 3
+  numberOfEnemies5: 2
+  totalNumberOfEnemies: 18
+  secondsBetweenEnemies: 12
 --- !u!1 &1385393255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,7 +2158,7 @@ Prefab:
       objectReference: {fileID: 796651252}
     - target: {fileID: 188470, guid: 3edd965ed9e964523be277313038f102, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3edd965ed9e964523be277313038f102, type: 2}
