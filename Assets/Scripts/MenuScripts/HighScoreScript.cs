@@ -20,7 +20,7 @@ public class HighScoreScript : MonoBehaviour {
 		goldAmount = stats.GetComponent<StoringVarScript> ().totalAmountOfGold;
 
 
-		highScoreText.text = "Congratulations! \n Your Score is: " + (goldAmount - (numberOfDeaths * 10) - playTime);
+		highScoreText.text = "Congratulations! \n Your Score is: " + (goldAmount - (numberOfDeaths * 20) - playTime);
 
 	}
 
