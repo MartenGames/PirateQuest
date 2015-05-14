@@ -1688,6 +1688,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf154e9e1b2484bbb58b3a9339c798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemy4: {fileID: 0}
+  enemy5: {fileID: 0}
+  spawnPoints_enemy1: []
+  spawnPoints_enemy2: []
+  spawnPoints_enemy3: []
+  spawnPoints_enemy4: []
+  spawnPoints_enemy5: []
+  numberOfEnemies1: 0
+  numberOfEnemies2: 0
+  numberOfEnemies3: 0
+  numberOfEnemies4: 0
+  numberOfEnemies5: 0
+  totalNumberOfEnemies: 0
+  secondsBetweenEnemies: 0
 --- !u!1 &1385393255
 GameObject:
   m_ObjectHideFlags: 0
