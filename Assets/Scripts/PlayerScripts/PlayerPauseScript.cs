@@ -25,22 +25,23 @@ public class PlayerPauseScript : MonoBehaviour {
 	}
 
 	public void Pause(){
-
-		if(Time.timeScale == 0){
-			GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
-			Time.timeScale = 1;
-			pauseCanvas.gameObject.SetActive(false);
-			pauseButton.image.overrideSprite = pause;
-			Debug.Log (pauseButton.image.overrideSprite);
-		}
+		if (this.name == "Player") {
+			GameObject.Find ("Player(Clone)").GetComponent<PlayerPauseScript> ().Pause ();
+		} 
 		else {
-			GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = true;
-			Time.timeScale = 0;
-			pauseCanvas.gameObject.SetActive(true);
-			Debug.Log ("is it truuuu, is it oveeeer!");
-			Debug.Log (pauseButton.image.name);
-			pauseButton.image.overrideSprite = play;
-			Debug.Log (pauseButton.image.overrideSprite);
+
+			if (Time.timeScale == 0) {
+				GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
+				Time.timeScale = 1;
+				pauseCanvas.gameObject.SetActive (false);
+				pauseButton.image.overrideSprite = pause;
+			} else {
+				GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = true;
+				Time.timeScale = 0;
+				pauseCanvas.gameObject.SetActive (true);
+				pauseButton.image.overrideSprite = play;
+				Debug.Log (this.name);
+			}
 		}
 	}
 
@@ -49,6 +50,7 @@ public class PlayerPauseScript : MonoBehaviour {
 		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
 		Time.timeScale = 1;
 		Application.LoadLevel (Application.loadedLevel);
+		Debug.Log(this.name);
 
 	}
 
