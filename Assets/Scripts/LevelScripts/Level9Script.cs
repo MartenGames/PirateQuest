@@ -32,7 +32,7 @@ public class Level9Script : MonoBehaviour {
 		go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().AllowedToWin = false;
 		spawned = false;
-		counter = 1;
+		counter = 0;
 	}
 	
 	IEnumerator spawnEnemies() {
@@ -70,8 +70,7 @@ public class Level9Script : MonoBehaviour {
 			Instantiate (enemy5, new Vector3 (spawnPoints_enemy5[i].transform.position.x, spawnPoints_enemy5[i].transform.position.y, 0), transform.rotation);
 			counter++;
 		}
-		
-		spawned = false;
+
 	}
 	
 	// Update is called once per frame
