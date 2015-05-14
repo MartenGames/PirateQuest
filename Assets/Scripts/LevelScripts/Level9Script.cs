@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Level8Script : MonoBehaviour {
+public class Level9Script : MonoBehaviour {
 	
 	
 	public GameObject enemy1;
