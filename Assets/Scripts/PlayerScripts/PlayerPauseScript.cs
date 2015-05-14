@@ -75,6 +75,8 @@ public class PlayerPauseScript : MonoBehaviour {
 		//If the player wants to restart the level, the timeScale can not be 0
 		GameObject.Find ("EmptyObject(Clone)").GetComponent<StoringVarScript> ().isPaused = false;
 		Time.timeScale = 1;
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 		Application.LoadLevel (Application.loadedLevel);
 
 	}
