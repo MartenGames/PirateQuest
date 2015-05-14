@@ -23,6 +23,7 @@ TagManager:
   - PauseButtonCanvas
   - Barrell
   - Enemy5
+  - StartCanvas
   layers:
   - Default
   - TransparentFX
