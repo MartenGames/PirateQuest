@@ -40,7 +40,7 @@ public class PlayerPauseScript : MonoBehaviour {
 	//Make the scene start after 2 seconds
 	private IEnumerator PauseBeginning() {
 
-		Time.timeScale = 0.0f;
+		Time.timeScale = 0.1f;
 		float pauseEndTime = Time.realtimeSinceStartup + 4;
 		while (Time.realtimeSinceStartup < pauseEndTime) {
 			Debug.Log ("TimeScale is: " + Time.timeScale);
