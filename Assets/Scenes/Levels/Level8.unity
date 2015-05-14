@@ -1573,6 +1573,7 @@ GameObject:
   - 212: {fileID: 1299008388}
   - 68: {fileID: 1299008387}
   - 114: {fileID: 1299008386}
+  - 114: {fileID: 1299008390}
   m_Layer: 0
   m_Name: BackgroundOcean
   m_TagString: BackgroundOcean
@@ -1602,17 +1603,14 @@ MonoBehaviour:
   numberOfEnemies: 0
   numberOfEnemies2: 0
   numberOfEnemies3: 0
-  numberOfEnemies4: 3
+  numberOfEnemies4: 0
   numberOfEnemies5: 0
   numberOfBabies: 0
   SpawnBoss: 0
   spawnPoints_enemy1: []
   spawnPoints_enemy2: []
   spawnPoints_enemy3: []
-  spawnPoints_enemy4:
-  - {fileID: 419187847}
-  - {fileID: 1971650581}
-  - {fileID: 1176326855}
+  spawnPoints_enemy4: []
   spawnPoints_enemy5: []
   spawnPoints_babies: []
   BossSpawn: {fileID: 0}
@@ -1679,6 +1677,17 @@ Transform:
   - {fileID: 1176326856}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1299008390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1299008385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bf154e9e1b2484bbb58b3a9339c798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385393255
 GameObject:
   m_ObjectHideFlags: 0
