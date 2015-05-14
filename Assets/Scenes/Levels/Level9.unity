@@ -1761,10 +1761,10 @@ MonoBehaviour:
   - {fileID: 60160883}
   - {fileID: 375956066}
   spawnPoints_enemy3:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 419187847}
+  - {fileID: 1971650581}
+  - {fileID: 1176326855}
+  - {fileID: 60160883}
   spawnPoints_enemy4:
   - {fileID: 419187847}
   - {fileID: 1176326855}
@@ -1933,7 +1933,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16137a4fb9b0c4fafa9a99d6e802edb6, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1525560468
+--- !u!114 &1525560468 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -2216,7 +2216,7 @@ Transform:
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
 --- !u!1 &1903142194
 GameObject:
   m_ObjectHideFlags: 0
