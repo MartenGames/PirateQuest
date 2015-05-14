@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StoringVarScript : MonoBehaviour {
 
+	//Variables for the player
 	public bool secondCannon = true;
 	public bool AllowedToWin = true;
 	public int health = 0;
@@ -15,6 +16,11 @@ public class StoringVarScript : MonoBehaviour {
 	public int currentLevelGoldAmount = 0;
 	public int currentLevel;
 	public int attackDamage = 25;
+
+	//Variables to determine the highscore
+	public int numberOfDeaths = 0;
+	public int totalAmountOfGold = 0;
+	public float totalAmountOfPlayTime = 0;
 
 	//Prices in upgrade store
 	public int healthPrice = 200;
