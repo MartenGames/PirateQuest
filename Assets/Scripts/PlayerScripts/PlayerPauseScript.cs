@@ -43,7 +43,6 @@ public class PlayerPauseScript : MonoBehaviour {
 		Time.timeScale = 0.1f;
 		float pauseEndTime = Time.realtimeSinceStartup + 4;
 		while (Time.realtimeSinceStartup < pauseEndTime) {
-			Debug.Log ("TimeScale is: " + Time.timeScale);
 			startCanvas.gameObject.SetActive (true);
 			yield return 0;
 		}
