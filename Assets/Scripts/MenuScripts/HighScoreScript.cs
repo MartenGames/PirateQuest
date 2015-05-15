@@ -29,7 +29,7 @@ public class HighScoreScript : MonoBehaviour {
 
 	}
 
-	void EndGame () {
+	public void EndGame () {
 		Application.LoadLevel ("EndCredits");
 	}
 	
