@@ -993,10 +993,10 @@ RectTransform:
   - {fileID: 537018203}
   m_Father: {fileID: 2059425956}
   m_RootOrder: 3
-  m_AnchorMin: {x: .637692869, y: .801000059}
-  m_AnchorMax: {x: .820692837, y: .869455516}
-  m_AnchoredPosition: {x: .900009155, y: -1.54600525}
-  m_SizeDelta: {x: -.200000048, y: 2.4000001}
+  m_AnchorMin: {x: .625692844, y: .796000063}
+  m_AnchorMax: {x: .807307243, y: .869455516}
+  m_AnchoredPosition: {x: .399999619, y: -.549999952}
+  m_SizeDelta: {x: .800000191, y: .400000095}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &833741068
 MonoBehaviour:
