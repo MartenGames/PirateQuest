@@ -87,7 +87,7 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &198809107 stripped
+--- !u!224 &198809107
 RectTransform:
   m_PrefabParentObject: {fileID: 22414828, guid: 34f396ed37555428bbaa080903cba20d,
     type: 2}
@@ -585,7 +585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.x
-      value: .400000006
+      value: .166666672
       objectReference: {fileID: 0}
     - target: {fileID: 22479024, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
       propertyPath: m_AnchorMax.y
@@ -1348,12 +1348,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c74a98f5bd47d419cb009bad9427e310, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1816521988 stripped
+--- !u!224 &1816521988
 RectTransform:
   m_PrefabParentObject: {fileID: 22417662, guid: 926541f2bab794861a54db79c51b2490,
     type: 2}
   m_PrefabInternal: {fileID: 900540780}
---- !u!224 &1951339625 stripped
+--- !u!224 &1951339625
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
