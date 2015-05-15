@@ -22,7 +22,8 @@ public class EnemyBossHealthScript : MonoBehaviour {
 	}
 
 	void Update () {
-		healthText.text = "" + (healthSlider.value * 10);
+		float val = healthSlider.value * 10;
+		healthText.text = "" + val;
 	}
 
 	public void TakeDamage(int amount) {

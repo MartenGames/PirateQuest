@@ -7,7 +7,6 @@ public class MuteButtonScript : MonoBehaviour {
 	public Button muteButton;
 	public Sprite mute;
 	public Sprite unmute;
-	bool isPlaying = false;
 	GameObject go;
 
 	public void ClickMute() {
@@ -38,14 +37,8 @@ public class MuteButtonScript : MonoBehaviour {
 	void Update () {
 
 
-		if (Input.GetKeyDown(KeyCode.M)) {
-
-			isPlaying = !isPlaying;
-
-			if(isPlaying) {
-				ClickMute();
-			}
-
+		if (Input.GetKey(KeyCode.M)) {
+			ClickMute();
 		}
 
 		if (go == null) {
