@@ -27,11 +27,11 @@ public class StoringVarScript : MonoBehaviour {
 	public float totalAmountOfPlayTime = 0;
 
 	//Prices in upgrade store
-	public int healthPrice = 200;
-	public int damagePrice = 500;
-	public int fireRatePrice = 500;
+	public int healthPrice = 300;
+	public int damagePrice = 600;
+	public int fireRatePrice = 600;
 	public int secondCannonPrice = 1000;
-	public int speedPrice = 500;
+	public int speedPrice = 700;
 
 
 	//Counter to know how many times a item has been upgrated
