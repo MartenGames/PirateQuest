@@ -23,6 +23,6 @@ public class OctoIntroScript : MonoBehaviour {
 	
 	
 	public void pressContinue() {
-		Application.LoadLevel ("LevelSelection");
+		Application.LoadLevel ("HighScore");
 	}
 }

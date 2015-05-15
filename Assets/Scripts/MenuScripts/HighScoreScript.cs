@@ -19,8 +19,13 @@ public class HighScoreScript : MonoBehaviour {
 		playTime = stats.GetComponent<StoringVarScript> ().totalAmountOfPlayTime;
 		goldAmount = stats.GetComponent<StoringVarScript> ().totalAmountOfGold;
 
+		int highscore = Mathf.RoundToInt ((goldAmount - (numberOfDeaths * 500) - playTime));
 
-		highScoreText.text = "Congratulations! \n Your Score is: " + (goldAmount - (numberOfDeaths * 20) - playTime);
+		if (highscore < 50) {
+			highscore = 50;
+		}
+
+		highScoreText.text = "Congratulations! \n Your Score is: " + highscore;
 
 	}
 
