@@ -172,7 +172,7 @@ MonoBehaviour:
   octopusBaby: {fileID: 136032, guid: 42ffdb1e846f0481a973ae0b811dedd1, type: 2}
   gunShot: {fileID: 8300000, guid: 2526743faf57a4463b1d1d07839f6b92, type: 3}
   coolDownTimer: 1
-  fireDelay: 1.5
+  fireDelay: 1
 --- !u!114 &11447870
 MonoBehaviour:
   m_ObjectHideFlags: 1
