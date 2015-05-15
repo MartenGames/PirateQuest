@@ -143,6 +143,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		//the gold that he collected in the level.
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		go.GetComponent<StoringVarScript> ().goldAmount -= go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart;
+		go.GetComponent<StoringVarScript> ().totalAmountOfGold -= go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart;
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart = 0;
 		Application.LoadLevel (Application.loadedLevel);
 	}
