@@ -13,7 +13,7 @@ GameObject:
   - 50: {fileID: 5067506}
   - 61: {fileID: 6112184}
   - 114: {fileID: 11456778}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: TNTBarrelMoving
   m_TagString: Barrell
   m_Icon: {fileID: 0}
