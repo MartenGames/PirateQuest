@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 1
   Distance: 3
-  rotateSpeed: 40
+  rotateSpeed: 65
 --- !u!114 &11428496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370be09f078dd414cb894f6c15c48f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 40
   sinkShip: {fileID: 8300000, guid: f3c72b7be3b8c46958a62964b87cfc12, type: 3}
   Gold: {fileID: 194100, guid: a67e203374fad4f95a0c716080f21954, type: 2}
   xCoordinate: 0
