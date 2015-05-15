@@ -158,7 +158,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 
 		if (go.GetComponent<StoringVarScript> ().currentLevel == 10) {
-			Application.LoadLevel ("HighScore");
+			Application.LoadLevel ("EndSceneOcto");
 		} else {
 			go.GetComponent<StoringVarScript> ().currentLevel += 1;
 			Application.LoadLevel ("LevelSelection");
@@ -169,7 +169,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 
 		if (go.GetComponent<StoringVarScript> ().currentLevel == 10) {
-			Application.LoadLevel ("HighScore");
+			Application.LoadLevel ("EndSceneOcto");
 		} else {
 			go.GetComponent<StoringVarScript> ().currentLevel += 1;
 			Application.LoadLevel ("UpgradeStore");
