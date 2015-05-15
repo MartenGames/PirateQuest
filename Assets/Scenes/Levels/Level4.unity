@@ -128,11 +128,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495220, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
       propertyPath: m_LocalScale.x
-      value: .5
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 495220, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
       propertyPath: m_LocalScale.y
-      value: .5
+      value: .300000012
       objectReference: {fileID: 0}
     - target: {fileID: 21247024, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
       propertyPath: m_SortingOrder
@@ -218,7 +218,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28bec7f7e0da74aee96732a6d5035c12, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &267379399
+--- !u!114 &267379399 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -862,6 +862,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!1 &868771306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 868771307}
+  m_Layer: 0
+  m_Name: SpawnPoint5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &868771307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 868771306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .372999996, y: .527999997, z: 0}
+  m_LocalScale: {x: .0476190485, y: .0833333358, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1311098666}
+  m_RootOrder: 4
 --- !u!1001 &900540780
 Prefab:
   m_ObjectHideFlags: 0
@@ -1198,6 +1225,8 @@ Transform:
   - {fileID: 1598463361}
   - {fileID: 182987714}
   - {fileID: 1804484858}
+  - {fileID: 868771307}
+  - {fileID: 2103719506}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &1311098667
@@ -1239,7 +1268,7 @@ MonoBehaviour:
   EnemyBoss: {fileID: 0}
   numberOfEnemies: 0
   numberOfEnemies2: 1
-  numberOfEnemies3: 3
+  numberOfEnemies3: 5
   numberOfEnemies4: 0
   numberOfEnemies5: 0
   numberOfBabies: 0
@@ -1251,6 +1280,8 @@ MonoBehaviour:
   - {fileID: 576190697}
   - {fileID: 1598463360}
   - {fileID: 182987713}
+  - {fileID: 2103719505}
+  - {fileID: 868771306}
   spawnPoints_enemy4: []
   spawnPoints_enemy5: []
   spawnPoints_babies: []
@@ -1623,12 +1654,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1311098666}
   m_RootOrder: 3
---- !u!224 &1816521988
+--- !u!224 &1816521988 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22417662, guid: 926541f2bab794861a54db79c51b2490,
     type: 2}
   m_PrefabInternal: {fileID: 900540780}
---- !u!224 &1951339625
+--- !u!224 &1951339625 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
@@ -1765,3 +1796,30 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28bec7f7e0da74aee96732a6d5035c12, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2103719505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2103719506}
+  m_Layer: 0
+  m_Name: SpawnPoint6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2103719506
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103719505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .061999999, y: -.964999974, z: 0}
+  m_LocalScale: {x: .0476190485, y: .0833333358, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1311098666}
+  m_RootOrder: 5
