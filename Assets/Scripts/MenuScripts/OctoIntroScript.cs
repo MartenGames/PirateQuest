@@ -25,4 +25,8 @@ public class OctoIntroScript : MonoBehaviour {
 	public void pressContinue() {
 		Application.LoadLevel ("LevelSelection");
 	}
+
+	public void pressEndGame() {
+		Application.LoadLevel ("HighScore");
+	}
 }

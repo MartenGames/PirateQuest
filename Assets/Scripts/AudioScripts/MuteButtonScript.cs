@@ -7,6 +7,7 @@ public class MuteButtonScript : MonoBehaviour {
 	public Button muteButton;
 	public Sprite mute;
 	public Sprite unmute;
+	bool isPlaying = false;
 	GameObject go;
 
 	public void ClickMute() {
@@ -35,6 +36,17 @@ public class MuteButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+		if (Input.GetKeyDown(KeyCode.M)) {
+
+			isPlaying = !isPlaying;
+
+			if(isPlaying) {
+				ClickMute();
+			}
+
+		}
 
 		if (go == null) {
 			go = GameObject.Find ("EmptyObject(Clone)");
