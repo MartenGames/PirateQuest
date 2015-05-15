@@ -55,11 +55,11 @@ MonoBehaviour:
   numberOfDeaths: 0
   totalAmountOfGold: 0
   totalAmountOfPlayTime: 0
-  healthPrice: 500
-  damagePrice: 600
-  fireRatePrice: 600
-  secondCannonPrice: 1000
-  speedPrice: 700
+  healthPrice: 600
+  damagePrice: 700
+  fireRatePrice: 700
+  secondCannonPrice: 1200
+  speedPrice: 800
   healthCounter: 0
   damageCounter: 0
   fireRateCounter: 0
