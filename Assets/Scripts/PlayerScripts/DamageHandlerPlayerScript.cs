@@ -120,8 +120,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 					winningCanvas.gameObject.SetActive(true);
 				}
 				go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
-				Debug.Log("currlevel: " + go.GetComponent<StoringVarScript> ().currentLevelGoldAmount);
-				Debug.Log("currlevelGoldForRestart: " + go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart);
 				go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 			}
 		}
