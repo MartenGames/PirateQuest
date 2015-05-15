@@ -27,7 +27,7 @@ public class StoringVarScript : MonoBehaviour {
 	public float totalAmountOfPlayTime = 0;
 
 	//Prices in upgrade store
-	public int healthPrice = 300;
+	public int healthPrice = 500;
 	public int damagePrice = 600;
 	public int fireRatePrice = 600;
 	public int secondCannonPrice = 1000;
