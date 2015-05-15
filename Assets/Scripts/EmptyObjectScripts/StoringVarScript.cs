@@ -33,6 +33,9 @@ public class StoringVarScript : MonoBehaviour {
 	public int secondCannonPrice = 1200;
 	public int speedPrice = 800;
 
+	//Audio variable
+	public int audio = 1;
+
 
 	//Counter to know how many times a item has been upgrated
 	public int healthCounter = 0;

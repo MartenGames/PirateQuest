@@ -124,7 +124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22478672, guid: aded51eebb54f40bd9786271b63ca065, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 22478672, guid: aded51eebb54f40bd9786271b63ca065, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -516,7 +516,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4e29fa4a1a54431a927385ffbdc256e, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &722148542 stripped
+--- !u!114 &722148542
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -649,7 +649,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22444966, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 22444966, guid: 9446d108e344f49468cc92bf705094b2, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1173,7 +1173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22409270, guid: 098c74964f8fa498ca37ab59a3d225c1, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 22409270, guid: 098c74964f8fa498ca37ab59a3d225c1, type: 2}
       propertyPath: m_AnchoredPosition.x
