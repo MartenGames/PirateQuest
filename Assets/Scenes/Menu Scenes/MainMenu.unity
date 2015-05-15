@@ -2081,7 +2081,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use the space bar to fire bullets from your cannon and shoot enemies.
+  m_Text: Press the space bar to fire bullets from your cannon and shoot enemies.
+    If you have two cannons, press X/L for the right cannon and Z/K for the left one.
 --- !u!222 &1918708136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2147,8 +2148,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To guide the ship, use the arrow keys. The left and right arrow are used
-    for rotation and the up and down arrows are used for forward and backward motion.
+  m_Text: To guide the ship, use the arrow keys. The left and right arrow keys are
+    used for rotation and the up and down arrows are used for forward and backward
+    motion.
 --- !u!222 &1985662831
 CanvasRenderer:
   m_ObjectHideFlags: 0
