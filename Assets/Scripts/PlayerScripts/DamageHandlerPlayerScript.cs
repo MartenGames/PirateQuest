@@ -20,11 +20,6 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	PlayerHealthScript playerHealth;
 	int layer;
 
-	//This is the gold that the player has collected through the level he is in
-	//This variable is needed to restart the level from winning and drop the gold
-	//the player has collected in that level.
-	public int currLevelGoldForRestart = 0;
-	private int i;
 	
 	void Start() {
 
@@ -124,9 +119,9 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 				if(GameObject.FindWithTag ("Gold") == null) {
 					winningCanvas.gameObject.SetActive(true);
 				}
-				currLevelGoldForRestart += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
+				go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart += go.GetComponent<StoringVarScript> ().currentLevelGoldAmount;
 				Debug.Log("currlevel: " + go.GetComponent<StoringVarScript> ().currentLevelGoldAmount);
-				Debug.Log("currlevelGoldForRestart: " + currLevelGoldForRestart);
+				Debug.Log("currlevelGoldForRestart: " + go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart);
 				go.GetComponent<StoringVarScript> ().currentLevelGoldAmount = 0;
 			}
 		}
@@ -146,11 +141,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	}
 		
 	public void RestartLevelFromWinning() {
-		//Still need to fix this
-		//Hilmar
-		Debug.Log("currlevelGoldForRestart in Restart func " + currLevelGoldForRestart);
+		//Need to set the gold amount for tha last level as 0. So the player will not hold
+		//the gold that he collected in the level.
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
-		go.GetComponent<StoringVarScript> ().goldAmount -= currLevelGoldForRestart;
+		go.GetComponent<StoringVarScript> ().goldAmount -= go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart;
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart = 0;
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
@@ -160,6 +155,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 
 	public void GoToMapWin() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		//Every time the player wins,currentLevelGoldAmountForRestart has to be set to 0.
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart = 0;
 
 		if (go.GetComponent<StoringVarScript> ().currentLevel == 10) {
 			Application.LoadLevel ("EndSceneOcto");
@@ -171,6 +168,8 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 	
 	public void GoToUpgradeStore() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		//Every time the player wins,currentLevelGoldAmountForRestart has to be set to 0.
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart = 0;
 
 		if (go.GetComponent<StoringVarScript> ().currentLevel == 10) {
 			Application.LoadLevel ("EndSceneOcto");

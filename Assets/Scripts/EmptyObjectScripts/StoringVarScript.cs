@@ -14,6 +14,10 @@ public class StoringVarScript : MonoBehaviour {
 	public float rotateSpeed = 0;
 	public float fireRate = 0;
 	public int currentLevelGoldAmount = 0;
+	//This is the gold that the player has collected through the level he is in
+	//This variable is needed to restart the level from winning and drop the gold
+	//the player has collected in that level.
+	public int currentLevelGoldAmountForRestart = 0;
 	public int currentLevel;
 	public int attackDamage = 25;
 
