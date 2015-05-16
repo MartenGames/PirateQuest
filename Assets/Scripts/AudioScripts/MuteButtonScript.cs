@@ -10,7 +10,6 @@ public class MuteButtonScript : MonoBehaviour {
 	GameObject go;
 
 	public void ClickMute() {
-		Debug.Log("here");
 		if (AudioListener.volume == 1.0f) {
 			AudioListener.volume = 0.0f;
 			muteButton.image.overrideSprite = mute;
