@@ -215,16 +215,16 @@ EdgeCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 149790697}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: d9f26be0701074da8aa4a9f900e2c5bf, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: .00999999978, y: .150000006}
   m_Points:
-  - {x: -1.16076779, y: -1.29189527}
-  - {x: -1.16087985, y: .932745814}
-  - {x: 1.17105091, y: .926891208}
-  - {x: 1.17538404, y: -1.27202129}
-  - {x: -1.15534663, y: -1.27543807}
+  - {x: -1.16076779, y: -1.4206624}
+  - {x: -1.17139137, y: 1.10750115}
+  - {x: 1.17105091, y: 1.10164654}
+  - {x: 1.18063998, y: -1.45597446}
+  - {x: -1.16060257, y: -1.42260063}
 --- !u!212 &149790701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -753,7 +753,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16137a4fb9b0c4fafa9a99d6e802edb6, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &616126571 stripped
+--- !u!114 &616126571
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -1938,7 +1938,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.7107019
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
