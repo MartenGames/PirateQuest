@@ -31,6 +31,7 @@ public class EnemyBossHealthScript : MonoBehaviour {
 		healthSlider.value = currentHealth;
 
 		if(currentHealth <= 0 && !isDead) {
+			healthText.text = "" + 0;
 			Death ();
 		}
 	}
