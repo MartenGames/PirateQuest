@@ -126,6 +126,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 21289964, guid: be975864e43d4424e8daabc1aebe6110, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106704, guid: be975864e43d4424e8daabc1aebe6110, type: 2}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be975864e43d4424e8daabc1aebe6110, type: 2}
   m_IsPrefabParent: 0
@@ -511,6 +519,10 @@ Prefab:
     - target: {fileID: 470300, guid: 28bec7f7e0da74aee96732a6d5035c12, type: 2}
       propertyPath: m_RootOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 21262508, guid: 28bec7f7e0da74aee96732a6d5035c12, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28bec7f7e0da74aee96732a6d5035c12, type: 2}
@@ -1788,6 +1800,10 @@ Prefab:
       propertyPath: m_Name
       value: Starfish 2
       objectReference: {fileID: 0}
+    - target: {fileID: 21247024, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
   m_IsPrefabParent: 0
@@ -2179,6 +2195,10 @@ Prefab:
     - target: {fileID: 101250, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
       propertyPath: m_Name
       value: Starfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 21247024, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 593d20a0e93034c3994340687c0c5495, type: 2}
