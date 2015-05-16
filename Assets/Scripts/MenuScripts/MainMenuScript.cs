@@ -22,6 +22,7 @@ public class MainMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log ("firstTime: " + firstTime);
 		
 		//Initialize the buttons and canvas
 		InfoMenu = InfoMenu.GetComponent<Canvas> ();
@@ -40,10 +41,11 @@ public class MainMenuScript : MonoBehaviour {
 		InfoButton.enabled = true;
 
 		if (!firstTime) {
-			Destroy (theInstance);
+			Destroy (GameObject.Find("EmptyObject(Clone)"));
 		}
 		theInstance = (GameObject)Instantiate(EmptyObject);
 		firstTime = false;
+		Debug.Log ("firstTime: " + firstTime);
 	
 	}
 	

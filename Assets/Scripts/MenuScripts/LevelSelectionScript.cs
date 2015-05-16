@@ -27,7 +27,6 @@ public class LevelSelectionScript : MonoBehaviour {
 				levels[i].enabled = false;
 			}
 		}
-
 	}
 
 	void Update () {
