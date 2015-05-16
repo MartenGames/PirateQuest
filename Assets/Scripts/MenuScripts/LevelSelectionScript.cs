@@ -19,7 +19,7 @@ public class LevelSelectionScript : MonoBehaviour {
 
 		//Grey out the levels that are not available to the player. 
 
-		for (int i = 0; i < levels.Length; i++) {
+		/*for (int i = 0; i < levels.Length; i++) {
 			if((i + 1) == currentLevel) {
 				levels[i].enabled = true;
 			}
@@ -27,7 +27,7 @@ public class LevelSelectionScript : MonoBehaviour {
 				levels[i].image.color = Color.gray;
 				levels[i].enabled = false;
 			}
-		}
+		}*/
 	}
 
 	void Update () {
