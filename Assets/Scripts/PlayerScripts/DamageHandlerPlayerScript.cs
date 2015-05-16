@@ -165,7 +165,7 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		}
 	}
 	
-	public void GoToUpgradeStore() {
+	public void GoToUpgradeStoreWin() {
 		GameObject go = GameObject.Find ("EmptyObject(Clone)");
 		//Every time the player wins,currentLevelGoldAmountForRestart has to be set to 0.
 		go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart = 0;
@@ -176,6 +176,12 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 			go.GetComponent<StoringVarScript> ().currentLevel += 1;
 			Application.LoadLevel ("UpgradeStore");
 		}
+	}
+
+	public void GoTupUpgradeStoreDefeat() {
+		GameObject go = GameObject.Find ("EmptyObject(Clone)");
+		go.GetComponent<StoringVarScript> ().currentLevelGoldAmountForRestart = 0;
+		Application.LoadLevel ("UpgradeStore");
 	}
 
 }
