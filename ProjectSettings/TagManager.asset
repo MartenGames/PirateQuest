@@ -24,6 +24,7 @@ TagManager:
   - Barrell
   - Enemy5
   - StartCanvas
+  - JellyFish
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - EnemyBullet
   - GoldLayer
   - PlayersBullet
-  - RockLayer
+  - Barrel
   - 
   - 
   - 
