@@ -362,7 +362,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &101403064 stripped
+--- !u!224 &101403064
 RectTransform:
   m_PrefabParentObject: {fileID: 22407614, guid: 4fab3f0a789ab4ae5bbe33ae5ea25dec,
     type: 2}
@@ -1219,7 +1219,7 @@ RectTransform:
   - {fileID: 537044940}
   - {fileID: 101403064}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1834,7 +1834,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aded51eebb54f40bd9786271b63ca065, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1805218397 stripped
+--- !u!114 &1805218397
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
