@@ -27,7 +27,6 @@ public class LevelSelectionScript : MonoBehaviour {
 //				levels[i].enabled = false;
 //			}
 //		}
-		levels [10].enabled = true;
 
 	}
 
