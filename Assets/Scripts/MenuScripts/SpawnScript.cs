@@ -198,7 +198,6 @@ public class SpawnScript : MonoBehaviour {
 		if (GameObject.Find ("EnemyBoss(Clone)") != null) {
 			enemyBossHealth = GameObject.Find ("EnemyBoss(Clone)").GetComponent<EnemyBossHealthScript> ().currentHealth;
 			if (enemyBossHealth < 20 && enemyBossHealth >= 0 && !babiesSpawned) {
-				Debug.Log ("SPAWN BABIES");
 				SpawnBabies ();
 			}
 		}
