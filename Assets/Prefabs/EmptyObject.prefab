@@ -43,7 +43,7 @@ MonoBehaviour:
   AllowedToWin: 1
   health: 0
   damage: 1
-  goldAmount: 0
+  goldAmount: 10000
   speed: 0
   acceleration: 0
   rotateSpeed: 0
@@ -60,6 +60,7 @@ MonoBehaviour:
   fireRatePrice: 700
   secondCannonPrice: 1200
   speedPrice: 800
+  audio: 1
   healthCounter: 0
   damageCounter: 0
   fireRateCounter: 0

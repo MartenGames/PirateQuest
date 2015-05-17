@@ -232,7 +232,7 @@ public class UpgradeScript : MonoBehaviour {
 		playerHealth.text = "Health: " + (emptyObject.GetComponent<StoringVarScript> ().health + 100);
 		playerDamage.text = "Damage: " + emptyObject.GetComponent<StoringVarScript> ().damage;
 		playerFireRate.text = "Firerate: " + (1 - emptyObject.GetComponent<StoringVarScript> ().fireRate) + " second";
-		playerSpeed.text = "Speed: " + (emptyObject.GetComponent<StoringVarScript> ().speed + 0.02f);
+		playerSpeed.text = "Speed: " + ((emptyObject.GetComponent<StoringVarScript> ().speed + 0.02f)*1000) + " knots";
 		if (emptyObject.GetComponent<StoringVarScript> ().secondCannon) {
 			playerNumberOfCannons.text = "Number of Cannons: 2";
 		} else {
