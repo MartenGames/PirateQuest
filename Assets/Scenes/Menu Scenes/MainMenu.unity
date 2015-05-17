@@ -1075,7 +1075,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910719578}
---- !u!114 &937332191
+--- !u!114 &937332191 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
   m_EffectDistance: {x: 2.73000002, y: -1}
   m_UseGraphicAlpha: 1
---- !u!224 &1531923359
+--- !u!224 &1531923359 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22451974, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -2300,9 +2300,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When an enemy is killed a treasure will appear from it's wreck. To collect
-    it guide your ship over the treasure. But be careful! The treasure will disappear
-    after a certain time limit.
+  m_Text: Be careful of floating objects in the sea. They may look harmless but they
+    can be very harmful, even deadly!
 --- !u!222 &2054504003
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2320,7 +2319,7 @@ GameObject:
   - 222: {fileID: 2073422083}
   - 114: {fileID: 2073422082}
   m_Layer: 5
-  m_Name: PlayerAndTreasure 1
+  m_Name: FloatingObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2357,7 +2356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: e68f2cc31e62b4c3eb836c2a20613fe7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf90aa7d57a374ce8b7d1313df348698, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
