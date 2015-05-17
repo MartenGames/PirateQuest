@@ -26,7 +26,9 @@ public class PlayerCollectScript : MonoBehaviour {
 			AudioSource.PlayClipAtPoint (coinCollect, transform.position);
 			Destroy (other.gameObject);
 		} else if (other.gameObject.tag == "Food") {
-			Destroy (other.gameObject);
+			if(other.gameObject.tag != "Cannons"){
+				Destroy (other.gameObject);
+			}
 			AudioSource.PlayClipAtPoint (foodCollect, transform.position);
 		}
 	}

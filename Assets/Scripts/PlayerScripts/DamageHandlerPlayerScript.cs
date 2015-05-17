@@ -40,8 +40,11 @@ public class DamageHandlerPlayerScript : MonoBehaviour {
 		goToUpgradeStore = goToUpgradeStore.GetComponent<Button> ();
 		goToMap = goToMap.GetComponent<Button> ();
 
-		GameObject cannon = GameObject.Find ("Cannon2");
-		cannon.SetActive (GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().secondCannon);
+		GameObject cannon2 = GameObject.Find ("Cannon2");
+		cannon2.SetActive (GameObject.Find("EmptyObject(Clone)").GetComponent<StoringVarScript>().secondCannon);
+
+		GameObject cannon = GameObject.Find ("Cannon");
+		cannon.SetActive (true);
 
 		layer = gameObject.layer;
 		material = GetComponent<SpriteRenderer> ().material;

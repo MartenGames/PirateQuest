@@ -25,6 +25,7 @@ TagManager:
   - Enemy5
   - StartCanvas
   - JellyFish
+  - Cannons
   layers:
   - Default
   - TransparentFX
