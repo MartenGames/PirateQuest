@@ -1075,7 +1075,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910719578}
---- !u!114 &937332191 stripped
+--- !u!114 &937332191
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11448742, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
   m_EffectDistance: {x: 2.73000002, y: -1}
   m_UseGraphicAlpha: 1
---- !u!224 &1531923359 stripped
+--- !u!224 &1531923359
 RectTransform:
   m_PrefabParentObject: {fileID: 22451974, guid: 16137a4fb9b0c4fafa9a99d6e802edb6,
     type: 2}
