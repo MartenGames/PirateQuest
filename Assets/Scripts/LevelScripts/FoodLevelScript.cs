@@ -7,6 +7,7 @@ public class FoodLevelScript : MonoBehaviour {
 
 	public Text timerText;
 	public float timer;
+	float timerHelper;
 	bool won;
 	GameObject player;
 
@@ -26,7 +27,12 @@ public class FoodLevelScript : MonoBehaviour {
 		}
 
 		if (timer > 0 && !won) {
-			timer -= Time.deltaTime;
+			timerHelper += Time.deltaTime;
+			if(timerHelper >= 1.0f)
+			{
+				timer -= 1;
+				timerHelper -= 1.0f;
+			}
 		}
 
 		if (timer <= 0) {
