@@ -19,12 +19,6 @@ public class FirstSceneScript : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.M)) {
-			if (AudioListener.volume == 1.0f) {
-				AudioListener.volume = 0.0f;
-			} else {
-				AudioListener.volume = 1.0f;
-			}
-		}
+
 	}
 }

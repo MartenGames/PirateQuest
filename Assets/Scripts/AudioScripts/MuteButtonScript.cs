@@ -10,20 +10,14 @@ public class MuteButtonScript : MonoBehaviour {
 	GameObject go;
 
 	public void ClickMute() {
+
 		if (AudioListener.volume == 1.0f) {
 			AudioListener.volume = 0.0f;
-			muteButton.image.overrideSprite = mute;
 			go.GetComponent<StoringVarScript>().audio = 0;
 		} else {
 			AudioListener.volume = 1.0f;
-			muteButton.image.overrideSprite = unmute;
 			go.GetComponent<StoringVarScript>().audio = 1;
 		}
-	}
-
-
-	void Awake() {
-
 	}
 
 	// Use this for initialization
@@ -31,14 +25,17 @@ public class MuteButtonScript : MonoBehaviour {
 		go = GameObject.Find ("EmptyObject(Clone)");
 		muteButton = muteButton.GetComponent<Button> ();
 	}
+
+	void OnGUI () {
+
+		if (Event.current.Equals (Event.KeyboardEvent("M"))) {
+			ClickMute();
+		}
+
+	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
-		if (Input.GetKey(KeyCode.M)) {
-			ClickMute();
-		}
 
 		if (go == null) {
 			go = GameObject.Find ("EmptyObject(Clone)");

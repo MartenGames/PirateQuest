@@ -10,7 +10,6 @@ public class BarrellExplosionScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player") {
-			Debug.Log("HOTHOT");
 			Destroy(other.gameObject);
 			AudioSource.PlayClipAtPoint(explosionSound, transform.position);
 			GameObject ex = (GameObject) Instantiate(explosion);
