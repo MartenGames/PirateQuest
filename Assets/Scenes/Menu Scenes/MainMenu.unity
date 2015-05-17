@@ -2300,8 +2300,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Be careful of floating objects on the water. They may look harmless but
-    they can be very deadly.
+  m_Text: Be careful of floating objects in the sea. They may look harmless but they
+    can be very harmful, even deadly!
 --- !u!222 &2054504003
 CanvasRenderer:
   m_ObjectHideFlags: 0
